@@ -123,6 +123,11 @@ class CategoryController extends Controller
         return redirect()->route('category.index')->with('category_create','Category Delete Successfull!!');
     }
 
+    public function trash(){
+        $categories = Category::onlyTrashed()->get();
+        return view('dashboard.category.trash',compact('categories'));
+    }
+
     public function status($slug)
     {
         $category = Category::where('slug',$slug)->first();
@@ -142,4 +147,8 @@ class CategoryController extends Controller
             return redirect()->route('category.index')->with('category_create','Status Update Successfull!!');
         }
     }
+
+
+
+
 }

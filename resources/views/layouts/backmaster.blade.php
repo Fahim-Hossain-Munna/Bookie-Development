@@ -133,6 +133,9 @@
                                             <li class="nav-item">
                                                 <a class='nav-link ' href='{{ route('category.create') }}'>Create Category</a>
                                             </li><!--end nav-item-->
+                                            <li class="nav-item">
+                                                <a class='nav-link ' href='{{ route('category.trash') }}'>Categories Trash</a>
+                                            </li><!--end nav-item-->
                                         </ul><!--end nav-->
                                     </div><!--end sidebarAnalytics-->
                                 </li><!--end nav-item-->
