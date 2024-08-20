@@ -105,6 +105,9 @@
                             <li class="nav-item">
                                 <a class='nav-link' href='{{ route('settings.index') }}'>Profile / Settings</a>
                             </li><!--end nav-item-->
+                            <li class="nav-item">
+                                <a class='nav-link' href=''>New Role Assign</a>
+                            </li><!--end nav-item-->
                         </ul><!--end nav-->
                     </div><!-- end Dashboards -->
 
@@ -125,10 +128,10 @@
                                     <div class="collapse " id="sidebarAnalytics">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class='nav-link ' href='{{ route('category.index') }}'>Category</a>
+                                                <a class='nav-link ' href='{{ route('category.index') }}'>Show Category</a>
                                             </li><!--end nav-item-->
                                             <li class="nav-item">
-                                                <a class='nav-link ' href='analytics-reports.html'>Sub-Category</a>
+                                                <a class='nav-link ' href='{{ route('category.create') }}'>Create Category</a>
                                             </li><!--end nav-item-->
                                         </ul><!--end nav-->
                                     </div><!--end sidebarAnalytics-->
@@ -137,7 +140,7 @@
                         </div><!--end sidebarCollapse-->
                     </div><!-- end Crypto -->
 
-                    {{-- <div id="MetricaUikit" class="main-icon-menu-pane  tab-pane" role="tabpanel"
+                     {{-- <div id="MetricaUikit" class="main-icon-menu-pane  tab-pane" role="tabpanel"
                         aria-labelledby="uikit-tab">
                         <div class="title-box">
                             <h6 class="menu-title">UI Kit</h6>

@@ -15,6 +15,7 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashHomeController::class, 'index'])->name('dashboard');
     Route::resource('settings', DashSettingsController::class);
     Route::resource('category', CategoryController::class);
+    Route::post('category/status/{slug}', [CategoryController::class , 'status'])->name('category.status');
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

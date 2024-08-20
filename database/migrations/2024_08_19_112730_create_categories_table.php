@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('image');
-            $table->string('status');
+            $table->string('status')->default('deactive');
             $table->softDeletes();
             $table->timestamps();
         });
