@@ -29,7 +29,6 @@
                             <th>Serial ID</th>
                             <th>Image</th>
                             <th>Title</th>
-                            <th>Status</th>
                             <th class="text-end">Action</th>
                         </tr>
                         </thead>
@@ -45,23 +44,15 @@
                                 <td>
                                     {{ $category->title }}
                                 </td>
-                                <td>
-                                    <form action="{{ route('category.status',$category->slug) }}" method="POST">
-                                        @csrf
-                                    <button type="submit" class="{{ ($category->status == 'deactive') ? 'badge badge-soft-danger' : 'badge badge-soft-success' }}">{{ $category->status }}</button>
-                                    </form>
-                                </td>
                                 <td class="text-end">
                                     <div class="dropdown d-inline-block">
                                         <a class="dropdown-toggle arrow-none" id="dLabel11" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                             <i class="las la-ellipsis-v font-20 text-muted"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dLabel11" style="">
-                                            <a class="dropdown-item" href="{{ route('category.edit',$category->id) }}"> <i class="ti ti-pencil"></i>  Edit</a>
-                                            <form action="{{ route('category.destroy',$category->id) }}" method="POST">
-                                                @csrf
-                                                @method("DELETE")
-                                            <button type="submit" class="dropdown-item"> <i class="ti ti-trash"></i>  Delete</button>
+                                            <a class="dropdown-item" href="{{ route('category.trash.restore',$category->id) }}"> <i class="ti ti-pencil"></i>  Restore</a>
+                                            <form action="{{ route('category.trash.delete',$category->id) }}" method="get">
+                                            <button type="submit" class="dropdown-item"> <i class="ti ti-trash"></i>  Permanent Delete</button>
                                             </form>
                                             {{-- <a class="dropdown-item" href="#">Tasks Details</a> --}}
                                         </div>

@@ -128,6 +128,18 @@ class CategoryController extends Controller
         return view('dashboard.category.trash',compact('categories'));
     }
 
+    public function trash_store($id){
+        Category::withTrashed()->find($id)->restore();
+
+        return redirect()->route('category.index')->with('category_create','Category Restore Successfull!!');
+    }
+
+    public function trash_delete($id){
+        Category::withTrashed()->find($id)->forceDelete();
+
+        return redirect()->route('category.index')->with('category_create','Category Delete Successfull!!');
+    }
+
     public function status($slug)
     {
         $category = Category::where('slug',$slug)->first();
