@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Blog;
+use App\Models\Tag;
 
-class Tag extends Model
+class Blog extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
     protected $guarded = [''];
 
-    function manywithblogs(){
-        return $this->belongsToMany(Blog::class,'blog_tag');
+    function manywithtags(){
+        return $this->belongsToMany(Tag::class,'blog_tag');
     }
+
 }

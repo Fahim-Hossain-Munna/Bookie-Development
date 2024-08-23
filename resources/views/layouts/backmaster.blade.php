@@ -1,216 +1,234 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
 <head>
 
 
-        <meta charset="utf-8" />
-                <title>{{ env("APP_NAME") }} - Admin & Dashboard Template</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-                <meta content="" name="author" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>{{ env('APP_NAME') }} - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-                <!-- App favicon -->
-                <link rel="shortcut icon" href="{{ asset('backend') }}/assets/images/favicon.ico">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{ asset('backend') }}/assets/images/favicon.ico">
 
 
 
-         <!-- App css -->
-         <link href="{{ asset('backend') }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-         <link href="{{ asset('backend') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-         <link href="{{ asset('backend') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- App css -->
+    <link href="{{ asset('backend') }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    {{-- tiny mce --}}
+    <script src="https://cdn.tiny.cloud/1/xg4lsmt7zxrncgo50cmt0hw9rvg8z5u3o4zxlen93hqhgj9t/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
-    </head>
+</head>
 
-    <body id="body">
-        <!-- leftbar-tab-menu -->
-        <div class="leftbar-tab-menu">
-            <div class="main-icon-menu">
-                <a class='logo logo-metrica d-block text-center' href='index.html'>
-                    <span>
-                        <img src="{{ asset('backend') }}/assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
-                    </span>
-                </a>
-                <div class="main-icon-menu-body">
-                    <div class="position-reletive h-100" data-simplebar style="overflow-x: hidden;">
-                        <ul class="nav nav-tabs" role="tablist" id="tab-menu">
-                            <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard" data-bs-trigger="hover">
-                                <a href="#MetricaDashboard" id="dashboard-tab" class="nav-link">
-                                    <i class="ti ti-smart-home menu-icon"></i>
-                                </a><!--end nav-link-->
-                            </li><!--end nav-item-->
-                            <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Category" data-bs-trigger="hover">
-                                <a href="#MetricaApps" id="apps-tab" class="nav-link">
-                                    <i class="ti ti-clipboard-list menu-icon"></i>
-                                </a><!--end nav-link-->
-                            </li><!--end nav-item-->
+<body id="body">
+    <!-- leftbar-tab-menu -->
+    <div class="leftbar-tab-menu">
+        <div class="main-icon-menu">
+            <a class='logo logo-metrica d-block text-center' href='index.html'>
+                <span>
+                    <img src="{{ asset('backend') }}/assets/images/logo-sm.png" alt="logo-small" class="logo-sm">
+                </span>
+            </a>
+            <div class="main-icon-menu-body">
+                <div class="position-reletive h-100" data-simplebar style="overflow-x: hidden;">
+                    <ul class="nav nav-tabs" role="tablist" id="tab-menu">
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard"
+                            data-bs-trigger="hover">
+                            <a href="#MetricaDashboard" id="dashboard-tab" class="nav-link">
+                                <i class="ti ti-smart-home menu-icon"></i>
+                            </a><!--end nav-link-->
+                        </li><!--end nav-item-->
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Category"
+                            data-bs-trigger="hover">
+                            <a href="#MetricaApps" id="apps-tab" class="nav-link">
+                                <i class="ti ti-clipboard-list menu-icon"></i>
+                            </a><!--end nav-link-->
+                        </li><!--end nav-item-->
 
-                            <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Tag" data-bs-trigger="hover">
-                                <a href="#MetricaUikit" id="uikit-tab" class="nav-link">
-                                    <i class="ti ti-tag menu-icon"></i>
-                                </a><!--end nav-link-->
-                            </li><!--end nav-item-->
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Tag"
+                            data-bs-trigger="hover">
+                            <a href="#MetricaUikit" id="uikit-tab" class="nav-link">
+                                <i class="ti ti-tag menu-icon"></i>
+                            </a><!--end nav-link-->
+                        </li><!--end nav-item-->
 
-                            <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Pages" data-bs-trigger="hover">
-                                <a href="#MetricaPages" id="pages-tab" class="nav-link">
-                                    <i class="ti ti-files menu-icon"></i>
-                                </a><!--end nav-link-->
-                            </li><!--end nav-item-->
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Blogs"
+                            data-bs-trigger="hover">
+                            <a href="#MetricaPages" id="pages-tab" class="nav-link">
+                                <i class="ti ti-news menu-icon"></i>
+                            </a><!--end nav-link-->
+                        </li><!--end nav-item-->
 
-                            <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Authentication" data-bs-trigger="hover">
+                        {{-- <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Authentication" data-bs-trigger="hover">
                                 <a href="#MetricaAuthentication" id="authentication-tab" class="nav-link">
                                     <i class="ti ti-shield-lock menu-icon"></i>
                                 </a><!--end nav-link-->
-                            </li><!--end nav-item-->
-                        </ul><!--end nav-->
-                    </div><!--end /div-->
-                </div><!--end main-icon-menu-body-->
-                <div class="pro-metrica-end">
-                    @if (auth()->user()->image == 'default.png')
+                            </li><!--end nav-item--> --}}
+                    </ul><!--end nav-->
+                </div><!--end /div-->
+            </div><!--end main-icon-menu-body-->
+            <div class="pro-metrica-end">
+                @if (auth()->user()->image == 'default.png')
                     <a href="{{ route('settings.index') }}" class="profile">
-                        <img src="{{ asset('uploads/default') }}/{{auth()->user()->image}}" alt="profile-user" class="rounded-circle thumb-sm">
+                        <img src="{{ asset('uploads/default') }}/{{ auth()->user()->image }}" alt="profile-user"
+                            class="rounded-circle thumb-sm">
                     </a>
-                    @else
+                @else
                     <a href="{{ route('settings.index') }}" class="profile">
-                        <img src="{{ asset('uploads/profile') }}/{{ auth()->user()->image }}" alt="profile-user" class="rounded-circle thumb-sm">
+                        <img src="{{ asset('uploads/profile') }}/{{ auth()->user()->image }}" alt="profile-user"
+                            class="rounded-circle thumb-sm">
                     </a>
-                    @endif
-                </div><!--end pro-metrica-end-->
-            </div>
-            <!--end main-icon-menu-->
+                @endif
+            </div><!--end pro-metrica-end-->
+        </div>
+        <!--end main-icon-menu-->
 
-            <div class="main-menu-inner">
-                <!-- LOGO -->
-                <div class="topbar-left">
-                    <a class='logo' href='{{ route('dashboard') }}'>
-                        <span>
-                            <h3 class="text-dark">Bookie</h3>
-                        </span>
-                    </a><!--end logo-->
-                </div><!--end topbar-left-->
-                <!--end logo-->
-                <div class="menu-body navbar-vertical tab-content" data-simplebar>
-                    <div id="MetricaDashboard" class="main-icon-menu-pane tab-pane" role="tabpanel"
-                        aria-labelledby="dasboard-tab">
-                        <div class="title-box">
-                            <h6 class="menu-title">Dashboard</h6>
-                        </div>
+        <div class="main-menu-inner">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a class='logo' href='{{ route('dashboard') }}'>
+                    <span>
+                        <h3 class="text-dark">Bookie</h3>
+                    </span>
+                </a><!--end logo-->
+            </div><!--end topbar-left-->
+            <!--end logo-->
+            <div class="menu-body navbar-vertical tab-content" data-simplebar>
+                <div id="MetricaDashboard" class="main-icon-menu-pane tab-pane" role="tabpanel"
+                    aria-labelledby="dasboard-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Dashboard</h6>
+                    </div>
 
-                        <ul class="nav flex-column">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class='nav-link' href='{{ route('dashboard') }}'>Home</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class='nav-link' href='{{ route('settings.index') }}'>Profile / Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class='nav-link' href=''>New Role Assign</a>
+                        </li><!--end nav-item-->
+                    </ul><!--end nav-->
+                </div><!-- end Dashboards -->
+
+                <div id="MetricaApps" class="main-icon-menu-pane tab-pane" role="tabpanel"
+                    aria-labelledby="apps-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Category</h6>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="sidebarCollapse">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class='nav-link' href='{{ route('dashboard') }}'>Home</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='{{ route('settings.index') }}'>Profile / Settings</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href=''>New Role Assign</a>
-                            </li><!--end nav-item-->
-                        </ul><!--end nav-->
-                    </div><!-- end Dashboards -->
-
-                    <div id="MetricaApps" class="main-icon-menu-pane tab-pane" role="tabpanel"
-                        aria-labelledby="apps-tab">
-                        <div class="title-box">
-                            <h6 class="menu-title">Category</h6>
-                        </div>
-
-                        <div class="collapse navbar-collapse" id="sidebarCollapse">
-                            <!-- Navigation -->
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#sidebarAnalytics" data-bs-toggle="collapse" role="button"
-                                        aria-expanded="false" aria-controls="sidebarAnalytics">
-                                        Lists
-                                    </a>
-                                    <div class="collapse " id="sidebarAnalytics">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class='nav-link ' href='{{ route('category.index') }}'>Show Category</a>
-                                            </li><!--end nav-item-->
-                                            <li class="nav-item">
-                                                <a class='nav-link ' href='{{ route('category.create') }}'>Create Category</a>
-                                            </li><!--end nav-item-->
-                                            <li class="nav-item">
-                                                <a class='nav-link ' href='{{ route('category.trash') }}'>Categories Trash</a>
-                                            </li><!--end nav-item-->
-                                        </ul><!--end nav-->
-                                    </div><!--end sidebarAnalytics-->
-                                </li><!--end nav-item-->
-                            </ul><!--end navbar-nav--->
-                        </div><!--end sidebarCollapse-->
-                    </div><!-- end Crypto -->
-
-                     <div id="MetricaUikit" class="main-icon-menu-pane  tab-pane" role="tabpanel"
-                        aria-labelledby="uikit-tab">
-                        <div class="title-box">
-                            <h6 class="menu-title">Tag</h6>
-                        </div>
-                        <div class="collapse navbar-collapse" id="sidebarCollapse_2">
-                            <!-- Navigation -->
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#sidebarElements" data-bs-toggle="collapse" role="button"
-                                        aria-expanded="false" aria-controls="sidebarElements">
+                                <a class="nav-link" href="#sidebarAnalytics" data-bs-toggle="collapse"
+                                    role="button" aria-expanded="false" aria-controls="sidebarAnalytics">
                                     Lists
-                                    </a>
-                                    <div class="collapse " id="sidebarElements">
-                                        <ul class="nav flex-column">
-                                            <li class="nav-item">
-                                                <a class='nav-link' href='{{ route('tag.index') }}'>Show Tags</a>
-                                            </li><!--end nav-item-->
-                                            <li class="nav-item">
-                                                <a class='nav-link' href='{{ route('tag.create') }}'>Create Tags</a>
-                                            </li><!--end nav-item-->
-                                            <li class="nav-item">
-                                                <a class='nav-link' href='{{ route('tag.trash') }}'>Tags Trash</a>
-                                            </li><!--end nav-item-->
-                                        </ul><!--end nav-->
-                                    </div><!--end sidebarElements-->
-                                </li><!--end nav-item-->
+                                </a>
+                                <div class="collapse " id="sidebarAnalytics">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class='nav-link ' href='{{ route('category.index') }}'>Show
+                                                Category</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link ' href='{{ route('category.create') }}'>Create
+                                                Category</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link ' href='{{ route('category.trash') }}'>Categories
+                                                Trash</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarAnalytics-->
+                            </li><!--end nav-item-->
+                        </ul><!--end navbar-nav--->
+                    </div><!--end sidebarCollapse-->
+                </div><!-- end category -->
 
-                            </ul><!--end navbar-nav--->
-                        </div><!--end sidebarCollapse_2-->
-                    </div><!-- end Others -->
+                <div id="MetricaUikit" class="main-icon-menu-pane  tab-pane" role="tabpanel"
+                    aria-labelledby="uikit-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Tag</h6>
+                    </div>
+                    <div class="collapse navbar-collapse" id="sidebarCollapse_2">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElements" data-bs-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="sidebarElements">
+                                    Lists
+                                </a>
+                                <div class="collapse " id="sidebarElements">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('tag.index') }}'>Show Tags</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('tag.create') }}'>Create Tags</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('tag.trash') }}'>Tags Trash</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
 
-                    {{-- <div id="MetricaPages" class="main-icon-menu-pane tab-pane" role="tabpanel" aria-labelledby="pages-tab">
+                        </ul><!--end navbar-nav--->
+                    </div><!--end sidebarCollapse_2-->
+                </div><!-- end tag -->
+                <div id="MetricaPages" class="main-icon-menu-pane  tab-pane" role="tabpanel"
+                    aria-labelledby="uikit-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Blogs</h6>
+                    </div>
+                    <div class="collapse navbar-collapse" id="sidebarCollapse_2">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElementsblog" data-bs-toggle="collapse"
+                                    role="button" aria-expanded="false" aria-controls="sidebarElementsblog">
+                                    Lists
+                                </a>
+                                <div class="collapse " id="sidebarElementsblog">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('blog.index') }}'>Show Blogs</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('blog.create') }}'>Create Blogs</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('tag.trash') }}'>Blogs Trash</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
+
+                        </ul><!--end navbar-nav--->
+                    </div><!--end sidebarCollapse_2-->
+                </div><!-- end tag -->
+
+                {{-- <div id="MetricaPages" class="main-icon-menu-pane tab-pane" role="tabpanel" aria-labelledby="pages-tab">
                         <div class="title-box">
-                            <h6 class="menu-title">Pages</h6>
+                            <h6 class="menu-title">Lists</h6>
                         </div>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class='nav-link' href='pages-profile.html'>Profile</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-tour.html'>Tour</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-timeline.html'>Timeline</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-treeview.html'>Treeview</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-starter.html'>Starter Page</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-pricing.html'>Pricing</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-blogs.html'>Blogs</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-faq.html'>FAQs</a>
-                            </li><!--end nav-item-->
-                            <li class="nav-item">
-                                <a class='nav-link' href='pages-gallery.html'>Gallery</a>
+                                <a class='nav-link' href='pages-profile.html'>Show Blogs</a>
                             </li><!--end nav-item-->
                         </ul><!--end nav-->
-                    </div><!-- end Pages -->
+                    </div><!-- end Blogs --> --}}
 
-                    <div id="MetricaAuthentication" class="main-icon-menu-pane tab-pane" role="tabpanel"
+                {{-- <div id="MetricaAuthentication" class="main-icon-menu-pane tab-pane" role="tabpanel"
                         aria-labelledby="authentication-tab">
                         <div class="title-box">
                             <h6 class="menu-title">Authentication</h6>
@@ -253,30 +271,33 @@
                                 <a class='nav-link' href='auth-500-alt.html'>Error 500-alt</a>
                             </li><!--end nav-item-->
                         </ul><!--end nav-->
-                    </div><!-- end Authentication--> --}}
-                </div>
-                <!--end menu-body-->
-            </div><!-- end main-menu-inner-->
-        </div>
-        <!-- end leftbar-tab-menu-->
+                    </div><!-- end Authentication-->  --}}
+            </div>
+            <!--end menu-body-->
+        </div><!-- end main-menu-inner-->
+    </div>
+    <!-- end leftbar-tab-menu-->
 
-        <!-- Top Bar Start -->
-        <!-- Top Bar Start -->
-        <div class="topbar">
-            <!-- Navbar -->
-            <nav class="navbar-custom" id="navbar-custom">
-                <ul class="list-unstyled topbar-nav float-end mb-0">
-                    <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
-                        aria-haspopup="false" aria-expanded="false">
-                        <img src="{{ asset('uploads/flag/bd.webp') }}" alt="bangladesh" class="thumb-xxs rounded-circle" style="object-fit: cover">
+    <!-- Top Bar Start -->
+    <!-- Top Bar Start -->
+    <div class="topbar">
+        <!-- Navbar -->
+        <nav class="navbar-custom" id="navbar-custom">
+            <ul class="list-unstyled topbar-nav float-end mb-0">
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="false" aria-expanded="false">
+                        <img src="{{ asset('uploads/flag/bd.webp') }}" alt="bangladesh"
+                            class="thumb-xxs rounded-circle" style="object-fit: cover">
                     </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('settings.index') }}"><img src="{{ asset('uploads/flag/bd.webp') }}" alt="bangladesh" height="15" class="me-2">Bangladesh</a>
-                        </div>
-                    </li><!--end topbar-language-->
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('settings.index') }}"><img
+                                src="{{ asset('uploads/flag/bd.webp') }}" alt="bangladesh" height="15"
+                                class="me-2">Bangladesh</a>
+                    </div>
+                </li><!--end topbar-language-->
 
-                    {{-- <li class="dropdown notification-list">
+                {{-- <li class="dropdown notification-list">
                         <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
                             aria-haspopup="false" aria-expanded="false">
                             <i class="ti ti-mail"></i>
@@ -445,99 +466,107 @@
                         </div>
                     </li> --}}
 
-                    <li class="dropdown">
-                        <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="false" aria-expanded="false">
-                            <div class="d-flex align-items-center">
-                                @if (auth()->user()->image == 'default.png')
-                                <img src="{{ asset('uploads/default') }}/{{auth()->user()->image}}" alt="profile-user" class="rounded-circle me-2 thumb-sm" />
-                                @else
-                                <img src="{{ asset('uploads/profile') }}/{{ auth()->user()->image }}" alt="profile-user" class="rounded-circle me-2 thumb-sm" />
-                                @endif
-                                <div>
-                                    <small class="d-none d-md-block font-11">{{ auth()->user()->designation }}</small>
-                                    <span class="d-none d-md-block fw-semibold font-12">{{auth()->user()->name}} <i
-                                            class="mdi mdi-chevron-down"></i></span>
-                                </div>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="false" aria-expanded="false">
+                        <div class="d-flex align-items-center">
+                            @if (auth()->user()->image == 'default.png')
+                                <img src="{{ asset('uploads/default') }}/{{ auth()->user()->image }}"
+                                    alt="profile-user" class="rounded-circle me-2 thumb-sm" />
+                            @else
+                                <img src="{{ asset('uploads/profile') }}/{{ auth()->user()->image }}"
+                                    alt="profile-user" class="rounded-circle me-2 thumb-sm" />
+                            @endif
+                            <div>
+                                <small class="d-none d-md-block font-11">{{ auth()->user()->designation }}</small>
+                                <span class="d-none d-md-block fw-semibold font-12">{{ auth()->user()->name }} <i
+                                        class="mdi mdi-chevron-down"></i></span>
                             </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="{{ route('settings.index') }}"><i class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
-                            <div class="dropdown-divider mb-0"></div>
-                            @if (Route::has('logout'))
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="{{ route('settings.index') }}"><i
+                                class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
+                        <div class="dropdown-divider mb-0"></div>
+                        @if (Route::has('logout'))
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <button type="submit" class="dropdown-item"><i class="ti ti-power font-16 me-1 align-text-bottom"></i> Logout</button>
+                                <button type="submit" class="dropdown-item"><i
+                                        class="ti ti-power font-16 me-1 align-text-bottom"></i> Logout</button>
                             </form>
-                            @endif
-                        </div>
-                    </li><!--end topbar-profile-->
-                    <li class="notification-list">
-                        <a class="nav-link arrow-none nav-icon offcanvas-btn" href="#" data-bs-toggle="offcanvas" data-bs-target="#Appearance" role="button" aria-controls="Rightbar">
-                            <i class="ti ti-settings ti-spin"></i>
-                        </a>
-                    </li>
-                </ul><!--end topbar-nav-->
+                        @endif
+                    </div>
+                </li><!--end topbar-profile-->
+                <li class="notification-list">
+                    <a class="nav-link arrow-none nav-icon offcanvas-btn" href="#" data-bs-toggle="offcanvas"
+                        data-bs-target="#Appearance" role="button" aria-controls="Rightbar">
+                        <i class="ti ti-settings ti-spin"></i>
+                    </a>
+                </li>
+            </ul><!--end topbar-nav-->
 
-                <ul class="list-unstyled topbar-nav mb-0">
-                    <li>
-                        <button class="nav-link button-menu-mobile nav-icon" id="togglemenu">
-                            <i class="ti ti-menu-2"></i>
-                        </button>
-                    </li>
-                    <li class="hide-phone app-search">
-                        <form role="search" action="#" method="get">
-                            <input type="search" name="search" class="form-control top-search mb-0" placeholder="Type text...">
-                            <button type="submit"><i class="ti ti-search"></i></button>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-            <!-- end navbar-->
+            <ul class="list-unstyled topbar-nav mb-0">
+                <li>
+                    <button class="nav-link button-menu-mobile nav-icon" id="togglemenu">
+                        <i class="ti ti-menu-2"></i>
+                    </button>
+                </li>
+                <li class="hide-phone app-search">
+                    <form role="search" action="#" method="get">
+                        <input type="search" name="search" class="form-control top-search mb-0"
+                            placeholder="Type text...">
+                        <button type="submit"><i class="ti ti-search"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <!-- end navbar-->
+    </div>
+    <!-- Top Bar End -->
+    <!-- Top Bar End -->
+
+    <div class="page-wrapper">
+
+        <!-- Page Content-->
+        <div class="page-content-tab">
+            <div class="container-fluid">
+                {{-- yield start --}}
+                @yield('contant')
+                {{-- yield end --}}
+
+            </div><!-- container -->
+
+            <!--Start Footer-->
+            <!-- Footer Start -->
+            <footer class="footer text-center text-sm-start">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> {{ env('APP_NAME') }} <span class="text-muted d-none d-sm-inline-block float-end">Crafted
+                    with <i class="mdi mdi-heart text-danger"></i> by {{ env('HOST_NAME') }}</span>
+            </footer>
+            <!-- end Footer -->
+            <!--end footer-->
         </div>
-        <!-- Top Bar End -->
-        <!-- Top Bar End -->
+        <!-- end page content -->
+    </div>
+    <!-- end page-wrapper -->
 
-        <div class="page-wrapper">
+    <!-- Javascript  -->
+    <!-- vendor js -->
 
-            <!-- Page Content-->
-            <div class="page-content-tab">
-                <div class="container-fluid">
-                    {{-- yield start --}}
-                    @yield('contant')
-                    {{-- yield end --}}
+    <script src="{{ asset('backend') }}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/libs/feather-icons/feather.min.js"></script>
 
-                </div><!-- container -->
+    <script src="{{ asset('backend') }}/assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="{{ asset('backend') }}/assets/js/pages/analytics-index.init.js"></script>
+    <!-- App js -->
+    <script src="{{ asset('backend') }}/assets/js/app.js"></script>
 
-                <!--Start Footer-->
-                <!-- Footer Start -->
-                <footer class="footer text-center text-sm-start">
-                    &copy; <script>
-                        document.write(new Date().getFullYear())
-                    </script> Bookie <span class="text-muted d-none d-sm-inline-block float-end">Crafted with <i
-                            class="mdi mdi-heart text-danger"></i> by {{ env("HOST_NAME") }}</span>
-                </footer>
-                <!-- end Footer -->
-                <!--end footer-->
-            </div>
-            <!-- end page content -->
-        </div>
-        <!-- end page-wrapper -->
-
-        <!-- Javascript  -->
-        <!-- vendor js -->
-
-        <script src="{{ asset('backend') }}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="{{ asset('backend') }}/assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="{{ asset('backend') }}/assets/libs/feather-icons/feather.min.js"></script>
-
-        <script src="{{ asset('backend') }}/assets/libs/apexcharts/apexcharts.min.js"></script>
-        <script src="{{ asset('backend') }}/assets/js/pages/analytics-index.init.js"></script>
-        <!-- App js -->
-        <script src="{{ asset('backend') }}/assets/js/app.js"></script>
-
-    </body>
-    <!--end body-->
+</body>
+<!--end body-->
 
 <!-- Mirrored from mannatthemes.com/metrica/default/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jun 2024 06:11:52 GMT -->
+
 </html>

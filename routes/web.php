@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
@@ -30,6 +31,9 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     Route::get('tag/trash/page', [TagController::class , 'trash'])->name('tag.trash');
     Route::get('tag/trash/restore/{id}', [TagController::class , 'trash_restore'])->name('tag.trash.restore');
     Route::get('tag/trash/delete/{id}', [TagController::class , 'trash_delete'])->name('tag.trash.delete');
+
+    // blog
+    Route::resource('blog',BlogController::class);
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
