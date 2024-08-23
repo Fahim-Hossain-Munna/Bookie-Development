@@ -165,7 +165,7 @@
                                                 <a class='nav-link' href='{{ route('tag.create') }}'>Create Tags</a>
                                             </li><!--end nav-item-->
                                             <li class="nav-item">
-                                                <a class='nav-link' href='{{ route('tag.index') }}'>Tags Trash</a>
+                                                <a class='nav-link' href='{{ route('tag.trash') }}'>Tags Trash</a>
                                             </li><!--end nav-item-->
                                         </ul><!--end nav-->
                                     </div><!--end sidebarElements-->

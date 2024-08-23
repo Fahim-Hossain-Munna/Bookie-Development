@@ -27,6 +27,9 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     // tag
     Route::resource('tag',TagController::class);
     Route::post('tag/status/{slug}', [TagController::class , 'status'])->name('tag.status');
+    Route::get('tag/trash/page', [TagController::class , 'trash'])->name('tag.trash');
+    Route::get('tag/trash/restore/{id}', [TagController::class , 'trash_restore'])->name('tag.trash.restore');
+    Route::get('tag/trash/delete/{id}', [TagController::class , 'trash_delete'])->name('tag.trash.delete');
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

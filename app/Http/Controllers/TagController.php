@@ -123,4 +123,26 @@ class TagController extends Controller
         }
 
     }
+
+    public function trash(){
+
+        $tags = Tag::onlyTrashed()->get();
+
+        return view('dashboard.tag.trash',compact('tags'));
+
+    }
+    public function trash_restore($id){
+
+        $tags = Tag::withTrashed()->find($id)->restore();
+        return redirect()->route('tag.index')->with('tag_success','Tag Restore Update Successfull!!');
+
+    }
+    public function trash_delete($id){
+
+        $tags = Tag::withTrashed()->findOrFail($id)->forceDelete();
+
+        return redirect()->route('tag.trash')->with('tag_success','Tag Permanently Delete Successfull!!');
+    }
+
+
 }
