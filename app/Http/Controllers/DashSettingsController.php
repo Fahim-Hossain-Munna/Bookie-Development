@@ -124,10 +124,18 @@ class DashSettingsController extends Controller
         if(isset($_POST['imagebtn'])){
             $manager = new ImageManager(new Driver());
             if($request->hasFile('image')){
-                $new_name = auth()->id().'-'.auth()->user()->name.'-'.now()->format('d-m-Y').'.'.$request->file('image')->getClientOriginalExtension();
+                $new_name = auth()->id().'-'.auth()->user()->name.'-'.now()->format('d-m-Y').rand(0,9999).'.'.$request->file('image')->getClientOriginalExtension();
                 $img = $manager->read($request->file('image'))->scale(300, 200);
                 $img->save(base_path('public/uploads/profile/'.$new_name), 80);
 
+                $user = User::where('id',auth()->id())->first();
+
+                if($user->image){
+                    $existspath = base_path('public/uploads/profile/'.$user->image);
+                    if(file_exists($existspath)){
+                        unlink($existspath);
+                    }
+                }
                 User::findOrFail(auth()->id())->update([
                     'image' => $new_name,
                     'created_at' => now(),

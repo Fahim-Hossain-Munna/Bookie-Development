@@ -15,9 +15,9 @@
                             <div class="met-profile-main">
                                 <div class="met-profile-main-pic">
                                     @if (auth()->user()->image == 'default.png')
-                                    <img src="{{ asset('uploads/default') }}/{{auth()->user()->image}}" alt="" height="110" class="rounded-circle">
+                                    <img src="{{ asset('uploads/default') }}/{{auth()->user()->image}}" alt="" width="110" height="110" class="rounded-circle">
                                     @else
-                                    <img src="{{ asset('uploads/profile') }}/{{ auth()->user()->image }}" alt="" height="110" class="rounded-circle">
+                                    <img src="{{ asset('uploads/profile') }}/{{ auth()->user()->image }}" alt="" width="110" height="110" class="rounded-circle">
                                     @endif
                                     <span class="met-profile_main-pic-change">
                                         <i class="fas fa-camera"></i>
@@ -85,8 +85,11 @@
                 <form action="{{ route('settings.update',auth()->user()->id) }}" method="post" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
-                    <label class="form-label" for="setFullName">Profile Picture</label>
-                    <input type="file" class="form-control" id="setFullName"  name="image">
+                    <picture>
+                        <img id="demoimg" src="{{ asset('uploads/default/default.png') }}" alt="" style="width:100%; height:300px; object-fit:cover;">
+                    </picture>
+                    <label class="form-label mt-3" for="setFullName">Profile Picture</label>
+                    <input onchange="document.querySelector('#demoimg').src = window.URL.createObjectURL(this.files[0])" type="file" class="form-control" id="setFullName"  name="image">
                     <button type="submit" name="imagebtn" class="btn btn-primary btn-sm mt-3">Save Change</button>
                 </form> <!--end form-->
             </div><!--end card-body-->
