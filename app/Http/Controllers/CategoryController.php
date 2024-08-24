@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
@@ -135,6 +136,14 @@ class CategoryController extends Controller
     }
 
     public function trash_delete($id){
+
+        $category = Category::where('id',$id)->first();
+        if($category->image){
+            $localpath = base_path('public/uploads/category/'.$category->image);
+            if(file_exists($localpath)){
+                unlink($localpath);
+            }
+        }
         Category::withTrashed()->find($id)->forceDelete();
 
         return redirect()->route('category.index')->with('category_create','Category Delete Successfull!!');

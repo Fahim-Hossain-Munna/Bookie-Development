@@ -34,6 +34,7 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
 
     // blog
     Route::resource('blog',BlogController::class);
+    Route::post('blog/status/{slug}', [BlogController::class , 'status'])->name('blog.status');
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

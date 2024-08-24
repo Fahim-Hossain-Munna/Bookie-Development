@@ -36,13 +36,13 @@
                         @forelse ($blogs as $blog)
                             <tr>
                                 <td>
-                                    {{ $blog->index + 1 }}
+                                    {{ $loop->index + 1 }}
                                 </td>
                                 <td>
                                     {{ $blog->title }}
                                 </td>
                                 <td>
-                                    <form action="{{ route('tag.status',$blog->slug) }}" method="POST">
+                                    <form action="{{ route('blog.status',$blog->slug) }}" method="POST">
                                         @csrf
                                     <button type="submit" class="{{ ($blog->status == 'deactive') ? 'btn btn-danger btn-sm' : 'btn btn-success btn-sm' }}">{{ $blog->status }}</button>
                                     </form>
@@ -53,8 +53,8 @@
                                             <i class="las la-ellipsis-v font-20 text-muted"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dLabel11" style="">
-                                            <a class="dropdown-item" href="{{ route('tag.edit',$blog->id) }}"> <i class="ti ti-pencil"></i>  Edit</a>
-                                            <form action="{{ route('tag.destroy',$blog->id) }}" method="POST">
+                                            <a class="dropdown-item" href="{{ route('blog.edit',$blog->id) }}"> <i class="ti ti-pencil"></i>  Edit</a>
+                                            <form action="{{ route('blog.destroy',$blog->id) }}" method="POST">
                                                 @csrf
                                                 @method("DELETE")
                                             <button type="submit" class="dropdown-item"> <i class="ti ti-trash"></i>  Delete</button>
