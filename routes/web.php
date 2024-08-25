@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ColorController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SizeColorController;
+use App\Http\Controllers\SizeController;
 use App\Http\Controllers\TagController;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +42,11 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     // blog
     Route::resource('blog',BlogController::class);
     Route::post('blog/status/{slug}', [BlogController::class , 'status'])->name('blog.status');
+
+    // size and color
+    Route::resource('size&color',SizeColorController::class);
+
+
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

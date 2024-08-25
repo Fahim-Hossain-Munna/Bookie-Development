@@ -23,7 +23,7 @@
     <link href="{{ asset('backend') }}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
     {{-- tiny mce --}}
     <script src="https://cdn.tiny.cloud/1/xg4lsmt7zxrncgo50cmt0hw9rvg8z5u3o4zxlen93hqhgj9t/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-
+    @livewireStyles
 </head>
 
 <body id="body">
@@ -65,6 +65,11 @@
                             </a><!--end nav-link-->
                         </li><!--end nav-item-->
 
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Size & Color" data-bs-trigger="hover">
+                                <a href="#Metricasizecolor" id="authentication-tab" class="nav-link">
+                                    <i class="ti ti-color-picker menu-icon"></i>
+                                </a><!--end nav-link-->
+                            </li><!--end nav-item-->
                         {{-- <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Authentication" data-bs-trigger="hover">
                                 <a href="#MetricaAuthentication" id="authentication-tab" class="nav-link">
                                     <i class="ti ti-shield-lock menu-icon"></i>
@@ -211,6 +216,34 @@
                                         </li><!--end nav-item-->
                                         <li class="nav-item">
                                             <a class='nav-link' href='{{ route('tag.trash') }}'>Blogs Trash</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
+
+                        </ul><!--end navbar-nav--->
+                    </div><!--end sidebarCollapse_2-->
+                </div><!-- end tag -->
+                <div id="Metricasizecolor" class="main-icon-menu-pane  tab-pane" role="tabpanel"
+                    aria-labelledby="uikit-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Size & Color</h6>
+                    </div>
+                    <div class="collapse navbar-collapse" id="sidebarCollapse_2">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElementsblog" data-bs-toggle="collapse"
+                                    role="button" aria-expanded="false" aria-controls="sidebarElementsblog">
+                                    Lists
+                                </a>
+                                <div class="collapse " id="sidebarElementsblog">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('size&color.index') }}'>Show Size & Color</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('tag.trash') }}'>Size & Color Trash</a>
                                         </li><!--end nav-item-->
                                     </ul><!--end nav-->
                                 </div><!--end sidebarElements-->
@@ -566,7 +599,7 @@
     <script src="{{ asset('backend') }}/assets/js/pages/analytics-index.init.js"></script>
     <!-- App js -->
     <script src="{{ asset('backend') }}/assets/js/app.js"></script>
-
+    @livewireScripts
 </body>
 <!--end body-->
 
