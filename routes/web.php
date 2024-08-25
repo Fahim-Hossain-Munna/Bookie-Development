@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
+use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagController;
 use App\Models\Tag;
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('bookie')->get('/',[HomeController::class,'index'])->name('home');
+
 
 
 Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
