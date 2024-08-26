@@ -186,9 +186,15 @@
                 <ul class="list">
                     <li><i class="fa-light fa-comments"></i><a href="contact.html">Live Chat</a></li>
                     <li><i class="fa-light fa-user"></i>
-                        <button data-bs-toggle="modal" data-bs-target="#loginModal">
-                            Login
+                       @auth
+                       <a href="{{ route('dashboard') }}">
+                           Dashboard
+                       </a>
+                       @else
+                       <button data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
                         </button>
+                       @endauth
                     </li>
                 </ul>
             </div>

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('sizes', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
+            $table->string('size_title');
             $table->string('size');
             $table->string('status')->default('deactive');
             $table->softDeletes();

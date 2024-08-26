@@ -243,7 +243,7 @@
                                             <a class='nav-link' href='{{ route('size&color.index') }}'>Show Size & Color</a>
                                         </li><!--end nav-item-->
                                         <li class="nav-item">
-                                            <a class='nav-link' href='{{ route('tag.trash') }}'>Size & Color Trash</a>
+                                            <a class='nav-link' href='{{ route('size&color.trash') }}'>Size & Color Trash</a>
                                         </li><!--end nav-item-->
                                     </ul><!--end nav-->
                                 </div><!--end sidebarElements-->

@@ -13,11 +13,11 @@ use App\Http\Controllers\TagController;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::prefix('bookie')->get('/',[HomeController::class,'index'])->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home');
 
 
 
@@ -44,7 +44,20 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     Route::post('blog/status/{slug}', [BlogController::class , 'status'])->name('blog.status');
 
     // size and color
-    Route::resource('size&color',SizeColorController::class);
+    Route::get('size&color',[SizeColorController::class,'index'])->name('size&color.index');
+    Route::get('size&color/trash',[SizeColorController::class,'trash'])->name('size&color.trash');
+    // only size under size and color section
+    Route::post('size&color/size/insert',[SizeColorController::class,'store_size'])->name('size&color.store.size');
+    Route::post('size&color/size/edit/{id}',[SizeColorController::class,'update_size'])->name('size&color.update.size');
+    Route::post('size&color/size/delete/{id}',[SizeColorController::class,'delete_size'])->name('size&color.delete.size');
+    Route::post('size&color/size/restore/{id}',[SizeColorController::class,'restore_size'])->name('size&color.restore.size');
+    Route::post('size&color/size/parmanentdelete/{id}',[SizeColorController::class,'pdelete_size'])->name('size&color.pdelete.size');
+    // only color under size and color section
+    Route::post('size&color/color/insert',[SizeColorController::class,'color_store'])->name('size&color.store.color');
+    Route::post('size&color/color/edit/{id}',[SizeColorController::class,'color_update'])->name('size&color.update.color');
+    Route::post('size&color/color/delete/{id}',[SizeColorController::class,'color_delete'])->name('size&color.delete.color');
+    Route::post('size&color/color/restore/{id}',[SizeColorController::class,'color_restore'])->name('size&color.restore.color');
+    Route::post('size&color/color/parmanentdelete/{id}',[SizeColorController::class,'color_pdelete'])->name('size&color.pdelete.color');
 
 
 

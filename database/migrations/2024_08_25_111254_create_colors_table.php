@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('colors', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
+            $table->string('color_title');
             $table->string('color');
             $table->string('status')->default('deactive');
             $table->softDeletes();
