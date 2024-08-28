@@ -70,6 +70,11 @@
                                     <i class="ti ti-color-picker menu-icon"></i>
                                 </a><!--end nav-link-->
                             </li><!--end nav-item-->
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Products" data-bs-trigger="hover">
+                                <a href="#Metricaproduct" id="authentication-tab" class="nav-link">
+                                    <i class="ti ti-building-store menu-icon"></i>
+                                </a><!--end nav-link-->
+                            </li><!--end nav-item-->
                         {{-- <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Authentication" data-bs-trigger="hover">
                                 <a href="#MetricaAuthentication" id="authentication-tab" class="nav-link">
                                     <i class="ti ti-shield-lock menu-icon"></i>
@@ -244,6 +249,34 @@
                                         </li><!--end nav-item-->
                                         <li class="nav-item">
                                             <a class='nav-link' href='{{ route('size&color.trash') }}'>Size & Color Trash</a>
+                                        </li><!--end nav-item-->
+                                    </ul><!--end nav-->
+                                </div><!--end sidebarElements-->
+                            </li><!--end nav-item-->
+
+                        </ul><!--end navbar-nav--->
+                    </div><!--end sidebarCollapse_2-->
+                </div><!-- end tag -->
+                <div id="Metricaproduct" class="main-icon-menu-pane  tab-pane" role="tabpanel"
+                    aria-labelledby="uikit-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Products</h6>
+                    </div>
+                    <div class="collapse navbar-collapse" id="sidebarCollapse_2">
+                        <!-- Navigation -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sidebarElementsblog" data-bs-toggle="collapse"
+                                    role="button" aria-expanded="false" aria-controls="sidebarElementsblog">
+                                    Lists
+                                </a>
+                                <div class="collapse " id="sidebarElementsblog">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('product.index') }}'>Show Products</a>
+                                        </li><!--end nav-item-->
+                                        <li class="nav-item">
+                                            <a class='nav-link' href='{{ route('size&color.trash') }}'>Products Trash</a>
                                         </li><!--end nav-item-->
                                     </ul><!--end nav-->
                                 </div><!--end sidebarElements-->

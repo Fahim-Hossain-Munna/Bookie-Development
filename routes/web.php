@@ -6,6 +6,7 @@ use App\Http\Controllers\ColorController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SizeColorController;
 use App\Http\Controllers\SizeController;
@@ -59,7 +60,8 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     Route::post('size&color/color/restore/{id}',[SizeColorController::class,'color_restore'])->name('size&color.restore.color');
     Route::post('size&color/color/parmanentdelete/{id}',[SizeColorController::class,'color_pdelete'])->name('size&color.pdelete.color');
 
-
+    // products section
+    Route::resource('product',ProductController::class);
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
