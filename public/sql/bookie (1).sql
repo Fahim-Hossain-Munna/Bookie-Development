@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 25, 2024 at 12:05 PM
+-- Generation Time: Aug 29, 2024 at 11:52 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.9
 
@@ -136,12 +136,24 @@ INSERT INTO `categories` (`id`, `title`, `slug`, `image`, `status`, `deleted_at`
 CREATE TABLE `colors` (
   `id` bigint UNSIGNED NOT NULL,
   `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `color_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `color` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `colors`
+--
+
+INSERT INTO `colors` (`id`, `user_id`, `color_title`, `color`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, '1', 'red', '#ff0000', 'deactive', NULL, '2024-08-26 00:14:36', '2024-08-26 00:14:36'),
+(2, '1', 'black', '#000000', 'deactive', NULL, '2024-08-26 00:15:02', '2024-08-26 00:15:02'),
+(3, '1', 'yellow', '#ffd500', 'deactive', NULL, '2024-08-26 00:15:18', '2024-08-26 04:33:21'),
+(4, '1', 'sky paste', '#9cb0ec', 'deactive', NULL, '2024-08-26 03:34:57', '2024-08-26 03:34:57'),
+(5, '1', 'pink', '#ff00c8', 'deactive', NULL, '2024-08-26 03:35:46', '2024-08-26 04:36:29');
 
 -- --------------------------------------------------------
 
@@ -218,8 +230,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2024_08_22_063313_create_tags_table', 2),
 (6, '2024_08_23_114934_create_blogs_table', 3),
 (7, '2024_08_23_143925_create_blog_tag_table', 3),
-(8, '2024_08_25_111247_create_sizes_table', 4),
-(9, '2024_08_25_111254_create_colors_table', 4);
+(12, '2024_08_25_111247_create_sizes_table', 4),
+(13, '2024_08_25_111254_create_colors_table', 4),
+(21, '2024_08_28_102552_create_products_table', 5),
+(22, '2024_08_29_092043_create_product_tag_table', 5);
 
 -- --------------------------------------------------------
 
@@ -232,6 +246,67 @@ CREATE TABLE `password_reset_tokens` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_short_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_unit` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hole_price` float DEFAULT NULL,
+  `purchase_price` float DEFAULT NULL,
+  `selling_price` float DEFAULT NULL,
+  `discount_price` float DEFAULT NULL,
+  `discount_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `feature` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `today_deal` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `vat_tax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_rate` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `user_id`, `category_id`, `product_name`, `product_slug`, `product_code`, `product_short_description`, `product_description`, `product_unit`, `product_thumbnail`, `hole_price`, `purchase_price`, `selling_price`, `discount_price`, `discount_type`, `feature`, `today_deal`, `vat_tax`, `shipping_type`, `shipping_rate`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(2, '1', '5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 656, 44, 34, 'flat', 'on', NULL, '4', 'outer', NULL, 'deactive', NULL, '2024-08-29 04:01:56', '2024-08-29 04:01:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_tag`
+--
+
+CREATE TABLE `product_tag` (
+  `product_id` bigint UNSIGNED NOT NULL,
+  `tag_id` bigint UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `product_tag`
+--
+
+INSERT INTO `product_tag` (`product_id`, `tag_id`) VALUES
+(2, 8),
+(2, 6),
+(2, 5),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -253,8 +328,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('4X2NhuDX0lSgGmSGmSO3kYL1sNFEg1wPZ0KtXXbc', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiY2hJeWtyWDRDajBNSVp1T3NzSXlxZHZVM0tGZkZWMlg2NlBZbU02eCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29raWUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1724561508),
-('LsxECrD0m6oo1AQg4tHkarlxKcvqxnDiQmLKR1hy', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSGN3MmJBVmVrY3drZVNOa0Zma1NqYWZSSUVXbWlOc0dkV2k0Z1hleSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM5OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYm9va2llL3NpemUmY29sb3IiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1724584877);
+('TfnQltleqGr8P90StkFGNrrI9zCyhJEHuQhh0xiO', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUUswd24zdDBpMDRxMEc5SW5BcjlpbGU2VjVXVkxyaFoxOVhwMGdnbSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29raWUvcHJvZHVjdCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1724925717);
 
 -- --------------------------------------------------------
 
@@ -265,12 +339,23 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 CREATE TABLE `sizes` (
   `id` bigint UNSIGNED NOT NULL,
   `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `size_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `size` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sizes`
+--
+
+INSERT INTO `sizes` (`id`, `user_id`, `size_title`, `size`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, '1', 'extra small', 'xs', 'deactive', NULL, '2024-08-26 03:47:06', '2024-08-26 03:47:06'),
+(2, '1', 'small', 's', 'deactive', NULL, '2024-08-26 03:47:36', '2024-08-26 03:47:36'),
+(3, '1', 'medium', 'm', 'deactive', NULL, '2024-08-25 23:41:46', '2024-08-26 04:36:24'),
+(4, '1', 'large', 'l', 'deactive', NULL, '2024-08-26 00:13:20', '2024-08-26 03:49:15');
 
 -- --------------------------------------------------------
 
@@ -404,6 +489,19 @@ ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`email`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product_tag`
+--
+ALTER TABLE `product_tag`
+  ADD KEY `product_tag_product_id_foreign` (`product_id`),
+  ADD KEY `product_tag_tag_id_foreign` (`tag_id`);
+
+--
 -- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
@@ -450,7 +548,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `colors`
 --
 ALTER TABLE `colors`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -468,13 +566,19 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sizes`
 --
 ALTER TABLE `sizes`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tags`
@@ -498,6 +602,13 @@ ALTER TABLE `users`
 ALTER TABLE `blog_tag`
   ADD CONSTRAINT `blog_tag_blog_id_foreign` FOREIGN KEY (`blog_id`) REFERENCES `blogs` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `blog_tag_tag_id_foreign` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `product_tag`
+--
+ALTER TABLE `product_tag`
+  ADD CONSTRAINT `product_tag_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `product_tag_tag_id_foreign` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
