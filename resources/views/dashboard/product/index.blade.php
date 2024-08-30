@@ -41,7 +41,7 @@
                                     {{ $product->title }}
                                 </td>
                                 <td>
-                                    <form action="{{ route('blog.status',$product->slug) }}" method="POST">
+                                    <form action="" method="POST">
                                         @csrf
                                     <button type="submit" class="{{ ($product->status == 'deactive') ? 'btn btn-danger btn-sm' : 'btn btn-success btn-sm' }}">{{ $product->status }}</button>
                                     </form>

@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
@@ -27,8 +28,8 @@ return new class extends Migration
             $table->float('selling_price',2)->nullable();
             $table->float('discount_price',2)->nullable();
             $table->string('discount_type')->nullable();
-            $table->string('feature')->nullable();
-            $table->string('today_deal')->nullable();
+            $table->string('feature')->default('deactive');
+            $table->string('today_deal')->default('deactive');
             $table->string('vat_tax')->nullable();
             $table->string('shipping_type')->nullable();
             $table->float('shipping_rate',2)->nullable();
