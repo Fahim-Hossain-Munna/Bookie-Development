@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('product_name')->nullable();
             $table->string('product_slug')->nullable();
             $table->string('product_code')->nullable();
-            $table->string('product_short_description')->nullable();
-            $table->string('product_description')->nullable();
+            $table->longText('product_short_description')->nullable();
+            $table->longText('product_description')->nullable();
             $table->string('product_unit')->nullable();
             $table->string('product_thumbnail')->nullable();
             $table->float('hole_price',2)->nullable();

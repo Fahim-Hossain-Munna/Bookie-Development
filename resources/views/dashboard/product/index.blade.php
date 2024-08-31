@@ -28,6 +28,8 @@
                             <th>Serial ID</th>
                             <th>Title</th>
                             <th>Status</th>
+                            <th>Today Deal</th>
+                            <th>Feature</th>
                             <th class="text-end">Action</th>
                         </tr>
                         </thead>
@@ -38,12 +40,33 @@
                                     {{ $loop->index + 1 }}
                                 </td>
                                 <td>
-                                    {{ $product->title }}
+                                    {{ $product->product_name }}
                                 </td>
                                 <td>
                                     <form action="" method="POST">
                                         @csrf
-                                    <button type="submit" class="{{ ($product->status == 'deactive') ? 'btn btn-danger btn-sm' : 'btn btn-success btn-sm' }}">{{ $product->status }}</button>
+                                        <div class="form-check form-switch form-switch-info" name="status">
+                                            <input {{ $product->status == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="status" value="active">
+                                            <label class="form-check-label" for="customSwitchInfos">Status</label>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="" method="POST">
+                                        @csrf
+                                        <div class="form-check form-switch form-switch-info" name="status">
+                                            <input {{ $product->today_deal == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="today_deal" value="active">
+                                            <label class="form-check-label" for="customSwitchInfos">Today Deal</label>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="" method="POST">
+                                        @csrf
+                                        <div class="form-check form-switch form-switch-info" name="status">
+                                            <input {{ $product->feature == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="feature" value="active">
+                                            <label class="form-check-label" for="customSwitchInfos">Feature</label>
+                                        </div>
                                     </form>
                                 </td>
                                 <td class="text-end">

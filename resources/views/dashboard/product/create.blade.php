@@ -76,7 +76,7 @@
                             @endfor
                     </select>
 
-                    <div class="form-check form-switch form-switch-info mt-3">
+                    {{-- <div class="form-check form-switch form-switch-info mt-3">
                         <input class="form-check-input" type="checkbox" id="customSwitchInfof" name="feature" value="active">
                         <label class="form-check-label" for="customSwitchInfof">Feature</label>
                     </div>
@@ -87,7 +87,7 @@
                     <div class="form-check form-switch form-switch-info mt-3" name="status">
                         <input class="form-check-input" type="checkbox" id="customSwitchInfos" name="status" value="active">
                         <label class="form-check-label" for="customSwitchInfos">Status</label>
-                    </div>
+                    </div> --}}
                     <button type="submit" class="btn btn-primary btn-sm mt-3">Save Change</button>
                 </form> <!--end form-->
             </div><!--end card-body-->

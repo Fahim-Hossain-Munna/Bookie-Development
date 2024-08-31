@@ -62,9 +62,6 @@ class ProductController extends Controller
                     'shipping_type' => $request->shipping_type,
                     'shipping_rate' => $request->shipping_price,
                     'vat_tax' => $request->vat_tax,
-                    'today_deal' => $request->today_sale,
-                    'feature' => $request->feature,
-                    'status' => $request->status,
                     'created_at' => now(),
                 ]);
 
@@ -90,9 +87,6 @@ class ProductController extends Controller
                     'shipping_type' => $request->shipping_type,
                     'shipping_rate' => $request->shipping_price,
                     'vat_tax' => $request->vat_tax,
-                    'today_deal' => $request->today_sale,
-                    'feature' => $request->feature,
-                    'status' => $request->status,
                     'created_at' => now(),
                 ]);
 
