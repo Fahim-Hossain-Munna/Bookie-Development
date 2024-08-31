@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 29, 2024 at 11:52 AM
+-- Generation Time: Aug 31, 2024 at 12:09 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.9
 
@@ -232,8 +232,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2024_08_23_143925_create_blog_tag_table', 3),
 (12, '2024_08_25_111247_create_sizes_table', 4),
 (13, '2024_08_25_111254_create_colors_table', 4),
-(21, '2024_08_28_102552_create_products_table', 5),
-(22, '2024_08_29_092043_create_product_tag_table', 5);
+(29, '2024_08_28_102552_create_products_table', 5),
+(30, '2024_08_29_092043_create_product_tag_table', 5);
 
 -- --------------------------------------------------------
 
@@ -260,8 +260,8 @@ CREATE TABLE `products` (
   `product_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `product_slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `product_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `product_short_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `product_description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_short_description` longtext COLLATE utf8mb4_unicode_ci,
+  `product_description` longtext COLLATE utf8mb4_unicode_ci,
   `product_unit` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `product_thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `hole_price` float DEFAULT NULL,
@@ -269,11 +269,11 @@ CREATE TABLE `products` (
   `selling_price` float DEFAULT NULL,
   `discount_price` float DEFAULT NULL,
   `discount_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `feature` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `today_deal` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `feature` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `today_deal` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `vat_tax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `shipping_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `shipping_rate` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_rate` float DEFAULT NULL,
   `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -285,7 +285,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `user_id`, `category_id`, `product_name`, `product_slug`, `product_code`, `product_short_description`, `product_description`, `product_unit`, `product_thumbnail`, `hole_price`, `purchase_price`, `selling_price`, `discount_price`, `discount_type`, `feature`, `today_deal`, `vat_tax`, `shipping_type`, `shipping_rate`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(2, '1', '5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 656, 44, 34, 'flat', 'on', NULL, '4', 'outer', NULL, 'deactive', NULL, '2024-08-29 04:01:56', '2024-08-29 04:01:56');
+(1, '1', '6', 'Fiver Gig', 'fiver-gig', '#AbCD123', '<p>Hey! I am PHP Senior( 8+ years) with great knowledge working of 1)WordPress/Woo commerce 2 Laravel 3)JavaScript 4HTML 5)CSS 6)CodeIgniter I love work with Laravel/WordPress and have great experience with customization &amp; optimization of theme , creating &amp; support plugin , etc. Let\'s start to work! Kind regards, Adeel</p>', '<p>Discuss requirements before ordering. Thank you.t!!</p>\r\n<p>&nbsp;</p>\r\n<p>If you\'re looking for a skilled PHP developer who can create or fix Laravel, CodeIgniter, or any PHP website, then you\'ve come to the right place.</p>\r\n<p>&nbsp;</p>\r\n<p>As a PHP developer, I understand the ins and outs of creating robust web applications using some of the most popular PHP frameworks available today. Whether you need a brand new website built from scratch or an existing fixed and improved, I can help.</p>\r\n<p>I can work with your existing codebase, or start from scratch to create a custom PHP website that perfectly meets your needs. I can create websites that are responsive and user-friendly, with a clean and modern design that showcases your brand and captures the attention of your audience.</p>\r\n<p>&nbsp;</p>\r\n<p>I have experience with a range of PHP frameworks, including Laravel, CodeIgniter, Symfony, and CakePHP, among others. I can work with databases such as MySQL, PostgreSQL, and MongoDB, and I am well-versed in HTML, CSS, and JavaScript.</p>\r\n<p>Whether you need a simple or a complex web application with advanced features, I can help you achieve your goals.</p>\r\n<p>Contact me today to discuss your project and see how I can help you</p>', '1', '1-Fiver Gig-7685-31-08-2024.png', NULL, 500, 800, 100, 'flat', 'deactive', 'deactive', '3', 'inner', 60, 'deactive', NULL, '2024-08-31 03:44:35', '2024-08-31 03:44:35');
 
 -- --------------------------------------------------------
 
@@ -303,10 +303,8 @@ CREATE TABLE `product_tag` (
 --
 
 INSERT INTO `product_tag` (`product_id`, `tag_id`) VALUES
-(2, 8),
-(2, 6),
-(2, 5),
-(2, 4);
+(1, 8),
+(1, 7);
 
 -- --------------------------------------------------------
 
@@ -328,6 +326,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('cOkZhqgadOU6VuyZIHphSza7VK9ukps31rIbktne', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiOHZmazlPTnR1NHFGeTdUbnA4ODFidmlFTXFET2JVZnJodm82dURkWSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozNjoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2Jvb2tpZS9wcm9kdWN0Ijt9fQ==', 1725098374),
 ('TfnQltleqGr8P90StkFGNrrI9zCyhJEHuQhh0xiO', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUUswd24zdDBpMDRxMEc5SW5BcjlpbGU2VjVXVkxyaFoxOVhwMGdnbSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29raWUvcHJvZHVjdCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1724925717);
 
 -- --------------------------------------------------------
@@ -566,13 +565,13 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `sizes`
