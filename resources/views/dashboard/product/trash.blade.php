@@ -2,7 +2,7 @@
 
 @section('contant')
 
- <x-back-page-header title="Blog Trashes"></x-back-page-header>
+ <x-back-page-header title="Product Trashes"></x-back-page-header>
 
 
     <div class="row">
@@ -10,7 +10,7 @@
 
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h4>Blog</h4>
+                    <h4>Product</h4>
                 </div><!--end card-header-->
                 <div class="card-body">
                     <div class="table-responsive">
@@ -23,13 +23,13 @@
                             </tr>
                             </thead>
                             <tbody>
-                               @forelse ($blogs as $blog)
+                               @forelse ($products as $product)
                                  <tr>
                                      <td>
                                          {{ $loop->index + 1 }}
                                      </td>
                                      <td>
-                                         {{ $blog->title }}
+                                         {{ $product->product_name }}
                                      </td>
 
                                      <td class="text-end">
@@ -38,11 +38,11 @@
                                                  <i class="las la-ellipsis-v font-20 text-muted"></i>
                                              </a>
                                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dLabel11" style="">
-                                                <form action="{{ route('blog.restore',$blog->id) }}" method="POST">
+                                                <form action="{{ route('product.restore',$product->id) }}" method="POST">
                                                     @csrf
                                                    <button type="submit" class="dropdown-item"> <i class="ti ti-pencil"></i>  Restore</button>
                                                 </form>
-                                                 <form action="{{ route('blog.permanentdelete',$blog->id) }}" method="POST">
+                                                 <form action="{{ route('size&color.pdelete.size',$product->id) }}" method="POST">
                                                      @csrf
                                                  <button type="submit" class="dropdown-item"> <i class="ti ti-trash"></i> Permanent Delete</button>
                                                  </form>

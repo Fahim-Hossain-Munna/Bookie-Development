@@ -43,6 +43,9 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     // blog
     Route::resource('blog',BlogController::class);
     Route::post('blog/status/{slug}', [BlogController::class , 'status'])->name('blog.status');
+    Route::get('blog/trash/page', [BlogController::class , 'trash'])->name('blog.trash');
+    Route::post('blog/restore/page/{id}', [BlogController::class , 'restore'])->name('blog.restore');
+    Route::post('blog/permanentdelete/page/{id}', [BlogController::class , 'permanentdelete'])->name('blog.permanentdelete');
 
     // size and color
     Route::get('size&color',[SizeColorController::class,'index'])->name('size&color.index');
@@ -62,6 +65,9 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
 
     // products section
     Route::resource('product',ProductController::class);
+    Route::get('product/trash/page',[ProductController::class,'trash'])->name('product.trash');
+    Route::post('product/trash/restore/{id}',[ProductController::class,'restore'])->name('product.restore');
+    Route::post('product/trash/permanentdelete/{id}',[ProductController::class,'pdelete'])->name('product.pdelete');
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

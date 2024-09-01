@@ -205,4 +205,27 @@ class BlogController extends Controller
             return redirect()->route('blog.index')->with('blog_success','Blog Status Update Successfull!!');
         }
     }
+
+
+    public function trash(){
+        $blogs = Blog::onlyTrashed()->get();
+        return view('dashboard.blog.trash',compact('blogs'));
+    }
+    public function restore($id){
+         Blog::withTrashed()->findOrFail($id)->restore();
+        return redirect()->route('blog.index')->with('blog_success','Product Restore Successfull!!');
+    }
+    public function permanentdelete($id){
+
+        $blog = Blog::where('id',$id)->first();
+
+        if($blog->image){
+            $oldpath = base_path('public/uploads/blog/'.$blog->image);
+            if(file_exists($oldpath)){
+                unlink($oldpath);
+            }
+        }
+        Blog::withTrashed()->findOrFail($id)->forceDelete();
+        return redirect()->route('blog.index')->with('blog_success','Product Parmanent Delete Successfull!!');
+    }
 }

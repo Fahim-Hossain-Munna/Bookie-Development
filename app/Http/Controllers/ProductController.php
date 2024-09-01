@@ -115,9 +115,6 @@ class ProductController extends Controller
                     'shipping_type' => $request->shipping_type,
                     'shipping_rate' => $request->shipping_price,
                     'vat_tax' => $request->vat_tax,
-                    'today_deal' => $request->today_sale,
-                    'feature' => $request->feature,
-                    'status' => $request->status,
                     'created_at' => now(),
                 ]);
 
@@ -143,9 +140,6 @@ class ProductController extends Controller
                     'shipping_type' => $request->shipping_type,
                     'shipping_rate' => $request->shipping_price,
                     'vat_tax' => $request->vat_tax,
-                    'today_deal' => $request->today_sale,
-                    'feature' => $request->feature,
-                    'status' => $request->status,
                     'created_at' => now(),
                 ]);
 
@@ -171,7 +165,11 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $categories = Category::latest()->get();
+        $tags = Tag::latest()->get();
+
+        // return $product->manywithtags->pluck('id')->toArray();
+        return view('dashboard.product.edit',compact('product','categories','tags'));
     }
 
     /**
@@ -179,7 +177,104 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $manager = new ImageManager(new Driver());
+        if($request->hasFile('thumbnail')){
+            if($product->product_thumbnail){
+                $old_path = base_path('public/uploads/product/'.$product->product_thumbnail);
+                if(file_exists($old_path)){
+                    unlink($old_path);
+                }
+            }
+            $new_name = auth()->user()->id .'-'. $request->title .'-'. rand(1111,9999) .'-'.now()->format('d-m-Y').'.'.$request->file('thumbnail')->getClientOriginalExtension();
+            $image = $manager->read($request->file('thumbnail'));
+            $image->toPng()->save(base_path('public/uploads/product/'.$new_name),80);
+
+            $product = Product::findOrFail($product->id);
+            if($request->slug){
+                $product->category_id = $request->category_id;
+                    $product->product_thumbnail = $new_name;
+                    $product->product_name = $request->title;
+                    $product->product_slug = Str::slug($request->slug);
+                    $product->product_code = $request->code;
+                    $product->product_unit = $request->unit;
+                    $product->product_short_description = $request->shortdescription;
+                    $product->product_description = $request->description;
+                    $product->purchase_price = $request->purchase_price;
+                    $product->selling_price = $request->selling_price;
+                    $product->discount_type = $request->discount_type;
+                    $product->discount_price = $request->discount_price;
+                    $product->shipping_type = $request->shipping_type;
+                    $product->shipping_rate = $request->shipping_price;
+                    $product->vat_tax = $request->vat_tax;
+                    $product->created_at = now();
+                    $product->manywithtags()->sync($request->tag_ids);
+                    $product->save();
+                    return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+
+            }else{
+                $product->category_id = $request->category_id;
+                    $product->product_thumbnail = $new_name;
+                    $product->product_name = $request->title;
+                    $product->product_slug = Str::slug($request->title);
+                    $product->product_code = $request->code;
+                    $product->product_unit = $request->unit;
+                    $product->product_short_description = $request->shortdescription;
+                    $product->product_description = $request->description;
+                    $product->purchase_price = $request->purchase_price;
+                    $product->selling_price = $request->selling_price;
+                    $product->discount_type = $request->discount_type;
+                    $product->discount_price = $request->discount_price;
+                    $product->shipping_type = $request->shipping_type;
+                    $product->shipping_rate = $request->shipping_price;
+                    $product->vat_tax = $request->vat_tax;
+                    $product->created_at = now();
+                    $product->manywithtags()->sync($request->tag_ids);
+                    $product->save();
+                    return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+            }
+
+        }else{
+            if($request->slug){
+                    $product->category_id = $request->category_id;
+                    $product->product_name = $request->title;
+                    $product->product_slug = Str::slug($request->slug);
+                    $product->product_code = $request->code;
+                    $product->product_unit = $request->unit;
+                    $product->product_short_description = $request->shortdescription;
+                    $product->product_description = $request->description;
+                    $product->purchase_price = $request->purchase_price;
+                    $product->selling_price = $request->selling_price;
+                    $product->discount_type = $request->discount_type;
+                    $product->discount_price = $request->discount_price;
+                    $product->shipping_type = $request->shipping_type;
+                    $product->shipping_rate = $request->shipping_price;
+                    $product->vat_tax = $request->vat_tax;
+                    $product->created_at = now();
+                    $product->manywithtags()->sync($request->tag_ids);
+                    $product->save();
+                    return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+            }else{
+                $product->category_id = $request->category_id;
+                    $product->product_name = $request->title;
+                    $product->product_slug = Str::slug($request->title);
+                    $product->product_code = $request->code;
+                    $product->product_unit = $request->unit;
+                    $product->product_short_description = $request->shortdescription;
+                    $product->product_description = $request->description;
+                    $product->purchase_price = $request->purchase_price;
+                    $product->selling_price = $request->selling_price;
+                    $product->discount_type = $request->discount_type;
+                    $product->discount_price = $request->discount_price;
+                    $product->shipping_type = $request->shipping_type;
+                    $product->shipping_rate = $request->shipping_price;
+                    $product->vat_tax = $request->vat_tax;
+                    $product->created_at = now();
+                    $product->manywithtags()->sync($request->tag_ids);
+                    $product->save();
+                    return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+            }
+        }
+
     }
 
     /**
@@ -187,6 +282,31 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        Product::findOrFail($product->id)->delete();
+        return redirect()->route('product.index')->with('product_status','Product Delete Successfull!!');
+    }
+
+
+    public function trash()
+    {
+        $products = Product::onlyTrashed()->get();
+        return view('dashboard.product.trash',compact('products'));
+    }
+    public function restore($id)
+    {
+        Product::withTrashed()->findOrFail($id)->restore();
+        return redirect()->route('product.index')->with('product_status','Product Restore Successfull!!');
+    }
+    public function pdelete($id)
+    {
+        $product = Product::where('id',$id)->first();
+        if($product->product_thumbnail){
+            $old_path = base_path('public/uploads/product/'.$product->product_thumbnail);
+            if(file_exists($old_path)){
+                unlink($old_path);
+            }
+        }
+        Product::withTrashed()->findOrFail($id)->forceDelete();
+        return redirect()->route('product.index')->with('product_status','Product Parmanent Delete Successfull!!');
     }
 }

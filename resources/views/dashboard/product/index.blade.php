@@ -6,11 +6,11 @@
 <div class="row">
     <div class="col-lg-12">
 
-        {{-- @if (session('tag_success'))
+        @if (session('product_status'))
         <div class="alert alert-outline-success" role="alert">
-            <strong>Well done!</strong> {{session('tag_success')}}.
+            <strong>Well done!</strong> {{session('product_status')}}.
         </div>
-        @endif --}}
+        @endif
 
         <div class="card">
             <div class="card-header d-flex justify-content-end">
@@ -75,8 +75,8 @@
                                             <i class="las la-ellipsis-v font-20 text-muted"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dLabel11" style="">
-                                            <a class="dropdown-item" href="{{ route('blog.edit',$product->id) }}"> <i class="ti ti-pencil"></i>  Edit</a>
-                                            <form action="{{ route('blog.destroy',$product->id) }}" method="POST">
+                                            <a class="dropdown-item" href="{{ route('product.edit',$product->id) }}"> <i class="ti ti-pencil"></i>  Edit</a>
+                                            <form action="{{ route('product.destroy',$product->id) }}" method="POST">
                                                 @csrf
                                                 @method("DELETE")
                                             <button type="submit" class="dropdown-item"> <i class="ti ti-trash"></i>  Delete</button>

@@ -220,7 +220,7 @@
                                             <a class='nav-link' href='{{ route('blog.create') }}'>Create Blogs</a>
                                         </li><!--end nav-item-->
                                         <li class="nav-item">
-                                            <a class='nav-link' href='{{ route('tag.trash') }}'>Blogs Trash</a>
+                                            <a class='nav-link' href='{{ route('blog.trash') }}'>Blogs Trash</a>
                                         </li><!--end nav-item-->
                                     </ul><!--end nav-->
                                 </div><!--end sidebarElements-->
@@ -276,7 +276,7 @@
                                             <a class='nav-link' href='{{ route('product.index') }}'>Show Products</a>
                                         </li><!--end nav-item-->
                                         <li class="nav-item">
-                                            <a class='nav-link' href='{{ route('size&color.trash') }}'>Products Trash</a>
+                                            <a class='nav-link' href='{{ route('product.trash') }}'>Products Trash</a>
                                         </li><!--end nav-item-->
                                     </ul><!--end nav-->
                                 </div><!--end sidebarElements-->
@@ -625,6 +625,7 @@
     <!-- vendor js -->
 
     <script src="{{ asset('backend') }}/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {{-- select 2 --}}
     <script src="{{ asset('backend') }}/assets/libs/simplebar/simplebar.min.js"></script>
     <script src="{{ asset('backend') }}/assets/libs/feather-icons/feather.min.js"></script>
 
@@ -632,6 +633,7 @@
     <script src="{{ asset('backend') }}/assets/js/pages/analytics-index.init.js"></script>
     <!-- App js -->
     <script src="{{ asset('backend') }}/assets/js/app.js"></script>
+
     @livewireScripts
 </body>
 <!--end body-->
