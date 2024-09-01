@@ -206,7 +206,7 @@ class ProductController extends Controller
                     $product->shipping_type = $request->shipping_type;
                     $product->shipping_rate = $request->shipping_price;
                     $product->vat_tax = $request->vat_tax;
-                    $product->created_at = now();
+                    $product->updated_at = now();
                     $product->manywithtags()->sync($request->tag_ids);
                     $product->save();
                     return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
@@ -227,7 +227,7 @@ class ProductController extends Controller
                     $product->shipping_type = $request->shipping_type;
                     $product->shipping_rate = $request->shipping_price;
                     $product->vat_tax = $request->vat_tax;
-                    $product->created_at = now();
+                    $product->updated_at = now();
                     $product->manywithtags()->sync($request->tag_ids);
                     $product->save();
                     return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
@@ -249,7 +249,7 @@ class ProductController extends Controller
                     $product->shipping_type = $request->shipping_type;
                     $product->shipping_rate = $request->shipping_price;
                     $product->vat_tax = $request->vat_tax;
-                    $product->created_at = now();
+                    $product->updated_at = now();
                     $product->manywithtags()->sync($request->tag_ids);
                     $product->save();
                     return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
@@ -268,7 +268,7 @@ class ProductController extends Controller
                     $product->shipping_type = $request->shipping_type;
                     $product->shipping_rate = $request->shipping_price;
                     $product->vat_tax = $request->vat_tax;
-                    $product->created_at = now();
+                    $product->updated_at = now();
                     $product->manywithtags()->sync($request->tag_ids);
                     $product->save();
                     return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
@@ -284,6 +284,62 @@ class ProductController extends Controller
     {
         Product::findOrFail($product->id)->delete();
         return redirect()->route('product.index')->with('product_status','Product Delete Successfull!!');
+    }
+
+    public function status(Request $request,$id)
+    {
+        $product = Product::where('id',$id)->first();
+
+        if($product->status == 'deactive'){
+            Product::findOrFail($product->id)->update([
+                'status' => 'active',
+                'updated_at' => now(),
+            ]);
+            return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+        }else{
+            Product::findOrFail($product->id)->update([
+                'status' => 'deactive',
+                'updated_at' => now(),
+            ]);
+            return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+        }
+    }
+
+    public function todaydeal($id)
+    {
+        $product = Product::where('id',$id)->first();
+
+        if($product->today_deal == 'deactive'){
+            Product::findOrFail($product->id)->update([
+                'today_deal' => 'active',
+                'updated_at' => now(),
+            ]);
+            return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+        }else{
+            Product::findOrFail($product->id)->update([
+                'today_deal' => 'deactive',
+                'updated_at' => now(),
+            ]);
+            return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+        }
+    }
+    public function feature($id)
+    {
+        $product = Product::where('id',$id)->first();
+
+        if($product->feature == 'deactive'){
+            Product::findOrFail($product->id)->update([
+                'feature' => 'active',
+                'updated_at' => now(),
+            ]);
+            return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+        }else{
+            Product::findOrFail($product->id)->update([
+                'feature' => 'deactive',
+                'updated_at' => now(),
+            ]);
+            return redirect()->route('product.index')->with('product_status','Product Update Successfully Complete');
+        }
     }
 
 

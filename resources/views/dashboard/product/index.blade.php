@@ -43,28 +43,28 @@
                                     {{ $product->product_name }}
                                 </td>
                                 <td>
-                                    <form action="" method="POST">
+                                    <form id="statusForm" action="{{ route('product.status',$product->id) }}" method="POST">
                                         @csrf
                                         <div class="form-check form-switch form-switch-info" name="status">
-                                            <input {{ $product->status == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="status" value="active">
+                                            <input onchange="document.getElementById('statusForm').submit()" {{ $product->status == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="status" value="active">
                                             <label class="form-check-label" for="customSwitchInfos">Status</label>
                                         </div>
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="" method="POST">
+                                    <form id="todaydealForm" action="{{ route('product.todaydeal',$product->id) }}" method="POST">
                                         @csrf
                                         <div class="form-check form-switch form-switch-info" name="status">
-                                            <input {{ $product->today_deal == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="today_deal" value="active">
+                                            <input onchange="document.getElementById('todaydealForm').submit()" {{ $product->today_deal == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="today_deal" value="active">
                                             <label class="form-check-label" for="customSwitchInfos">Today Deal</label>
                                         </div>
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="" method="POST">
+                                    <form id="featureForm" action="{{ route('product.feature',$product->id) }}" method="POST">
                                         @csrf
                                         <div class="form-check form-switch form-switch-info" name="status">
-                                            <input {{ $product->feature == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="feature" value="active">
+                                            <input onchange="document.getElementById('featureForm').submit()" {{ $product->feature == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="feature" value="active">
                                             <label class="form-check-label" for="customSwitchInfos">Feature</label>
                                         </div>
                                     </form>

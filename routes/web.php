@@ -66,6 +66,10 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     // products section
     Route::resource('product',ProductController::class);
     Route::get('product/trash/page',[ProductController::class,'trash'])->name('product.trash');
+    Route::post('product/status/page/{id}',[ProductController::class,'status'])->name('product.status');
+    Route::post('product/todaydeal/page/{id}',[ProductController::class,'todaydeal'])->name('product.todaydeal');
+    Route::post('product/feature/page/{id}',[ProductController::class,'feature'])->name('product.feature');
+    Route::get('product/trash/page',[ProductController::class,'trash'])->name('product.trash');
     Route::post('product/trash/restore/{id}',[ProductController::class,'restore'])->name('product.restore');
     Route::post('product/trash/permanentdelete/{id}',[ProductController::class,'pdelete'])->name('product.pdelete');
 
