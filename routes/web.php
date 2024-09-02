@@ -7,6 +7,7 @@ use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SizeColorController;
@@ -82,6 +83,15 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     Route::post('product/gallery/update/{id}/{pid}',[GalleryController::class,'update'])->name('gallery.update');
     Route::post('product/gallery/delete/{id}/{pid}',[GalleryController::class,'destroy'])->name('gallery.destroy');
     Route::post('product/gallery/status/{id}/{pid}',[GalleryController::class,'status'])->name('gallery.status');
+
+    // products inventory
+    Route::get('product/inventory/index/{id}',[InventoryController::class,'index'])->name('inventory.index');
+    Route::post('product/inventory/store/{id}',[InventoryController::class,'store'])->name('inventory.store');
+    Route::get('product/inventory/edit/{id}/{pid}',[InventoryController::class,'edit'])->name('inventory.edit');
+    Route::post('product/inventory/update/{id}/{pid}',[InventoryController::class,'update'])->name('inventory.update');
+    Route::post('product/inventory/delete/{id}/{pid}',[InventoryController::class,'destroy'])->name('inventory.destroy');
+    Route::post('product/inventory/status/{id}/{pid}',[InventoryController::class,'status'])->name('inventory.status');
+
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
