@@ -6,6 +6,7 @@ use App\Http\Controllers\ColorController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SizeColorController;
@@ -72,6 +73,15 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     Route::get('product/trash/page',[ProductController::class,'trash'])->name('product.trash');
     Route::post('product/trash/restore/{id}',[ProductController::class,'restore'])->name('product.restore');
     Route::post('product/trash/permanentdelete/{id}',[ProductController::class,'pdelete'])->name('product.pdelete');
+
+    // products gallery part
+    Route::get('product/gallery/index/{id}',[GalleryController::class,'index'])->name('gallery.index');
+    Route::get('product/gallery/create/{id}',[GalleryController::class,'create'])->name('gallery.create');
+    Route::post('product/gallery/store/{id}',[GalleryController::class,'store'])->name('gallery.store');
+    Route::get('product/gallery/edit/{id}/{pid}',[GalleryController::class,'edit'])->name('gallery.edit');
+    Route::post('product/gallery/update/{id}/{pid}',[GalleryController::class,'update'])->name('gallery.update');
+    Route::post('product/gallery/delete/{id}/{pid}',[GalleryController::class,'destroy'])->name('gallery.destroy');
+    Route::post('product/gallery/status/{id}/{pid}',[GalleryController::class,'status'])->name('gallery.status');
 
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
