@@ -1,836 +1,704 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--<< Header Area >>-->
 
+<!doctype html>
+<html class="no-js" lang="zxx">
 
-<!-- Mirrored from gramentheme.com/html/bookle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Aug 2024 04:27:26 GMT -->
+<!-- Mirrored from html.hixstudio.net/ninico/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Sep 2024 06:03:17 GMT -->
 <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="gramentheme">
-    <meta name="description" content="Bookie - Book Store WooCommerce">
-    <!-- ======== Page title ============ -->
-    <title>{{ env('APP_NAME') }} - Book Store WooCommerce</title>
-    <!--<< Favcion >>-->
-    <link rel="shortcut icon" href="{{ asset('frontend') }}/assets/img/favicon.png">
-    <!--<< Bootstrap min.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/bootstrap.min.css">
-    <!--<< All Min Css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/all.min.css">
-    <!--<< Animate.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/animate.css">
-    <!--<< Magnific Popup.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/magnific-popup.css">
-    <!--<< MeanMenu.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/meanmenu.css">
-    <!--<< Swiper Bundle.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/swiper-bundle.min.css">
-    <!--<< Nice Select.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/nice-select.css">
-    <!--<< Icomoon.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/icomoon.css">
-    <!--<< Main.css >>-->
-    <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/main.css">
-</head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>{{ env('APP_NAME') }} - Bangladesh eCommerce Website</title>
+      <meta name="description" content="{{ env('APP_NAME') }} -Bangladesh eCommerce Website">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
-    <!-- Cursor follower -->
-    <div class="cursor-follower"></div>
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend') }}/assets/img/logo/favicon.png">
 
-    <!-- Preloader start -->
-    <div id="preloader" class="preloader">
-        <div class="animation-preloader">
-            <div class="spinner">
+      <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+      <!-- CSS here -->
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/animate.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/swiper-bundle.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/slick.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/nice-select.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/fontawesome.min.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/meanmenu.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/spacing.css">
+      <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/main.css">
+   </head>
+   <body>
+
+      <!-- preloader -->
+      <div id="preloader">
+         <div class="preloader">
+             <span></span>
+             <span></span>
+         </div>
+     </div>
+     <!-- preloader end  -->
+
+      <!-- Scroll-top -->
+         <button class="scroll-top scroll-to-target" data-target="html">
+            <i class="fas fa-angle-up"></i>
+         </button>
+      <!-- Scroll-top-end-->
+
+      <!-- header-area-start -->
+      <header>
+         <div class="header-top space-bg">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="header-welcome-text text-start ">
+                        <span>Welcome to our Bangladesh shop! Enjoy free shipping on orders ৳100 & up.</span>
+                        <a href="shop.html">Shop Now <i class="fal fa-long-arrow-right"></i> </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="txt-loading">
-                <span data-text-preloader="B" class="letters-loading">
-                    B
-                </span>
-                <span data-text-preloader="O" class="letters-loading">
-                    O
-                </span>
-                <span data-text-preloader="O" class="letters-loading">
-                    O
-                </span>
-                <span data-text-preloader="K" class="letters-loading">
-                    K
-                </span>
-                <span data-text-preloader="L" class="letters-loading">
-                    L
-                </span>
-                <span data-text-preloader="E" class="letters-loading">
-                    E
-                </span>
-            </div>
-            <p class="text-center">Loading</p>
-        </div>
-        <div class="loader">
-            <div class="row">
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Back To Top start -->
-    <button id="back-top" class="back-to-top">
-        <i class="fa-solid fa-chevron-up"></i>
-    </button>
-
-    <!-- Offcanvas Area start  -->
-    <div class="fix-area">
-        <div class="offcanvas__info">
-            <div class="offcanvas__wrapper">
-                <div class="offcanvas__content">
-                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                        <div class="offcanvas__logo">
-                            <a href="index.html">
-                                <img src="{{ asset('frontend') }}/assets/img/logo/black-logo.svg" alt="logo-img">
-                            </a>
+         </div>
+         <div class="logo-area mt-30 d-none d-xl-block">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-xl-2 col-lg-3">
+                     <div class="logo">
+                        <a href="{{ route('home') }}">
+                            <h2 style="width: 115px; height:27px; font-family: 'Protest Guerrilla', 'sans-serif'; font-width:400;">Bookie</h2>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-xl-10 col-lg-9">
+                     <div class="header-meta-info d-flex align-items-center justify-content-between">
+                        <div class="header-search-bar">
+                           <form action="#">
+                              <div class="search-info p-relative">
+                                 <button class="header-search-icon"><i class="fal fa-search"></i></button>
+                                 <input type="text" placeholder="Search products...">
+                              </div>
+                           </form>
                         </div>
-                        <div class="offcanvas__close">
-                            <button>
-                                <i class="fas fa-times"></i>
-                            </button>
+                        <div class="header-meta header-language d-flex align-items-center">
+                           <div class="header-meta__lang">
+                              <ul>
+                                 <li>
+                                    <a href="#">
+                                       <img src="{{ asset('uploads/flag/bd.webp') }}" style="width: 36px; height:36px; border-radius:8px;" alt="flag">Bangladesh
+                                       <span><i class="fal fa-angle-down"></i></span>
+                                    </a>
+                                    <ul class="header-meta__lang-submenu">
+                                       <li>
+                                          <a href="#">Bangladesh</a>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="header-meta__value mr-15">
+                              <select>
+                                 <option>৳ BDT</option>>
+                              </select>
+                           </div>
+                           <div class="header-meta__social d-flex align-items-center ml-25">
+                              <button class="header-cart p-relative tp-cart-toggle">
+                                 <i class="fal fa-shopping-cart"></i>
+                                 <span class="tp-product-count">2</span>
+                              </button>
+                              <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                              <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                           </div>
                         </div>
-                    </div>
-                    <p class="text d-none d-xl-block">
-                        Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a
-                        feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
-                    </p>
-                    <div class="mobile-menu fix mb-3"></div>
-                    <div class="offcanvas__contact">
-                        <h4>Contact Info</h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="main-menu-area mt-20 d-none d-xl-block">
+            <div class="for-megamenu p-relative">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-xl-2 col-lg-3">
+                        <div class="cat-menu__category p-relative">
+                           <a class="tp-cat-toggle" href="#" role="button"><i class="fal fa-bars"></i>Categories</a>
+                           <div class="category-menu category-menu-off">
+                              <ul class="cat-menu__list">
+                                @forelse ($categories as $category)
+                                <li><a href="shop.html"><img src="{{ asset('uploads/category') }}/{{ $category->image }}" alt='' style="width:28px; height:28px; border-radius:50%; object-fit:cover; margin-right:5px"> {{ $category->title }}</a></li>
+                                @empty
+                                <li><a href="shop.html"><img src="{{ asset('uploads/default/default.png') }}" alt='' style="width:28px; height:28px; border-radius:50%; object-fit:cover; margin-right:5px">No categories!</a></li>
+                                @endforelse
+                                 {{-- <li class="menu-item-has-children"><a href="shop.html"><i class="fal fa-flower-tulip"></i> Handmade</a>
+                                    <ul class="submenu">
+                                       <li><a href="shop-2.html">Chair</a></li>
+                                       <li><a href="shop-2.html">Table</a></li>
+                                       <li><a href="shop.html">Wooden</a></li>
+                                       <li><a href="shop.html">furniture</a></li>
+                                       <li><a href="shop.html">Clock</a></li>
+                                       <li><a href="shop.html">Gifts</a></li>
+                                       <li><a href="shop.html">Crafts</a></li>
+                                    </ul>
+                                 </li> --}}
+                              </ul>
+                              <div class="daily-offer">
+                                 <ul>
+                                    <li><a href="shop.html">Value of the Day</a></li>
+                                    <li><a href="shop.html">Top 100 Offers</a></li>
+                                    <li><a href="shop.html">New Arrivals</a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-7 col-lg-6">
+                        <div class="main-menu">
+                           <nav id="mobile-menu">
+                              <ul>
+                                 <li class="has-dropdown">
+                                    <a href="index.html">Home</a>
+                                    <ul class="submenu">
+                                       <li><a href="index.html">Wooden  Home</a></li>
+                                       <li><a href="index-2.html">Fashion Home</a></li>
+                                       <li><a href="index-3.html">Furniture Home</a></li>
+                                       <li><a href="index-4.html">Cosmetics Home</a></li>
+                                       <li><a href="index-5.html">Food Grocery</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-dropdown">
+                                    <a href="shop.html">Shop</a>
+                                    <ul class="submenu">
+                                       <li><a href="shop.html">Shop</a></li>
+                                       <li><a href="shop-2.html">Shop 2</a></li>
+                                       <li><a href="shop-details.html">Shop Details </a></li>
+                                       <li><a href="shop-details-2.html">Shop Details 2</a></li>
+                                       <li><a href="shop-location.html">Shop Location</a></li>
+                                       <li><a href="cart.html">Cart</a></li>
+                                       <li><a href="sign-in.html">Sign In</a></li>
+                                       <li><a href="checkout.html">Checkout</a></li>
+                                       <li><a href="wishlist.html">Wishlist</a></li>
+                                       <li><a href="track.html">Product Track</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-dropdown has-megamenu">
+                                    <a href="about.html">Pages</a>
+                                    <ul class="submenu mega-menu">
+                                       <li>
+                                          <a class="mega-menu-title">Page layout</a>
+                                          <ul>
+                                             <li><a href="shop.html">Shop filters v1</a></li>
+                                             <li><a href="shop-2.html">Shop filters v2</a></li>
+                                             <li><a href="shop-details.html">Shop sidebar</a></li>
+                                             <li><a href="shop-details-2.html">Shop Right sidebar</a></li>
+                                             <li><a href="shop-location.html">Shop List view</a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a class="mega-menu-title">Page layout</a>
+                                          <ul>
+                                             <li><a href="about.html">About</a></li>
+                                             <li><a href="cart.html">Cart</a></li>
+                                             <li><a href="checkout.html">Checkout</a></li>
+                                             <li><a href="sign-in.html">Sign In</a></li>
+                                             <li><a href="sign-in.html">Log In</a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a class="mega-menu-title">Page type</a>
+                                          <ul>
+                                             <li><a href="track.html">Product Track</a></li>
+                                             <li><a href="wishlist.html">Wishlist</a></li>
+                                             <li><a href="error.html">404 / Error</a></li>
+                                             <li><a href="coming-soon.html">Coming Soon</a></li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-dropdown">
+                                    <a href="javascript:void(0)">Blog</a>
+                                    <ul class="submenu">
+                                       <li><a href="{{ route('front.blog') }}">Blog</a></li>
+                                       <li><a href="blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="contact.html">Contact</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-3">
+                        <div class="menu-contact">
+                           <ul>
+                              <li>
+                                 <div class="menu-contact__item">
+                                    <div class="menu-contact__icon">
+                                       <i class="fal fa-phone"></i>
+                                    </div>
+                                    <div class="menu-contact__info">
+                                       <a href="tel:0123456">908. 408. 501. 89</a>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="menu-contact__item">
+                                    <div class="menu-contact__icon">
+                                       <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="menu-contact__info">
+                                       <a href="shop-location.html">Find Store</a>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- header-area-end -->
+
+      <!-- header-xl-sticky-area -->
+      <div id="header-sticky" class="logo-area tp-sticky-one mainmenu-5">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-2 col-lg-3">
+                  <div class="logo">
+                     <a href="{{ route('home') }}">
+                        <h2 style="width: 115px; height:27px; font-family: 'Protest Guerrilla', 'sans-serif'; font-width:400;">Bookie</h2>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6">
+                  <div class="main-menu">
+                     <nav>
                         <ul>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon">
-                                    <i class="fal fa-map-marker-alt"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="index.html">Main Street, Melbourne, Australia</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon mr-15">
-                                    <i class="fal fa-envelope"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a href="mailto:info@example.com"><span
-                                            class="mailto:info@example.com">info@example.com</span></a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon mr-15">
-                                    <i class="fal fa-clock"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a target="_blank" href="index.html">Mod-friday, 09am -05pm</a>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="offcanvas__contact-icon mr-15">
-                                    <i class="far fa-phone"></i>
-                                </div>
-                                <div class="offcanvas__contact-text">
-                                    <a href="tel:+11002345909">+11002345909</a>
-                                </div>
-                            </li>
+                           <li class="has-dropdown">
+                              <a href="index.html">Home</a>
+                              <ul class="submenu">
+                                 <li><a href="index.html">Wooden  Home</a></li>
+                                 <li><a href="index-2.html">Fashion Home</a></li>
+                                 <li><a href="index-3.html">Furniture Home</a></li>
+                                 <li><a href="index-4.html">Cosmetics Home</a></li>
+                                 <li><a href="index-5.html">Food Grocery</a></li>
+                              </ul>
+                           </li>
+                           <li class="has-dropdown">
+                              <a href="shop.html">Shop</a>
+                              <ul class="submenu">
+                                 <li><a href="shop.html">Shop</a></li>
+                                 <li><a href="shop-2.html">Shop 2</a></li>
+                                 <li><a href="shop-details.html">Shop Details </a></li>
+                                 <li><a href="shop-details-2.html">Shop Details 2</a></li>
+                                 <li><a href="shop-location.html">Shop Location</a></li>
+                                 <li><a href="cart.html">Cart</a></li>
+                                 <li><a href="sign-in.html">Sign In</a></li>
+                                 <li><a href="checkout.html">Checkout</a></li>
+                                 <li><a href="wishlist.html">Wishlist</a></li>
+                                 <li><a href="track.html">Product Track</a></li>
+                              </ul>
+                           </li>
+                           <li class="has-dropdown has-megamenu">
+                              <a href="about.html">Pages</a>
+                              <ul class="submenu mega-menu">
+                                 <li>
+                                    <a class="mega-menu-title">Page layout</a>
+                                    <ul>
+                                       <li><a href="shop.html">Shop filters v1</a></li>
+                                       <li><a href="shop-2.html">Shop filters v2</a></li>
+                                       <li><a href="shop-details.html">Shop sidebar</a></li>
+                                       <li><a href="shop-details-2.html">Shop Right sidebar</a></li>
+                                       <li><a href="shop-location.html">Shop List view</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a class="mega-menu-title">Page layout</a>
+                                    <ul>
+                                       <li><a href="about.html">About</a></li>
+                                       <li><a href="cart.html">Cart</a></li>
+                                       <li><a href="checkout.html">Checkout</a></li>
+                                       <li><a href="sign-in.html">Sign In</a></li>
+                                       <li><a href="sign-in.html">Log In</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a class="mega-menu-title">Page type</a>
+                                    <ul>
+                                       <li><a href="track.html">Product Track</a></li>
+                                       <li><a href="wishlist.html">Wishlist</a></li>
+                                       <li><a href="error.html">404 / Error</a></li>
+                                       <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="has-dropdown">
+                              <a href="blog.html">Blog</a>
+                              <ul class="submenu">
+                                 <li><a href="blog.html">Blog</a></li>
+                                 <li><a href="blog-details.html">Blog Details</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="contact.html">Contact</a></li>
                         </ul>
-                        <div class="header-button mt-4">
-                            <a href="contact.html" class="theme-btn text-center">
-                                Get A Quote <i class="fa-solid fa-arrow-right-long"></i>
-                            </a>
-                        </div>
-                        <div class="social-icon d-flex align-items-center">
-                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="offcanvas__overlay"></div>
-
-    <div class="header-top-1">
-        <div class="container">
-            <div class="header-top-wrapper">
-                <ul class="contact-list">
-                    <li>
-                        <i class="fa-regular fa-phone"></i>
-                        <a href="tel:+20866660112">+208-6666-0112</a>
-                    </li>
-                    <li>
-                        <i class="far fa-envelope"></i>
-                        <a href="mailto:info@example.com">info@example.com</a>
-                    </li>
-                    <li>
-                        <i class="far fa-clock"></i>
-                        <span>Sunday - Fri: 9 aM - 6 pM</span>
-                    </li>
-                </ul>
-                <ul class="list">
-                    <li><i class="fa-light fa-comments"></i><a href="contact.html">Live Chat</a></li>
-                    <li><i class="fa-light fa-user"></i>
-                       @auth
-                       <a href="{{ route('dashboard') }}">
-                           Dashboard
-                       </a>
-                       @else
-                       <button data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Login
+                     </nav>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-9">
+                  <div class="header-meta-info d-flex align-items-center justify-content-end">
+                     <div class="header-meta__social  d-flex align-items-center">
+                        <button class="header-cart p-relative tp-cart-toggle">
+                           <i class="fal fa-shopping-cart"></i>
+                           <span class="tp-product-count">2</span>
                         </button>
-                       @endauth
-                    </li>
-                </ul>
+                        <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                        <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                     </div>
+                     <div class="header-meta__search-5 ml-25">
+                        <div class="header-search-bar-5">
+                           <form action="#">
+                              <div class="search-info-5 p-relative">
+                                 <button class="header-search-icon-5"><i class="fal fa-search"></i></button>
+                                 <input type="text" placeholder="Search products...">
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+      <!-- header-xl-sticky-end -->
 
-    <!-- Sticky Header Section start  -->
-    <header class="header-1 sticky-header">
-        <div class="mega-menu-wrapper">
-            <div class="header-main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-lg-10 col-xl-8 col-xxl-10">
-                            <div class="header-left">
-                                <div class="logo">
-                                    <a href="index.html" class="header-logo">
-                                        <img src="{{ asset('frontend') }}/assets/img/logo/white-logo.svg" alt="logo-img">
-                                    </a>
-                                </div>
-                                <div class="mean__menu-wrapper">
-                                    <div class="main-menu">
-                                        <nav>
-                                            <ul>
-                                                <li>
-                                                    <a href="index.html">
-                                                        Home
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="index.html">Home 01</a></li>
-                                                        <li><a href="index-2.html">Home 02</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="shop.html">
-                                                        Shop
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="shop.html">Shop Default</a></li>
-                                                        <li><a href="shop-list.html">Shop List</a></li>
-                                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                                        <li><a href="shop-cart.html">Shop Cart</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-dropdown">
-                                                    <a href="about.html">
-                                                        Pages
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="about.html">About Us</a></li>
-                                                        <li class="has-dropdown">
-                                                            <a href="team.html">
-                                                                Author
-                                                                <i class="fas fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="submenu">
-                                                                <li><a href="team.html">Author</a></li>
-                                                                <li><a href="team-details.html">Author Profile</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a href="faq.html">Faq's</a></li>
-                                                        <li><a href="404.html">404 Page</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="news.html">
-                                                        Blog
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="news-grid.html">Blog Grid</a></li>
-                                                        <li><a href="news.html">Blog List</a></li>
-                                                        <li><a href="news-details.html">Blog Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="contact.html">Contact</a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-6 col-lg-2 col-xl-4 col-xxl-2">
-                            <div class="header-right">
-                                <div class="category-oneadjust gap-6 d-flex align-items-center">
-                                    <div class="icon">
-                                        <i class="fa-sharp fa-solid fa-grid-2"></i>
-                                    </div>
-                                    <select name="cate" class="category">
-                                        <option value="1">
-                                            Category
-                                        </option>
-                                        <option value="1">
-                                            Web Design
-                                        </option>
-                                        <option value="1">
-                                            Web Development
-                                        </option>
-                                        <option value="1">
-                                            Graphic Design
-                                        </option>
-                                        <option value="1">
-                                            Softwer Eng
-                                        </option>
-                                    </select>
-                                    <form action="#" class="search-toggle-box d-md-block">
-                                        <div class="input-area">
-                                            <input type="text" placeholder="Author">
-                                            <button class="cmn-btn">
-                                                <i class="far fa-search"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="menu-cart">
-                                    <a href="wishlist.html" class="cart-icon">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a href="shop-cart.html" class="cart-icon">
-                                        <i class="fa-regular fa-cart-shopping"></i>
-                                    </a>
-                                    <div class="header-humbager ml-30">
-                                        <a class="sidebar__toggle" href="javascript:void(0)">
-                                            <div class="bar-icon-2">
-                                                <img src="{{ asset('frontend') }}/assets/img/icon/icon-13.svg" alt="img">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+      <!-- header-md-lg-area -->
+      <div id="header-tab-sticky" class="tp-md-lg-header d-none d-md-block d-xl-none pt-30 pb-30">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-3 col-md-4 d-flex align-items-center">
+                  <div class="header-canvas flex-auto">
+                     <button class="tp-menu-toggle"><i class="far fa-bars"></i></button>
+                  </div>
+                  <div class="logo">
+                     <a href="index.html"><img src="{{ asset('frontend') }}/assets/img/logo/logo.png" alt="logo"></a>
+                  </div>
+               </div>
+               <div class="col-lg-9 col-md-8">
+                  <div class="header-meta-info d-flex align-items-center justify-content-between">
+                     <div class="header-search-bar">
+                        <form action="#">
+                           <div class="search-info p-relative">
+                              <button class="header-search-icon"><i class="fal fa-search"></i></button>
+                              <input type="text" placeholder="Search products...">
+                           </div>
+                        </form>
+                     </div>
+                     <div class="header-meta__social d-flex align-items-center ml-25">
+                        <button class="header-cart p-relative tp-cart-toggle">
+                           <i class="fal fa-shopping-cart"></i>
+                           <span>2</span>
+                        </button>
+                        <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                        <a href="wishlist.html"><i class="fal fa-heart"></i></a>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </header>
-
-    <!-- Main Header Section start  -->
-    <header class="header-1">
-        <div class="mega-menu-wrapper">
-            <div class="header-main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-md-6 col-lg-10 col-xl-8 col-xxl-10">
-                            <div class="header-left">
-                                <div class="logo">
-                                    <a href="index.html" class="header-logo">
-                                        <img src="{{ asset('frontend') }}/assets/img/logo/white-logo.svg" alt="logo-img">
-                                    </a>
-                                </div>
-                                <div class="mean__menu-wrapper">
-                                    <div class="main-menu">
-                                        <nav id="mobile-menu">
-                                            <ul>
-                                                <li>
-                                                    <a href="index.html">
-                                                        Home
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="index.html">Home 01</a></li>
-                                                        <li><a href="index-2.html">Home 02</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="shop.html">
-                                                        Shop
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="shop.html">Shop Default</a></li>
-                                                        <li><a href="shop-list.html">Shop List</a></li>
-                                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                                        <li><a href="shop-cart.html">Shop Cart</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-dropdown">
-                                                    <a href="about.html">
-                                                        Pages
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="about.html">About Us</a></li>
-                                                        <li class="has-dropdown">
-                                                            <a href="team.html">
-                                                                Author
-                                                                <i class="fas fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="submenu">
-                                                                <li><a href="team.html">Author</a></li>
-                                                                <li><a href="team-details.html">Author Profile</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a href="faq.html">Faq's</a></li>
-                                                        <li><a href="404.html">404 Page</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="news.html">
-                                                        Blog
-                                                        <i class="fas fa-angle-down"></i>
-                                                    </a>
-                                                    <ul class="submenu">
-                                                        <li><a href="news-grid.html">Blog Grid</a></li>
-                                                        <li><a href="news.html">Blog List</a></li>
-                                                        <li><a href="news-details.html">Blog Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="contact.html">Contact</a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
+         </div>
+      </div>
+      <div id="header-mob-sticky" class="tp-md-lg-header d-md-none pt-20 pb-20">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-3 d-flex align-items-center">
+                  <div class="header-canvas flex-auto">
+                     <button class="tp-menu-toggle"><i class="far fa-bars"></i></button>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="logo text-center">
+                     <a href="index.html"><img src="{{ asset('frontend') }}/assets/img/logo/logo.png" alt="logo"></a>
+                  </div>
+               </div>
+               <div class="col-3">
+                  <div class="header-meta-info d-flex align-items-center justify-content-end ml-25">
+                     <div class="header-meta m-0 d-flex align-items-center">
+                        <div class="header-meta__social d-flex align-items-center">
+                           <button class="header-cart p-relative tp-cart-toggle">
+                              <i class="fal fa-shopping-cart"></i>
+                              <span>2</span>
+                           </button>
+                           <a href="sign-in.html"><i class="fal fa-user"></i></a>
                         </div>
-                        <div class="col-6 col-md-6 col-lg-2 col-xl-4 col-xxl-2">
-                            <div class="header-right">
-                                <div class="category-oneadjust gap-6 d-flex align-items-center">
-                                    <div class="icon">
-                                        <i class="fa-sharp fa-solid fa-grid-2"></i>
-                                    </div>
-                                    <select name="cate" class="category">
-                                        @forelse ($categories as $category)
-                                            <option value="{{ $category->id }}">
-                                                {{ $category->title }}
-                                            </option>
-                                        @empty
-                                        <option value="1">
-                                            no categories found!
-                                        </option>
-                                        @endforelse
-                                    </select>
-                                    <form action="#" class="search-toggle-box d-md-block">
-                                        <div class="input-area">
-                                            <input type="text" placeholder="Author">
-                                            <button class="cmn-btn">
-                                                <i class="far fa-search"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="menu-cart">
-                                    <a href="wishlist.html" class="cart-icon">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </a>
-                                    <a href="shop-cart.html" class="cart-icon">
-                                        <i class="fa-regular fa-cart-shopping"></i>
-                                    </a>
-                                    <div class="header-humbager ml-30">
-                                        <a class="sidebar__toggle" href="javascript:void(0)">
-                                            <div class="bar-icon-2">
-                                                <img src="{{ asset('frontend') }}/assets/img/icon/icon-13.svg" alt="img">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </header>
+         </div>
+      </div>
+      <!-- header-md-lg-area -->
 
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="close-btn">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="identityBox">
-                        <div class="form-wrapper">
-                            <h1 id="loginModalLabel">welcome back!</h1>
-                            <input class="inputField" type="email" name="email" placeholder="Email Address">
-                            <input class="inputField" type="password" name="password" placeholder="Enter Password">
-                            <div class="input-check remember-me">
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" class="form-check-input" name="save-for-next"
-                                        id="saveForNext">
-                                    <label for="saveForNext">Remember me</label>
-                                </div>
-                                <div class="text"> <a href="index-2.html">Forgot Your password?</a> </div>
-                            </div>
-                            <div class="loginBtn">
-                                <a href="index-2.html" class="theme-btn rounded-0"> Log in </a>
-                            </div>
-                            <div class="orting-badge">
-                                Or
-                            </div>
-                            <div>
-                                <a class="another-option" href="https://www.google.com/">
-                                    <img src="{{ asset('frontend') }}/assets/img/google.png" alt="google">
-                                    Continue With Google
-                                </a>
-                            </div>
-                            <div>
-                                <a class="another-option another-option-two" href="https://www.facebook.com/">
-                                    <img src="{{ asset('frontend') }}/assets/img/facebook.png" alt="google">
-                                    Continue With Facebook
-                                </a>
-                            </div>
+      <!-- sidebar-menu-area -->
+      <div class="tpsideinfo">
+         <button class="tpsideinfo__close">Close<i class="fal fa-times ml-10"></i></button>
+         <div class="tpsideinfo__search text-center pt-35">
+            <span class="tpsideinfo__search-title mb-20">What Are You Looking For?</span>
+            <form action="#">
+               <input type="text" placeholder="Search Products...">
+               <button><i class="fal fa-search"></i></button>
+            </form>
+         </div>
+         <div class="tpsideinfo__nabtab">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+               <li class="nav-item" role="presentation">
+                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Menu</button>
+               </li>
+               <li class="nav-item" role="presentation">
+                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Categories</button>
+               </li>
+             </ul>
+             <div class="tab-content" id="pills-tabContent">
+               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                  <div class="mobile-menu"></div>
+               </div>
+               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                  <div class="tpsidebar-categories">
+                     <ul>
+                        <li><a href="shop.html">Furniture</a></li>
+                        <li><a href="shop.html">Wooden</a></li>
+                        <li><a href="shop.html">Lifestyle</a></li>
+                        <li><a href="shop-2.html">Shopping</a></li>
+                        <li><a href="track.html">Track Product</a></li>
+                     </ul>
+                  </div>
+               </div>
+             </div>
+         </div>
+         <div class="tpsideinfo__account-link">
+            <a href="sign-in.html"><i class="fal fa-user"></i> Login / Register</a>
+         </div>
+         <div class="tpsideinfo__wishlist-link">
+            <a href="wishlist.html" target="_parent"><i class="fal fa-heart"></i> Wishlist</a>
+         </div>
+      </div>
+      <div class="body-overlay"></div>
+      <!-- sidebar-menu-area-end -->
 
-                            <div class="form-check-3 d-flex align-items-center from-customradio-2 mt-3">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault">
-                                <label class="form-check-label">
-                                    I Accept Your Terms & Conditions
-                                </label>
-                            </div>
+      <!-- header-cart-start -->
+      <div class="tpcartinfo tp-cart-info-area p-relative">
+      <button class="tpcart__close"><i class="fal fa-times"></i></button>
+      <div class="tpcart">
+         <h4 class="tpcart__title">Your Cart</h4>
+         <div class="tpcart__product">
+            <div class="tpcart__product-list">
+               <ul>
+                  <li>
+                     <div class="tpcart__item">
+                        <div class="tpcart__img">
+                           <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-1.jpg" alt="">
+                           <div class="tpcart__del">
+                              <a href="#"><i class="far fa-times-circle"></i></a>
+                           </div>
                         </div>
-
-                        <div class="banner">
-                            <button type="button" class="rounded-0 login-btn" data-bs-toggle="modal"
-                                data-bs-target="#loginModal">Log in</button>
-                            <button type="button" class="theme-btn rounded-0 register-btn" data-bs-toggle="modal"
-                                data-bs-target="#registrationModal">Create
-                                Account</button>
-                            <div class="loginBg">
-                                <img src="{{ asset('frontend') }}/assets/img/signUpbg.jpg" alt="signUpBg">
-                            </div>
+                        <div class="tpcart__content">
+                           <span class="tpcart__content-title"><a href="shop-details.html">Miko Wooden Bluetooth Speaker</a>
+                           </span>
+                           <div class="tpcart__cart-price">
+                              <span class="quantity">1 x</span>
+                              <span class="new-price">$162.80</span>
+                           </div>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="tpcart__item">
+                        <div class="tpcart__img">
+                           <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-3.jpg" alt="">
+                           <div class="tpcart__del">
+                              <a href="#"><i class="far fa-times-circle"></i></a>
+                           </div>
+                        </div>
+                        <div class="tpcart__content">
+                           <span class="tpcart__content-title"><a href="shop-details.html">Evo Lightweight Granite Shirt</a>
+                           </span>
+                           <div class="tpcart__cart-price">
+                              <span class="quantity">1 x</span>
+                              <span class="new-price">$138.00</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
             </div>
-        </div>
-    </div>
-
-    <!-- Registration Modal -->
-    <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="close-btn">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="identityBox">
-                        <div class="form-wrapper">
-                            <h1 id="registrationModalLabel">Create account!</h1>
-                            <input class="inputField" type="text" name="name" id="name" placeholder="User Name">
-                            <input class="inputField" type="email" name="email" placeholder="Email Address">
-                            <input class="inputField" type="password" name="password" placeholder="Enter Password">
-                            <input class="inputField" type="password" name="password"
-                                placeholder="Enter Confirm Password">
-                            <div class="input-check remember-me">
-                                <div class="checkbox-wrapper">
-                                    <input type="checkbox" class="form-check-input" name="save-for-next"
-                                        id="rememberMe">
-                                    <label for="rememberMe">Remember me</label>
-                                </div>
-                                <div class="text"> <a href="index-2.html">Forgot Your password?</a> </div>
-                            </div>
-                            <div class="loginBtn">
-                                <a href="index-2.html" class="theme-btn rounded-0"> Log in </a>
-                            </div>
-                            <div class="orting-badge">
-                                Or
-                            </div>
-                            <div>
-                                <a class="another-option" href="https://www.google.com/">
-                                    <img src="{{ asset('frontend') }}/assets/img/google.png" alt="google">
-                                    Continue With Google
-                                </a>
-                            </div>
-                            <div>
-                                <a class="another-option another-option-two" href="https://www.facebook.com/">
-                                    <img src="{{ asset('frontend') }}/assets/img/facebook.png" alt="google">
-                                    Continue With Facebook
-                                </a>
-                            </div>
-                            <div class="form-check-3 d-flex align-items-center from-customradio-2 mt-3">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault">
-                                <label class="form-check-label">
-                                    I Accept Your Terms & Conditions
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="banner">
-                            <button type="button" class="rounded-0 login-btn" data-bs-toggle="modal"
-                                data-bs-target="#loginModal">Log in</button>
-                            <button type="button" class="theme-btn rounded-0 register-btn" data-bs-toggle="modal"
-                                data-bs-target="#registrationModal">Create
-                                Account</button>
-                            <div class="signUpBg">
-                                <img src="{{ asset('frontend') }}/assets/img/registrationbg.jpg" alt="signUpBg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="tpcart__checkout">
+               <div class="tpcart__total-price d-flex justify-content-between align-items-center">
+                  <span> Subtotal:</span>
+                  <span class="heilight-price"> $300.00</span>
+               </div>
+               <div class="tpcart__checkout-btn">
+                  <a class="tpcart-btn mb-10" href="cart.html">View Cart</a>
+                  <a class="tpcheck-btn" href="checkout.html">Checkout</a>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+         <div class="tpcart__free-shipping text-center">
+            <span>Free shipping for orders <b>under 10km</b></span>
+         </div>
+      </div>
+      </div>
+      <div class="cartbody-overlay"></div>
+      <!-- header-cart-end -->
+        <!-- main-area-start -->
+        <main>
 
-    {{-- header end --}}
+            @yield('content')
 
-    @yield('content')
+        </main>
+        <!-- main-area-end -->
 
-    {{-- footer start --}}
-
-    <!-- Footer Section start  -->
-    <footer class="footer-section footer-bg">
-        <div class="container">
-            <div class="contact-info-area">
-                <div class="contact-info-items wow fadeInUp" data-wow-delay=".2s">
-                    <div class="icon">
-                        <i class="icon-icon-5"></i>
-                    </div>
-                    <div class="content">
-                        <p>Call Us 7/24</p>
-                        <h3>
-                            <a href="tel:+2085550112">+208-555-0112</a>
-                        </h3>
-                    </div>
-                </div>
-                <div class="contact-info-items wow fadeInUp" data-wow-delay=".4s">
-                    <div class="icon">
-                        <i class="icon-icon-6"></i>
-                    </div>
-                    <div class="content">
-                        <p>Make a Quote</p>
-                        <h3>
-                            <a href="mailto:example@gmail.com">example@gmail.com</a>
-                        </h3>
-                    </div>
-                </div>
-                <div class="contact-info-items wow fadeInUp" data-wow-delay=".6s">
-                    <div class="icon">
-                        <i class="icon-icon-7"></i>
-                    </div>
-                    <div class="content">
-                        <p>Opening Hour</p>
-                        <h3>
-                            Sunday - Fri: 9 aM - 6 pM
-                        </h3>
-                    </div>
-                </div>
-                <div class="contact-info-items wow fadeInUp" data-wow-delay=".8s">
-                    <div class="icon">
-                        <i class="icon-icon-8"></i>
-                    </div>
-                    <div class="content">
-                        <p>Location</p>
-                        <h3>
-                            4517 Washington ave.
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-widgets-wrapper">
-            <div class="plane-shape float-bob-y">
-                <img src="{{ asset('frontend') }}/assets/img/plane-shape.png" alt="img">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="single-footer-widget">
-                            <div class="widget-head">
-                                <a href="index.html">
-                                    <img src="{{ asset('frontend') }}/assets/img/logo/white-logo.svg" alt="logo-img">
-                                </a>
-                            </div>
-                            <div class="footer-content">
-                                <p>
-                                    Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia curabitur
-                                    lacinia mollis
-                                </p>
-                                <div class="social-icon d-flex align-items-center">
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="single-footer-widget">
-                            <div class="widget-head">
-                                <h3>Costumers Support</h3>
-                            </div>
-                            <ul class="list-area">
-                                <li>
-                                    <a href="shop.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        Store List
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        Opening Hours
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        Contact Us
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        Return Policy
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="single-footer-widget">
-                            <div class="widget-head">
-                                <h3>Categories</h3>
-                            </div>
-                            <ul class="list-area">
-                                <li>
-                                    <a href="shop.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        Novel Books
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="shop.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        Poetry Books
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        Political Books
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">
-                                        <i class="fa-solid fa-chevrons-right"></i>
-                                        History Books
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                        <div class="single-footer-widget">
-                            <div class="widget-head">
-                                <h3>Newsletter</h3>
-                            </div>
-                            <div class="footer-content">
-                                <p>Sign up to searing weekly newsletter to get the latest updates.</p>
-                                <div class="footer-input">
-                                    <input type="email" id="email2" placeholder="Enter Email Address">
-                                    <button class="newsletter-btn" type="submit">
-                                        <i class="fa-regular fa-paper-plane"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-wrapper d-flex align-items-center justify-content-between">
-                    <p class="wow fadeInLeft" data-wow-delay=".3s">
-                        © All Copyright 2024 by <a href="index.html">Bookle</a>
-                    </p>
-                    <ul class="brand-logo wow fadeInRight" data-wow-delay=".5s">
-                        <li>
-                            <a href="contact.html">
-                                <img src="{{ asset('frontend') }}/assets/img/visa-logo.png" alt="img">
+       <!-- footer-area-start -->
+       <footer>
+        <div class="footer-area theme-bg pt-65">
+           <div class="container">
+              <div class="main-footer pb-15 mb-30">
+                 <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                       <div class="footer-widget footer-col-1 mb-40">
+                          <div class="footer-logo mb-30">
+                             <a href="javascript:void(0)">
+                            <h2 style="width: 115px; height:27px; font-family: 'Protest Guerrilla', 'sans-serif'; font-width:400;">{{ env('APP_NAME') }}</h2>
                             </a>
-                        </li>
-                        <li>
-                            <a href="contact.html">
-                                <img src="{{ asset('frontend') }}/assets/img/mastercard.png" alt="img">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html">
-                                <img src="{{ asset('frontend') }}/assets/img/payoneer.png" alt="img">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html">
-                                <img src="{{ asset('frontend') }}/assets/img/affirm.png" alt="img">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                          </div>
+                          <div class="footer-content">
+                             <p>Elegant pink origami design three <br> dimensional view and decoration co-exist. <br> Great for adding a decorative touch to <br> any room’s decor.</p>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                       <div class="footer-widget footer-col-2 ml-30 mb-40">
+                          <h4 class="footer-widget__title mb-30">Information</h4>
+                          <div class="footer-widget__links">
+                             <ul>
+                                <li><a href="#">Custom Service</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="track.html">Ordering Tracking</a></li>
+                                <li><a href="contact.html">Contacts</a></li>
+                                <li><a href="#">Events</a></li>
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                       <div class="footer-widget footer-col-3 mb-40">
+                          <h4 class="footer-widget__title mb-30">My Account</h4>
+                          <div class="footer-widget__links">
+                             <ul>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Discount</a></li>
+                                <li><a href="#">Custom Service</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                       <div class="footer-widget footer-col-4 mb-40">
+                          <h4 class="footer-widget__title mb-30">Social Network</h4>
+                          <div class="footer-widget__links">
+                             <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a></li>
+                                <li><a href="#"><i class="fab fa-dribbble"></i>Dribbble</a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i>Twitter</a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i>Behance</a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i>Youtube</a></li>
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                       <div class="footer-widget footer-col-5 mb-40">
+                          <h4 class="footer-widget__title mb-30">Get Newsletter</h4>
+                          <p>Get on the list and get 10% off your first order!</p>
+                          <div class="footer-widget__newsletter">
+                             <form action="#">
+                                <input type="email" placeholder="Enter email address">
+                                <button class="footer-widget__fw-news-btn tpsecondary-btn">Subscribe Now<i class="fal fa-long-arrow-right"></i></button>
+                             </form>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="footer-cta pb-20">
+                 <div class="row justify-content-between align-items-center">
+                    <div class="col-xl-6 col-lg-4 col-md-4 col-sm-6">
+                       <div class="footer-cta__contact">
+                          <div class="footer-cta__icon">
+                             <i class="far fa-phone"></i>
+                          </div>
+                          <div class="footer-cta__text">
+                             <a href="tel:0123456">980. 029. 666. 99</a>
+                             <span>Working 8:00 - 22:00</span>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-8 col-md-8 col-sm-6">
+                       <div class="footer-cta__source">
+                          <div class="footer-cta__source-content">
+                             <h4 class="footer-cta__source-title">Download App on Mobile</h4>
+                             <p>15% discount on your first purchase</p>
+                          </div>
+                          <div class="footer-cta__source-thumb">
+                             <a href="#"><img src="{{ asset('frontend') }}/assets/img/footer/f-google.jpg" alt="google"></a>
+                             <a href="#"><img src="{{ asset('frontend') }}/assets/img/footer/f-app.jpg" alt="app"></a>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="footer-copyright footer-bg">
+              <div class="container">
+                 <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-md-5 col-sm-12">
+                       <div class="footer-copyright__content">
+                          <span>Copyright {{ now()->format('Y') }} <a href="{{ route('home') }}">©{{ env('APP_NAME') }}</a>. All rights reserved. Powered by <a href="{{ env('HOST_URL') }}">{{ env('HOST_NAME') }}</a>.</span>
+                       </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-7 col-sm-12">
+                       <div class="footer-copyright__brand">
+                          <img src="{{ asset('frontend') }}/assets/img/footer/f-brand-icon-01.png" alt="footer-brand">
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
-    </footer>
-
-    <!--<< All JS Plugins >>-->
-    <script src="{{ asset('frontend') }}/assets/js/jquery-3.7.1.min.js"></script>
-    <!--<< Viewport Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/viewport.jquery.js"></script>
-    <!--<< Bootstrap Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/bootstrap.bundle.min.js"></script>
-    <!--<< Nice Select Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/jquery.nice-select.min.js"></script>
-    <!--<< Waypoints Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/jquery.waypoints.js"></script>
-    <!--<< Counterup Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/jquery.counterup.min.js"></script>
-    <!--<< Swiper Slider Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/swiper-bundle.min.js"></script>
-    <!--<< MeanMenu Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/jquery.meanmenu.min.js"></script>
-    <!--<< Magnific Popup Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/jquery.magnific-popup.min.js"></script>
-    <!--<< Wow Animation Js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/wow.min.js"></script>
-    <!-- Gsap -->
-    <script src="{{ asset('frontend') }}/assets/js/gsap.min.js"></script>
-    <!--<< Main.js >>-->
-    <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
-</body>
+     </footer>
+     <!-- footer-area-end -->
 
 
-<!-- Mirrored from gramentheme.com/html/bookle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Aug 2024 04:27:26 GMT -->
+
+     <!-- JS here -->
+     <script src="{{ asset('frontend') }}/assets/js/jquery.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/waypoints.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/bootstrap.bundle.min.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/swiper-bundle.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/slick.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/magnific-popup.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/nice-select.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/counterup.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/wow.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/isotope-pkgd.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/imagesloaded-pkgd.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/countdown.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/ajax-form.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/meanmenu.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/jquery.knob.js"></script>
+     <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
+  </body>
+
+<!-- Mirrored from html.hixstudio.net/ninico/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Sep 2024 06:03:17 GMT -->
 </html>

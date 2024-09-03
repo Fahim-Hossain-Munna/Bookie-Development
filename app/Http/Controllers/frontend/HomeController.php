@@ -18,6 +18,18 @@ class HomeController extends Controller
         $categories = Category::latest()->get();
         return view('frontend.home.index',compact('categories','blogs'));
     }
+    public function blog()
+    {
+        $blogs = Blog::latest()->get();
+        $categories = Category::latest()->get();
+        return view('frontend.blog.index',compact('categories','blogs'));
+    }
+
+    public function blog_details($blogid)
+    {
+        $categories = Category::latest()->get();
+        return view('frontend.blog.blogsingle',compact('categories'));
+    }
 
     /**
      * Show the form for creating a new resource.

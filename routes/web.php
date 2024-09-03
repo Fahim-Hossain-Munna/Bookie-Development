@@ -21,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
-
+Route::prefix('bookie/frontend')->get('/blog',[HomeController::class,'blog'])->name('front.blog');
+Route::prefix('bookie/frontend')->get('/blog/single/{id}',[HomeController::class,'blog_details'])->name('front.blog.single');
 
 
 Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {

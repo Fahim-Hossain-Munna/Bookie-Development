@@ -1,1605 +1,1435 @@
-
 @extends('layouts.frontmaster')
 
-
 @section('content')
-
-    <!-- Hero Section start  -->
-    <div class="hero-section hero-1 fix">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-xl-8 col-lg-6">
-                    <div class="hero-items">
-                        <div class="book-shape">
-                            <img src="{{ asset('frontend') }}/assets/img/hero/book.png" alt="shape-img">
-                        </div>
-                        <div class="frame-shape1 float-bob-x">
-                            <img src="{{ asset('frontend') }}/assets/img/hero/frame.png" alt="shape-img">
-                        </div>
-                        <div class="frame-shape2 float-bob-y">
-                            <img src="{{ asset('frontend') }}/assets/img/hero/frame-2.png" alt="shape-img">
-                        </div>
-                        <div class="frame-shape3">
-                            <img src="{{ asset('frontend') }}/assets/img/hero/xstar.png" alt="img">
-                        </div>
-                        <div class="frame-shape4 float-bob-x">
-                            <img src="{{ asset('frontend') }}/assets/img/hero/frame-shape.png" alt="img">
-                        </div>
-                        <div class="bg-shape1">
-                            <img src="{{ asset('frontend') }}/assets/img/hero/bg-shape.png" alt="img">
-                        </div>
-                        <div class="bg-shape2">
-                            <img src="{{ asset('frontend') }}/assets/img/hero/bg-shape2.png" alt="shape-img">
-                        </div>
-                        <div class="hero-content">
-                            <h6 class="wow fadeInUp" data-wow-delay=".3s">Up to 30% Off</h6>
-                            <h1 class="wow fadeInUp" data-wow-delay=".5s">Get Your New Book <br> With The Best Price
-                            </h1>
-                            <div class="form-clt wow fadeInUp" data-wow-delay=".9s">
-                                <button type="submit" class="theme-btn">
-                                    Shop Now <i class="fa-solid fa-arrow-right-long"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-12 col-xl-4 col-lg-6">
-                    <div class="girl-image">
-                        <img class=" float-bob-x" src="{{ asset('frontend') }}/assets/img/hero/hero-girl.png" alt="img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Feature Section start  -->
-    <section class="feature-section fix section-padding">
-        <div class="container">
-            <div class="feature-wrapper">
-                <div class="feature-box-items wow fadeInUp" data-wow-delay=".2s">
-                    <div class="icon">
-                        <i class="icon-icon-1"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Return & refund</h3>
-                        <p>Money back guarantee</p>
-                    </div>
-                </div>
-                <div class="feature-box-items wow fadeInUp" data-wow-delay=".4s">
-                    <div class="icon">
-                        <i class="icon-icon-2"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Secure Payment</h3>
-                        <p>30% off by subscribing</p>
-                    </div>
-                </div>
-                <div class="feature-box-items wow fadeInUp" data-wow-delay=".6s">
-                    <div class="icon">
-                        <i class="icon-icon-3"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Quality Support</h3>
-                        <p>Always online 24/7</p>
-                    </div>
-                </div>
-                <div class="feature-box-items wow fadeInUp" data-wow-delay=".8s">
-                    <div class="icon">
-                        <i class="icon-icon-4"></i>
-                    </div>
-                    <div class="content">
-                        <h3>Daily Offers</h3>
-                        <p>20% off by subscribing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shop Section start  -->
-    <section class="shop-section section-padding fix pt-0">
-        <div class="container">
-            <div class="section-title-area">
-                <div class="section-title">
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Featured Books</h2>
-                </div>
-                <a href="shop.html" class="theme-btn transparent-btn wow fadeInUp" data-wow-delay=".5s">Explore More <i
-                        class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
-            <div class="swiper book-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/01.png" alt="img"></a>
-                                <ul class="post-box">
-                                    <li>
-                                        Hot
-                                    </li>
-                                    <li>
-                                        -30%
-                                    </li>
-                                </ul>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">Simple Things You To <br> Save BOOK</a></h3>
-                                <ul class="price-list">
-                                    <li>$30.00</li>
-                                    <li>
-                                        <del>$39.99</del>
-                                    </li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-1.png" alt="img">
-                                        </span>
-                                        <span class="content">Wilson</span>
-                                    </li>
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/02.png" alt="img"></a>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">How Deal With Very <br> Bad BOOK</a></h3>
-                                <ul class="price-list">
-                                    <li>$39.00</li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content">Esther</span>
-                                    </li>
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/03.png" alt="img"></a>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">The Hidden Mystery <br> Behind</a></h3>
-                                <ul class="price-list">
-                                    <li>
-                                        $29.00
-                                    </li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-3.png" alt="img">
-                                        </span>
-                                        <span class="content">Hawkins</span>
-                                    </li>
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/04.png" alt="img"></a>
-                                <ul class="post-box">
-                                    <li>
-                                        -12%
-                                    </li>
-                                </ul>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">Qple GPad With Retina <br> Sisplay</a></h3>
-                                <ul class="price-list">
-                                    <li>$19.00</li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-4.png" alt="img">
-                                        </span>
-                                        <span class="content">(Author) Albert </span>
-                                    </li>
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/05.png" alt="img"></a>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">Flovely and Unicom <br> Erna</a></h3>
-                                <ul class="price-list">
-                                    <li>$30.00</li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-5.png" alt="img">
-                                        </span>
-                                        <span class="content">Alexander</span>
-                                    </li>
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Book Catagories Section start  -->
-    <section class="book-catagories-section fix section-padding">
-        <div class="container">
-            <div class="book-catagories-wrapper">
-                <div class="section-title text-center">
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Top Categories Book</h2>
-                </div>
-                <div class="array-button">
-                    <button class="array-prev"><i class="fal fa-arrow-left"></i></button>
-                    <button class="array-next"><i class="fal fa-arrow-right"></i></button>
-                </div>
-                <div class="swiper book-catagories-slider">
-                    <div class="swiper-wrapper">
-                        @foreach ($categories as $category)
-                            <div class="swiper-slide">
-                                <div class="book-catagories-items">
-                                    <div class="book-thumb" style="overflow: hidden">
-                                        <img src="{{ asset('uploads/category') }}/{{ $category->image }}" alt="img" style="height: 100%; width:100%; object-fit:cover;">
-                                        <div class="circle-shape">
-                                            <img src="{{ asset('frontend') }}/assets/img/book-categori/circle-shape.png" alt="shape-img">
-                                        </div>
+            <!-- slider-area-start -->
+            <section class="slider-area pb-25">
+               <div class="container">
+                  <div class="row justify-content-xl-end">
+                     <div class="col-xl-9 col-xxl-7 col-lg-9">
+                        <div class="tp-slider-area p-relative">
+                           <div class="swiper-container slider-active">
+                              <div class="swiper-wrapper">
+                                 <div class="swiper-slide">
+                                    <div class="tp-slide-item">
+                                       <div class="tp-slide-item__content">
+                                          <h4 class="tp-slide-item__sub-title">Accessories</h4>
+                                          <h3 class="tp-slide-item__title mb-25">Up To
+                                             <i>40% Off
+                                                <img src="{{ asset('frontend') }}/assets/img/icon/title-shape-02.jpg" alt="">
+                                             </i>
+                                             latest Creations</h3>
+                                          <a class="tp-slide-item__slide-btn tp-btn" href="shop.html">Shop Now <i class="fal fa-long-arrow-right"></i></a>
+                                       </div>
+                                       <div class="tp-slide-item__img">
+                                          <img src="{{ asset('frontend') }}/assets/img/slider/banner-1.jpg" alt="">
+                                       </div>
                                     </div>
-                                    <div class="number"> {{ count($category->hasmanyblogs) }} </div>
-                                    <h3><a href="shop-details.html">{{ $category->title }}</a></h3>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shop Section start  -->
-    <section class="shop-section section-padding fix">
-        <div class="container">
-            <div class="section-title-area">
-                <div class="section-title mb- wow fadeInUp" data-wow-delay=".3s">
-                    <h2>Bookle Top Books</h2>
-                </div>
-                <a href="shop.html" class="theme-btn transparent-btn wow fadeInUp" data-wow-delay=".5s">Explore More <i
-                        class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
-            <div class="book-shop-wrapper">
-                <div class="shop-box-items style-2">
-                    <div class="book-thumb center">
-                        <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/05.png" alt="img"></a>
-                        <ul class="shop-icon d-grid justify-content-center align-items-center">
-                            <li>
-                                <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                            </li>
-                            <li>
-                                <a href="shop-cart.html">
-
-                                    <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-content">
-                        <h5> Design Low Book </h5>
-                        <h3><a href="shop-details.html">Flovely and Unicom <br> Erna</a></h3>
-                        <ul class="price-list">
-                            <li>$30.00</li>
-                            <li>
-                                <del>$39.99</del>
-                            </li>
-                        </ul>
-                        <ul class="author-post">
-                            <li class="authot-list">
-                                <span class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/client-1.png" alt="img">
-                                </span>
-                                <span class="content">(Author) Albert</span>
-                            </li>
-                            <li class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-button">
-                        <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
-                            Cart</a>
-                    </div>
-                </div>
-
-                <div class="shop-box-items style-2">
-                    <div class="book-thumb center">
-                        <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/04.png" alt="img"></a>
-                        <ul class="post-box">
-                            <li>
-                                Hot
-                            </li>
-                        </ul>
-                        <ul class="shop-icon d-grid justify-content-center align-items-center">
-                            <li>
-                                <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                            </li>
-                            <li>
-                                <a href="shop-cart.html">
-
-                                    <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-content">
-                        <h5> Design Low Book </h5>
-                        <h3><a href="shop-details.html">Qple GPad With Retinay<br> Sispla</a></h3>
-                        <ul class="price-list">
-                            <li>$30.00</li>
-                            <li>
-                                <del>$39.99</del>
-                            </li>
-                        </ul>
-                        <ul class="author-post">
-                            <li class="authot-list">
-                                <span class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                </span>
-                                <span class="content">Wilson</span>
-                            </li>
-                            <li class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-button">
-                        <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
-                            Cart</a>
-                    </div>
-                </div>
-
-                <div class="shop-box-items style-2">
-                    <div class="book-thumb center">
-                        <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/03.png" alt="img"></a>
-                        <ul class="shop-icon d-grid justify-content-center align-items-center">
-                            <li>
-                                <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                            </li>
-                            <li>
-                                <a href="shop-cart.html">
-
-                                    <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-content">
-                        <h5> Design Low Book </h5>
-                        <h3><a href="shop-details.html">Simple Things You To <br> Save BOOK</a></h3>
-                        <ul class="price-list">
-                            <li>$30.00</li>
-                            <li>
-                                <del>$39.99</del>
-                            </li>
-                        </ul>
-                        <ul class="author-post">
-                            <li class="authot-list">
-                                <span class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/client-3.png" alt="img">
-                                </span>
-                                <span class="content">Wilson</span>
-                            </li>
-                            <li class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-button">
-                        <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
-                            Cart</a>
-                    </div>
-                </div>
-
-                <div class="shop-box-items style-2">
-                    <div class="book-thumb center">
-                        <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/02.png" alt="img"></a>
-                        <ul class="post-box">
-                            <li>
-                                Hot
-                            </li>
-                            <li>
-                                -30%
-                            </li>
-                        </ul>
-                        <ul class="shop-icon d-grid justify-content-center align-items-center">
-                            <li>
-                                <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                            </li>
-                            <li>
-                                <a href="shop-cart.html">
-
-                                    <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-content">
-                        <h5> Design Low Book </h5>
-                        <h3><a href="shop-details.html">How Deal With Very <br> Bad BOOK</a></h3>
-                        <ul class="price-list">
-                            <li>$30.00</li>
-                            <li>
-                                <del>$39.99</del>
-                            </li>
-                        </ul>
-                        <ul class="author-post">
-                            <li class="authot-list">
-                                <span class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/client-4.png" alt="img">
-                                </span>
-                                <span class="content">Esther</span>
-                            </li>
-                            <li class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="shop-button">
-                        <a href="shop-details.html" class="theme-btn"><i class="fa-solid fa-basket-shopping"></i> Add To
-                            Cart</a>
-                    </div>
-                </div>
-
-                <div class="cta-shop-box">
-                    <h2 class="wow fadeInUp" data-wow-delay=".2s">
-                        Find Your Nest
-                        Books!
-                    </h2>
-                    <h6 class="wow fadeInUp" data-wow-delay=".4s">And get your 25% discount now!</h6>
-                    <a href="shop.html" class="theme-btn white-bg wow fadeInUp" data-wow-delay=".6s">Shop Now <i
-                            class="fa-solid fa-arrow-right-long"></i></a>
-                    <div class="girl-shape">
-                        <img src="{{ asset('frontend') }}/assets/img/girl-shape.png" alt="shape-img">
-                    </div>
-                    <div class="circle-shape">
-                        <img src="{{ asset('frontend') }}/assets/img/circle-shape.png" alt="shape-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cta Banner Section start  -->
-    <section class="cta-banner-section fix section-padding pt-0">
-        <div class="container">
-            <div class="cta-banner-wrapper section-padding bg-cover"
-                style="background-image: url('{{ asset('frontend') }}/assets/img/cta-banner.jpg');">
-                <div class="book-shape">
-                    <img src="{{ asset('frontend') }}/assets/img/book-shape.png" alt="shape-img">
-                </div>
-                <div class="girl-shape float-bob-x">
-                    <img src="{{ asset('frontend') }}/assets/img/girl-shape-2.png" alt="shape-img">
-                </div>
-                <div class="cta-content text-center">
-                    <h2 class="mb-40 wow fadeInUp" data-wow-delay=".3s"
-                        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Get 25% discount
-                        in all <br> kind of
-                        super Selling</h2>
-                    <a href="shop.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s"
-                        style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">Shop Now <i
-                            class="fa-solid fa-arrow-right-long"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Top Ratting Book Section start  -->
-    <section class="top-ratting-book-section fix section-padding section-bg">
-        <div class="container">
-            <div class="top-ratting-book-wrapper">
-                <div class="section-title-area">
-                    <div class="section-title">
-                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Top Rating Books</h2>
-                    </div>
-                    <a href="shop.html" class="theme-btn transparent-btn wow fadeInUp" data-wow-delay=".5s">View More <i
-                            class="fa-solid fa-arrow-right-long"></i></a>
-                </div>
-                <div class="row">
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="top-ratting-box-items">
-                            <div class="book-thumb">
-                                <a href="shop-details.html">
-                                    <img src="{{ asset('frontend') }}/assets/img/top-book/01.png" alt="img">
-                                </a>
-                            </div>
-                            <div class="book-content">
-                                <div class="title-header">
-                                    <div>
-                                        <h5> Design Low Book </h5>
-                                        <h3>
-                                            <a href="shop-details.html">Simple Things You To Save BOOK</a>
-                                        </h3>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="tp-slide-item">
+                                       <div class="tp-slide-item__content">
+                                          <h4 class="tp-slide-item__sub-title">Accessories</h4>
+                                          <h3 class="tp-slide-item__title mb-25">Up To <i>35% Off <img src="{{ asset('frontend') }}/assets/img/icon/title-shape-02.jpg" alt=""></i> latest Creations</h3>
+                                          <a class="tp-slide-item__slide-btn tp-btn" href="shop.html">Shop Now <i class="fal fa-long-arrow-right"></i></a>
+                                       </div>
+                                       <div class="tp-slide-item__img">
+                                          <img src="{{ asset('frontend') }}/assets/img/slider/banner-2.jpg" alt="">
+                                       </div>
                                     </div>
-                                    <ul class="shop-icon d-flex justify-content-center align-items-center">
-                                        <li>
-                                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-cart.html">
-                                                <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <span class="mt-10">$30.00</span>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content mt-10">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="shop-btn">
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="tp-slide-item">
+                                       <div class="tp-slide-item__content">
+                                          <h4 class="tp-slide-item__sub-title">Accessories</h4>
+                                          <h3 class="tp-slide-item__title mb-25">Up To <i>45% Off <img src="{{ asset('frontend') }}/assets/img/icon/title-shape-02.jpg" alt=""></i> latest Creations</h3>
+                                          <a class="tp-slide-item__slide-btn tp-btn" href="shop.html">Shop Now <i class="fal fa-long-arrow-right"></i></a>
+                                       </div>
+                                       <div class="tp-slide-item__img">
+                                          <img src="{{ asset('frontend') }}/assets/img/slider/banner-3.jpg" alt="">
+                                       </div>
                                     </div>
-                                    <a href="shop-details.html" class="theme-btn"><i
-                                            class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                                </div>
-                            </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="slider-pagination"></div>
                         </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="top-ratting-box-items">
-                            <div class="book-thumb">
-                                <a href="shop-details.html">
-                                    <img src="{{ asset('frontend') }}/assets/img/top-book/02.png" alt="img">
-                                </a>
-                            </div>
-                            <div class="book-content">
-                                <div class="title-header">
-                                    <div>
-                                        <h5> Design Low Book </h5>
-                                        <h3>
-                                            <a href="shop-details.html">How Deal With Very Bad BOOK</a>
-                                        </h3>
+                     </div>
+                     <div class="col-xl-3 col-xxl-3 col-lg-3">
+                        <div class="row">
+                           <div class="col-lg-12 col-md-6">
+                              <div class="tpslider-banner tp-slider-sm-banner mb-30">
+                                 <a href="shop-details.html">
+                                    <div class="tpslider-banner__img">
+                                       <img src="{{ asset('frontend') }}/assets/img/slider/banner-slider-01.jpg" alt="">
+                                       <div class="tpslider-banner__content">
+                                          <span class="tpslider-banner__sub-title">Hand made</span>
+                                          <h4 class="tpslider-banner__title">New Modern & Stylist <br> Crafts</h4>
+                                       </div>
                                     </div>
-                                    <ul class="shop-icon d-flex justify-content-center align-items-center">
-                                        <li>
-                                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-cart.html">
-
-                                                <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <span class="mt-10">$39.00</span>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content mt-10">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="shop-btn">
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="col-lg-12 col-md-6">
+                              <div class="tpslider-banner">
+                                 <a href="shop-details.html">
+                                    <div class="tpslider-banner__img">
+                                       <img src="{{ asset('frontend') }}/assets/img/slider/banner-slider-02.jpg" alt="">
+                                       <div class="tpslider-banner__content">
+                                          <span class="tpslider-banner__sub-title">Popular</span>
+                                          <h4 class="tpslider-banner__title">Energy with our <br> newest collection</h4>
+                                       </div>
                                     </div>
-                                    <a href="shop-details.html" class="theme-btn"><i
-                                            class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                                </div>
-                            </div>
+                                 </a>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="top-ratting-box-items">
-                            <div class="book-thumb">
-                                <a href="shop-details.html">
-                                    <img src="{{ asset('frontend') }}/assets/img/top-book/03.png" alt="img">
-                                </a>
-                            </div>
-                            <div class="book-content">
-                                <div class="title-header">
-                                    <div>
-                                        <h5> Design Low Book </h5>
-                                        <h3>
-                                            <a href="shop-details.html">Qple GPad With Retina Sisplay</a>
-                                        </h3>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- slider-area-end -->
+
+            <!-- category-area-start -->
+            <section class="category-area pt-70">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="tpsection mb-40">
+                           <h4 class="tpsection__title">Top <span> Categories <img src="{{ asset('frontend') }}/assets/img/icon/title-shape-01.jpg" alt=""></span></h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="custom-row category-border pb-45 justify-content-xl-between">
+                     @forelse ($categories as $category)
+                     <div class="tpcategory mb-40">
+                        <div class="tpcategory__icon p-relative">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+                            <image id="cat-icon-01.svg" width="120" height="120" xlink:href="{{ asset('uploads/category') }}/{{ $category->image }}"/>
+                           </svg>
+                           <span>{{ $category->hasmanyblogs->count() }}</span>
+                        </div>
+                        <div class="tpcategory__content">
+                           <h5 class="tpcategory__title"><a href="shop.html">{{ env('APP_NAME') }} <br> {{ Illuminate\Support\Str::upper($category->title) }}</a></h5>
+                        </div>
+                     </div>
+                     @empty
+
+                     <div class="tpcategory mb-40">
+                        <div class="tpcategory__icon p-relative">
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="50" viewBox="0 0 33 50">
+                           <image id="cat-icon-01.svg" width="33" height="50" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAyCAYAAADSprJaAAAEt0lEQVRYhcWYa2jVZRzHP5tzF9c0dFZr62Kz5VZ2p1AqhWgh2M3oSkG+CHwjVBK96F12gcJ3RfUmiIggKsoiipakZaQk64YutQvq1DJrzplzWzvxjM9/PDs7O2eX89cf/DnnOef/e37f53f/PYyDFgPrgB3AMaAf6Bvj6ffpAjYDjwPzC4koyfPfbOApYBXQA3wM/Ab8O449ZwKXAa3AAWAt8PJ4ThzTXGAjkAGeBuonugFQDiwE3nOfdRNhLgPWA0eBWychPBetFcgj42V4QIZVRQKAJnpbs15Y6OUKYBuwVY0Uk5qAE8ALhfa8GvgHWFNkAAm1AVuA6vjH0qyXQjidbnilQRuARuDsfCCCvQYMxTQo5Jo5QEM+EAHlHuDvlEB0APsN35w0QzOsTwkAUSIbQbEmqjXHjhRBhNCvNZsOUwxirk9HiiACPQa8GaeAGESSRHanDCL4W4u1aRSIZl/4M2UQ2/WNC3KBuBTYCxxKGUSQ0e2hR4FoNny6UgbRCRzJBWIWcB7wKzCYMoj92ZpIPPR8v2/Pw3yWKf00oMpiN137lphpQ1d13A6sxzoUBP4X7RM6sF2WiJC0+mIQyHAVcAVwMXAYeAa40c6oWsYyn2nylShoMKv9C4B6gX1qeacF7A9lhJTQmYAIHVAN8IYbddvUfKeg3+2Qjhk93ZGATKTVSoHONimdabFqUP33afoyeQOQznCCa4APgYPAu8DP1o8DnmCgCH5Q5qnr9b1LgIfU3lI84d7IJCeLFqmNZxHAhDvhIlAw8xeh0SmNPPtkU6nmKElAZE4BCJQ7BCJ4fN0pAFCpsx4psxV/EnjQKOkvMJlNlTICWG29eq5ENK8DywzPQ4KoiEzVqw0rJmC6hKc82ue4DpmE6kvAo8mJQwK525xxu6n5fR12ur8ddR6dVkA4Cr/XxNYmgJAMb7NpanPM/EDNj6LNvpRQs4ls9QTN8BrQ7gExYYV9Xsx+MXvKmmOq3RD9dj1whvZ7RZ58Jil1cp9pOQh8X6rVPXZwpXG1zgbRoNp2Rhsu0aYrLWgDBRw3ox/Uul4iCDTF5daWv8baYJnOs9x1nRXvB38r96nM85RbxFaajbdGfcsTCr8ozyF42JO0uL7F9c35mPLQGtWeCF3henHMkj2BNZm89rm+0z6gfZIgNur9d7nend3kZoMI388FfjEcQ/d0k+qcbPP7kzNG0rcmvciIe6zYMWf4Z4cmuNZo+XwKtaXXy5Y+1z0ecoRPZI+BjdEY2GokxDljMjSoQ16pqQOIBTlcYYgWeuL7tdsm4JspAsDsGzTyquvnNXdNLk00CiJoYp7I3ykCiB6LZKvyOgQ2fEcRg2iyRT9s6xXM81kRQAT6yPaxxab5xFhjYIuh2WNofl/E4XibEbbCCaw7ds4YxAJBZFTdJzpSMSjUjG893EFDdhSIKtWzywuM0Dd8VSQAmLA2KaPWcWL4PjMBUW8tCE3NHWpkSxFBBPrUXmSpzl+XXCUmIOYZRl3m9fYUrgh+1B9u0DmrnG+HQcwXRI2hmsbl2YA97CKvBoLmz4lfCDf5oYR/7edkbvXHQ6G3CI4fhp7weU/MdJ12CgCGxrKUKJz+LbUSHLUR4H/WLynTfCxBKgAAAABJRU5ErkJggg=="/>
+                           </svg>
+                           <span>20</span>
+                        </div>
+                        <div class="tpcategory__content">
+                           <h5 class="tpcategory__title"><a href="shop.html">Driftwood <br> Table Decor</a></h5>
+                        </div>
+                     </div>
+                     @endforelse
+                  </div>
+               </div>
+            </section>
+            <!-- category-area-end -->
+
+            <!-- product-area-start -->
+            <section class="product-area pt-95 pb-70">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-6 col-12">
+                        <div class="tpsection mb-40">
+                           <h4 class="tpsection__title">Popular <span> Products <img src="{{ asset('frontend') }}/assets/img/icon/title-shape-01.jpg" alt=""></span></h4>
+                        </div>
+                     </div>
+                     <div class="col-md-6 col-12">
+                        <div class="tpnavbar">
+                           <nav>
+                              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="true">All</button>
+                                <button class="nav-link" id="nav-popular-tab" data-bs-toggle="tab" data-bs-target="#nav-popular" type="button" role="tab" aria-controls="nav-popular" aria-selected="false">Popular</button>
+                                <button class="nav-link" id="nav-sale-tab" data-bs-toggle="tab" data-bs-target="#nav-sale" type="button" role="tab" aria-controls="nav-sale" aria-selected="false">On Sale</button>
+                                <button class="nav-link" id="nav-rate-tab" data-bs-toggle="tab" data-bs-target="#nav-rate" type="button" role="tab" aria-controls="nav-rate" aria-selected="false">Best Rated</button>
+                              </div>
+                            </nav>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-content" id="nav-tabContent">
+                     <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                        <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-1.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-2.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <ul class="shop-icon d-flex justify-content-center align-items-center">
-                                        <li>
-                                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-cart.html">
-                                                <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <span class="mt-10">$30.00</span>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content mt-10">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="shop-btn">
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Miko Wooden Bluetooth Speaker</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
                                     </div>
-                                    <a href="shop-details.html" class="theme-btn"><i
-                                            class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="top-ratting-box-items">
-                            <div class="book-thumb">
-                                <a href="shop-details.html">
-                                    <img src="{{ asset('frontend') }}/assets/img/top-book/04.png" alt="img">
-                                </a>
-                            </div>
-                            <div class="book-content">
-                                <div class="title-header">
-                                    <div>
-                                        <h5> Design Low Book </h5>
-                                        <h3>
-                                            <a href="shop-details.html">Flovely and Unicom Erna</a>
-                                        </h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-3.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-4.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <ul class="shop-icon d-flex justify-content-center align-items-center">
-                                        <li>
-                                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-cart.html">
-
-                                                <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <span class="mt-10">$19.00</span>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content mt-10">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="shop-btn">
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Wooden Gloves</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
                                     </div>
-                                    <a href="shop-details.html" class="theme-btn"><i
-                                            class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="top-ratting-box-items">
-                            <div class="book-thumb">
-                                <a href="shop-details.html">
-                                    <img src="{{ asset('frontend') }}/assets/img/top-book/05.png" alt="img">
-                                </a>
-                            </div>
-                            <div class="book-content">
-                                <div class="title-header">
-                                    <div>
-                                        <h5> Design Low Book </h5>
-                                        <h3>
-                                            <a href="shop-details.html">Castle In The Sky</a>
-                                        </h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-5.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-6.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <ul class="shop-icon d-flex justify-content-center align-items-center">
-                                        <li>
-                                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-cart.html">
-
-                                                <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <span class="mt-10">$16.00</span>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content mt-10">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="shop-btn">
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
                                     </div>
-                                    <a href="shop-details.html" class="theme-btn"><i
-                                            class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="top-ratting-box-items">
-                            <div class="book-thumb">
-                                <a href="shop-details.html">
-                                    <img src="{{ asset('frontend') }}/assets/img/top-book/06.png" alt="img">
-                                </a>
-                            </div>
-                            <div class="book-content">
-                                <div class="title-header">
-                                    <div>
-                                        <h5> Design Low Book </h5>
-                                        <h3>
-                                            <a href="shop-details.html">The Hidden Mystery Behind</a>
-                                        </h3>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-topsall">On Sale</span>
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-7.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-8.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <ul class="shop-icon d-flex justify-content-center align-items-center">
-                                        <li>
-                                            <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-cart.html">
-
-                                                <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <span class="mt-10">$30.00</span>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content mt-10">Wilson</span>
-                                    </li>
-                                </ul>
-                                <div class="shop-btn">
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Aluminum Table</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
                                     </div>
-                                    <a href="shop-details.html" class="theme-btn"><i
-                                            class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shop Section start  -->
-    <section class="shop-section section-padding fix">
-        <div class="container">
-            <div class="section-title-area">
-                <div class="section-title wow fadeInUp" data-wow-delay=".3s">
-                    <h2>Top Selling Books</h2>
-                </div>
-                <a href="shop.html" class="theme-btn transparent-btn wow fadeInUp" data-wow-delay=".5s">Explore More <i
-                        class="fa-solid fa-arrow-right-long"></i></a>
-            </div>
-            <div class="swiper book-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/01.png" alt="img"></a>
-                                <ul class="post-box">
-                                    <li>
-                                        Hot
-                                    </li>
-                                    <li>
-                                        -30%
-                                    </li>
-                                </ul>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                </ul>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">Simple Things You To <br> Save BOOK</a></h3>
-                                <ul class="price-list">
-                                    <li>$30.00</li>
-                                    <li>
-                                        <del>$39.99</del>
-                                    </li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-1.png" alt="img">
-                                        </span>
-                                        <span class="content">Wilson</span>
-                                    </li>
-
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/02.png" alt="img"></a>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">How Deal With Very <br> Bad BOOK</a></h3>
-                                <ul class="price-list">
-                                    <li>$30.00</li>
-                                    <li>
-                                        <del>$39.99</del>
-                                    </li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-2.png" alt="img">
-                                        </span>
-                                        <span class="content">Alexander</span>
-                                    </li>
-
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/03.png" alt="img"></a>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">Qple GPad With Retina <br> Sisplay</a></h3>
-                                <ul class="price-list">
-                                    <li>$30.00</li>
-                                    <li>
-                                        <del>$39.99</del>
-                                    </li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-3.png" alt="img">
-                                        </span>
-                                        <span class="content">Esther</span>
-                                    </li>
-
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/04.png" alt="img"></a>
-                                <ul class="post-box">
-                                    <li>
-                                        Hot
-                                    </li>
-                                </ul>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">Qple GPad With Retina <br> Sisplay</a></h3>
-                                <ul class="price-list">
-                                    <li>$30.00</li>
-                                    <li>
-                                        <del>$39.99</del>
-                                    </li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-4.png" alt="img">
-                                        </span>
-                                        <span class="content">Hawkins</span>
-                                    </li>
-
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="shop-box-items style-2">
-                            <div class="book-thumb center">
-                                <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/book/05.png" alt="img"></a>
-                                <ul class="shop-icon d-grid justify-content-center align-items-center">
-                                    <li>
-                                        <a href="shop-cart.html"><i class="far fa-heart"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-
-                                            <img class="icon" src="{{ asset('frontend') }}/assets/img/icon/shuffle.svg" alt="svg-icon">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-details.html"><i class="far fa-eye"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-content">
-                                <h5> Design Low Book </h5>
-                                <h3><a href="shop-details.html">Simple Things You To <br> Save BOOK</a></h3>
-                                <ul class="price-list">
-                                    <li>$30.00</li>
-                                    <li>
-                                        <del>$39.99</del>
-                                    </li>
-                                </ul>
-                                <ul class="author-post">
-                                    <li class="authot-list">
-                                        <span class="thumb">
-                                            <img src="{{ asset('frontend') }}/assets/img/testimonial/client-5.png" alt="img">
-                                        </span>
-                                        <span class="content">(Author) Albert</span>
-                                    </li>
-
-                                    <li class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="shop-button">
-                                <a href="shop-details.html" class="theme-btn"><i
-                                        class="fa-solid fa-basket-shopping"></i> Add To Cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonial Section start  -->
-    <section class="testimonial-section fix section-padding pt-0">
-        <div class="container">
-            <div class="section-title text-left">
-                <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">What our client say</h2>
-            </div>
-            <div class="swiper testimonial-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="testimonial-card-items">
-                            <p>
-                                One of the most powerful takeaways from this book is the emphasis on adopting a mindset
-                                of abundance and possibility. The idea that we can choose to see opportunities rather
-                                than limitations is a game-changer.
-                            </p>
-                            <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                                <div class="client-info">
-                                    <div class="client-img bg-cover"
-                                        style="background-image: url('{{ asset('frontend') }}/assets/img/testimonial/01.jpg');">
-                                        <div class="icon">
-                                            <img class="shape" src="{{ asset('frontend') }}/assets/img/testimonial/shape.svg" alt="img">
-                                        </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-9.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-10.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <div class="content">
-                                        <h3>Ronald Richards</h3>
-                                        <span>Marketing Coordinator</span>
-                                        <div class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Evo Lightweight Granite Shirt</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
                                     </div>
-                                </div>
-
-
-                                <div class="logo">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/logo1.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card-items">
-                            <p>
-                                The idea that we can choose to see opportunities rather than limitations is a
-                                game-changer. The book encourages readers to step out of their comfort zones and embrace
-                                a more positive outlook on life.
-                            </p>
-                            <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                                <div class="client-info">
-                                    <div class="client-img bg-cover"
-                                        style="background-image: url('{{ asset('frontend') }}/assets/img/testimonial/02.jpg');">
-                                        <div class="icon">
-                                            <img class="shape" src="{{ asset('frontend') }}/assets/img/testimonial/shape.svg" alt="img">
-                                        </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-volt"><i class="fas fa-bolt"></i></span>
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-11.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-12.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <div class="content">
-                                        <h3>Dianne Russell</h3>
-                                        <span>Project Manager</span>
-                                        <div class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">CLCo. Incredible Paper Car</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
                                     </div>
-                                </div>
-
-
-                                <div class="logo">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/logo2.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card-items">
-                            <p>
-                                "The Art of Possibility" by Rosamund Stone Zander and Benjamin Zander is a
-                                transformative read that challenges conventional thinking and opens up new
-                                possibilities. As a reader, I found myself profoundly .
-                            </p>
-                            <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                                <div class="client-info">
-                                    <div class="client-img bg-cover"
-                                        style="background-image: url('{{ asset('frontend') }}/assets/img/testimonial/03.jpg');">
-                                        <div class="icon">
-                                            <img class="shape" src="{{ asset('frontend') }}/assets/img/testimonial/shape.svg" alt="img">
-                                        </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-13.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-14.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <div class="content">
-                                        <h3>Ronald Richards</h3>
-                                        <span>Marketing Coordinator</span>
-                                        <div class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Progash Durable Granite Hat</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
                                     </div>
-                                </div>
-
-
-                                <div class="logo">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/logo1.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="testimonial-card-items">
-                            <p>
-                                From the very first chapter, the authors engage readers with inspiring stories and
-                                practical insights. Benjamin Zander's experiences as a conductor bring a unique
-                                perspective to leadership .
-                            </p>
-                            <div class="client-info-wrapper d-flex align-items-center justify-content-between">
-                                <div class="client-info">
-                                    <div class="client-img bg-cover"
-                                        style="background-image: url('{{ asset('frontend') }}/assets/img/testimonial/04.jpg');">
-                                        <div class="icon">
-                                            <img class="shape" src="{{ asset('frontend') }}/assets/img/testimonial/shape.svg" alt="img">
-                                        </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-15.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-16.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
                                     </div>
-                                    <div class="content">
-                                        <h3>Ronald Richards</h3>
-                                        <span>Marketing Coordinator</span>
-                                        <div class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
+                                    <div class="tpproduct__variation">
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg"></span>
+                                             <span class="tpproduct__termshape-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg red-product-bg"></span>
+                                             <span class="tpproduct__termshape-border red-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg yellow-product-bg"></span>
+                                             <span class="tpproduct__termshape-border yellow-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg green-product-bg"></span>
+                                             <span class="tpproduct__termshape-border green-product-border"></span>
+                                          </div>
+                                       </a>
                                     </div>
-                                </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Purab Enormous Miranda Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-17.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-18.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Miklonda Co. Crafted Candles</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-19.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-20.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="nav-popular" role="tabpanel" aria-labelledby="nav-popular-tab">
+                        <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-volt"><i class="fas fa-bolt"></i></span>
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-11.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-12.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">CLCo. Incredible Paper Car</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-13.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-14.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Progash Durable Granite Hat</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-15.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-16.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                    <div class="tpproduct__variation">
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg"></span>
+                                             <span class="tpproduct__termshape-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg red-product-bg"></span>
+                                             <span class="tpproduct__termshape-border red-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg yellow-product-bg"></span>
+                                             <span class="tpproduct__termshape-border yellow-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg green-product-bg"></span>
+                                             <span class="tpproduct__termshape-border green-product-border"></span>
+                                          </div>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Purab Enormous Miranda Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-17.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-18.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Miklonda Co. Crafted Candles</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-19.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-20.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-1.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-2.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Miko Wooden Bluetooth Speaker</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-3.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-4.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Wooden Gloves</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-5.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-6.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-topsall">On Sale</span>
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-7.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-8.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Aluminum Table</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-9.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-10.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Evo Lightweight Granite Shirt</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="nav-sale" role="tabpanel" aria-labelledby="nav-sale-tab">
+                        <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-17.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-18.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Miklonda Co. Crafted Candles</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-19.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-20.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-1.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-2.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Miko Wooden Bluetooth Speaker</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-3.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-4.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Wooden Gloves</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-5.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-6.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-volt"><i class="fas fa-bolt"></i></span>
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-11.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-12.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">CLCo. Incredible Paper Car</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-13.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-14.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Progash Durable Granite Hat</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-15.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-16.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                    <div class="tpproduct__variation">
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg"></span>
+                                             <span class="tpproduct__termshape-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg red-product-bg"></span>
+                                             <span class="tpproduct__termshape-border red-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg yellow-product-bg"></span>
+                                             <span class="tpproduct__termshape-border yellow-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg green-product-bg"></span>
+                                             <span class="tpproduct__termshape-border green-product-border"></span>
+                                          </div>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Purab Enormous Miranda Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-topsall">On Sale</span>
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-7.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-8.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Aluminum Table</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-9.jpg" alt="product-thumb">
+                                       <img class="product-thumb-secondary" src="{{ asset('frontend') }}/assets/img/product/home-one/product-10.jpg" alt="">
+                                    </a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Evo Lightweight Granite Shirt</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="nav-rate" role="tabpanel" aria-labelledby="nav-rate-tab">
+                        <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-5.jpg" alt="product-thumb"></a>
+                                    <a class="product-thumb-secondary" href="shop-details.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-6.jpg" alt=""></a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Pinkol Enormous Granite Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-1.jpg" alt="product-thumb">
+                                    </a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-2.jpg" alt=""></a>
+
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Miko Wooden Bluetooth Speaker</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-3.jpg" alt="product-thumb">
+                                    </a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-4.jpg" alt=""></a>
+
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Wooden Gloves</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-19.jpg" alt="product-thumb"></a>
+                                    <a class="product-thumb-secondary" href="#"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-20.jpg" alt=""></a>
+
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Weddonix Mediocre Silk Hat</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-topsall">On Sale</span>
+                                    <a href="shop-details.html">
+                                       <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-7.jpg" alt="product-thumb">
+                                    </a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-8.jpg" alt=""></a>
+
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Gorgeous Aluminum Table</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-9.jpg" alt="product-thumb"></a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-10.jpg" alt=""></a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Evo Lightweight Granite Shirt</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-15.jpg" alt="product-thumb"></a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-16.jpg" alt=""></a>
 
 
-                                <div class="logo">
-                                    <img src="{{ asset('frontend') }}/assets/img/testimonial/logo2.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                    <div class="tpproduct__variation">
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg"></span>
+                                             <span class="tpproduct__termshape-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg red-product-bg"></span>
+                                             <span class="tpproduct__termshape-border red-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg yellow-product-bg"></span>
+                                             <span class="tpproduct__termshape-border yellow-product-border"></span>
+                                          </div>
+                                       </a>
+                                       <a class="tpproduct__variationitem" href="#">
+                                          <div class="tpproduct__termshape">
+                                             <span class="tpproduct__termshape-bg green-product-bg"></span>
+                                             <span class="tpproduct__termshape-border green-product-border"></span>
+                                          </div>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">Purab Enormous Miranda Bottle</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-17.jpg" alt="product-thumb"></a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-18.jpg" alt=""></a>
 
-    <!-- Team Section start  -->
-    <section class="team-section fix section-padding pt-0 margin-bottom-30">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">Featured Author</h2>
-                <p class="wow fadeInUp" data-wow-delay=".5s">Interdum et malesuada fames ac ante ipsum primis in
-                    faucibus. <br> Donec at nulla nulla. Duis posuere ex lacus</p>
-            </div>
-            <div class="array-button">
-                <button class="array-prev"><i class="fal fa-arrow-left"></i></button>
-                <button class="array-next"><i class="fal fa-arrow-right"></i></button>
-            </div>
-            <div class="swiper team-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="team-box-items">
-                            <div class="team-image">
-                                <div class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/01.jpg" alt="img">
-                                </div>
-                                <div class="shape-img">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/shape-img.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h6><a href="team-details.html">Esther Howard</a></h6>
-                                <p>10 Published Books</p>
-                            </div>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Miklonda Co. Crafted Candles</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                          <span class="tpproduct__priceinfo-list-oldprice">$39.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <span class="tpproduct__thumb-volt"><i class="fas fa-bolt"></i></span>
+                                    <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-11.jpg" alt="product-thumb"></a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-12.jpg" alt=""></a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details.html">CLCo. Incredible Paper Car</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <div class="tpproduct pb-15 mb-30">
+                                 <div class="tpproduct__thumb p-relative">
+                                    <a href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-13.jpg" alt="product-thumb"></a>
+                                    <a class="product-thumb-secondary" href="shop-details-2.html"><img src="{{ asset('frontend') }}/assets/img/product/home-one/product-14.jpg" alt=""></a>
+                                    <div class="tpproduct__thumb-action">
+                                       <a class="comphare" href="#"><i class="fal fa-exchange"></i></a>
+                                       <a class="quckview" href="#"><i class="fal fa-eye"></i></a>
+                                       <a class="wishlist" href="wishlist.html"><i class="fal fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="tpproduct__content">
+                                    <h3 class="tpproduct__title"><a href="shop-details-2.html">Progash Durable Granite Hat</a></h3>
+                                    <div class="tpproduct__priceinfo p-relative">
+                                       <div class="tpproduct__priceinfo-list">
+                                          <span>$31.00</span>
+                                       </div>
+                                       <div class="tpproduct__cart">
+                                          <a href="cart.html"><i class="fal fa-shopping-cart"></i>Add To Cart</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="team-box-items">
-                            <div class="team-image">
-                                <div class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/02.jpg" alt="img">
-                                </div>
-                                <div class="shape-img">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/shape-img.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h6><a href="team-details.html">Shikhon Islam</a></h6>
-                                <p>07 Published Books</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="team-box-items">
-                            <div class="team-image">
-                                <div class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/03.jpg" alt="img">
-                                </div>
-                                <div class="shape-img">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/shape-img.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h6><a href="team-details.html">Kawser Ahmed</a></h6>
-                                <p>04 Published Books</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="team-box-items">
-                            <div class="team-image">
-                                <div class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/04.jpg" alt="img">
-                                </div>
-                                <div class="shape-img">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/shape-img.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h6><a href="team-details.html">Brooklyn Simmons</a></h6>
-                                <p>15 Published Books</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="team-box-items">
-                            <div class="team-image">
-                                <div class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/05.jpg" alt="img">
-                                </div>
-                                <div class="shape-img">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/shape-img.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h6><a href="team-details.html">Leslie Alexander</a></h6>
-                                <p>05 Published Books</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="team-box-items">
-                            <div class="team-image">
-                                <div class="thumb">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/06.jpg" alt="img">
-                                </div>
-                                <div class="shape-img">
-                                    <img src="{{ asset('frontend') }}/assets/img/team/shape-img.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="team-content text-center">
-                                <h6><a href="team-details.html">Guy Hawkins</a></h6>
-                                <p>12 Published Books</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- product-area-end -->
 
-    <!-- News Section start  -->
-    <section class="news-section fix section-padding section-bg">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2 class="mb-3 wow fadeInUp" data-wow-delay=".3s">Our Latest News</h2>
-                <p class="wow fadeInUp" data-wow-delay=".5s">Interdum et malesuada fames ac ante ipsum primis in
-                    faucibus. <br> Donec at nulla nulla. Duis posuere ex lacus</p>
-            </div>
-            <div class="row">
-                @foreach ($blogs as $blog)
-                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="news-card-items">
-                            <div class="news-image">
-                                <img src="{{ asset('uploads/blog') }}/{{ $blog->image }}" alt="img">
-                                <img src="{{ asset('uploads/blog') }}/{{ $blog->image }}" alt="img">
-                                <div class="post-box">
-                                    {{ $blog->onewithcategory->title }}
-                                </div>
-                            </div>
-                            <div class="news-content">
-                                <ul>
-                                    <li>
-                                        <i class="fa-light fa-calendar-days"></i>
-                                        {{ \Carbon\Carbon::parse($blog->created_at)->format('M d, Y') }}
-                                    </li>
-                                    <li>
-                                        <i class="fa-regular fa-user"></i>
-                                        By {{ $blog->onewithuser->name }}
-                                    </li>
-                                </ul>
-                                <h3><a href="news-details.html">
-                                {{ $blog->title }}
-                                </a></h3>
-                                <a href="news-details.html" class="theme-btn-2">Read More <i
-                                        class="fa-regular fa-arrow-right-long"></i></a>
-                            </div>
+            <!-- deal-product-area-start -->
+            <section class="dealproduct-area pb-95">
+               <div class="container">
+                  <div class="theme-bg pt-40 pb-40">
+                     <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                           <div class="tpdealproduct">
+                              <div class="tpdealproduct__thumb p-relative text-center">
+                                 <img src="{{ asset('frontend') }}/assets/img/floded/floded-01.png" alt="dealproduct-thumb">
+                                 <div class="tpdealproductd__offer">
+                                    <h5 class="tpdealproduct__offer-price"><span>From</span>$49</h5>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+                        <div class="col-lg-6 col-md-12">
+                           <div class="tpdealcontact pt-30">
+                              <div class="tpdealcontact__price mb-5">
+                                 <span>$49.00</span>
+                                 <del>$59.00</del>
+                              </div>
+                              <div class="tpdealcontact__text mb-30">
+                                 <h4 class="tpdealcontact__title mb-10"><a href="shop-details.html">Pro2 Abstract Folded Pots</a></h4>
+                                 <p>Elegant pink origami design three-dimensional view and decoration co-exist. Great for adding a decorative touch to any room’s decor. Wonderful accent piece for coffee tables or side tables.</p>
+                              </div>
+                              <div class="tpdealcontact__progress mb-30">
+                                 <div class="progress">
+                                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                 </div>
+                              </div>
+                              <div class="tpdealcontact__count">
+                                 <div class="tpdealcontact__countdown" data-countdown="2022/12/29"></div>
+                                 <i>Remains until the <br> end of the offer</i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- deal-product-area-end -->
+
+            <!-- shop-area-start -->
+            <section class="shop-area pb-100">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="tpsectionarea text-center mb-35">
+                           <h5 class="tpsectionarea__subtitle">Follow On</h5>
+                           <h4 class="tpsectionarea__title"><i class="fab fa-instagram"></i> {{ env('APP_NAME') }}-Blogs</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="shopareaitem">
+                     <div class="shopslider-active swiper-container">
+                        <div class="swiper-wrapper">
+                           @forelse ($blogs as $blog)
+                            <div class="tpshopitem swiper-slide">
+                               <a class="popup-image" href="{{ asset('uploads/blog') }}/{{ $blog->image }}">
+                                  <img src="{{ asset('uploads/blog') }}/{{ $blog->image }}" alt="{{ asset('uploads/blog') }}/{{ $blog->image }}">
+                               </a>
+                            </div>
+                            @empty
+                            <div class="tpshopitem swiper-slide">
+                               <a class="popup-image" href="{{ asset('frontend') }}/assets/img/instagram/instagram-01.jpg">
+                                  <img src="{{ asset('frontend') }}/assets/img/instagram/instagram-01.jpg" alt="shop-thumb">
+                               </a>
+                            </div>
+                           @endforelse
+                           {{-- <div class="tpshopitem swiper-slide">
+                              <a class="popup-image" href="{{ asset('frontend') }}/assets/img/instagram/instagram-02.jpg">
+                                 <img src="{{ asset('frontend') }}/assets/img/instagram/instagram-02.jpg" alt="shop-thumb">
+                              </a>
+                           </div>
+                           <div class="tpshopitem swiper-slide">
+                              <a class="popup-image" href="{{ asset('frontend') }}/assets/img/instagram/instagram-03.jpg">
+                                 <img src="{{ asset('frontend') }}/assets/img/instagram/instagram-03.jpg" alt="shop-thumb">
+                              </a>
+                           </div>
+                           <div class="tpshopitem swiper-slide">
+                              <a class="popup-image" href="{{ asset('frontend') }}/assets/img/instagram/instagram-04.jpg">
+                                 <img src="{{ asset('frontend') }}/assets/img/instagram/instagram-04.jpg" alt="shop-thumb">
+                              </a>
+                           </div>
+                           <div class="tpshopitem swiper-slide">
+                              <a class="popup-image" href="{{ asset('frontend') }}/assets/img/instagram/instagram-05.jpg">
+                                 <img src="{{ asset('frontend') }}/assets/img/instagram/instagram-05.jpg" alt="shop-thumb">
+                              </a>
+                           </div>
+                           <div class="tpshopitem swiper-slide">
+                              <a class="popup-image" href="{{ asset('frontend') }}/assets/img/instagram/instagram-06.jpg">
+                                 <img src="{{ asset('frontend') }}/assets/img/instagram/instagram-06.jpg" alt="shop-thumb">
+                              </a>
+                           </div> --}}
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- shop-area-end -->
+
 
 @endsection
-
-
-
-
-
 
