@@ -1,327 +1,280 @@
-{{-- @extends('layouts.frontmaster');
-
+@extends('layouts.frontmaster')
 
 @section('content')
 
 <x-front-header-title title="Blog Details"></x-front-header-title>
-<section class="news-details fix section-padding">
-    <div class="container">
-        <div class="news-details-area">
-            <div class="row g-5">
-                <div class="col-xl-9 col-lg-8">
-                    <div class="blog-post-details">
-                        <div class="single-blog-post">
-                            <div class="post-featured-thumb bg-cover" style="background-image: url('assets/img/news/post-4.jpg');"></div>
-                            <div class="post-content">
-                                <ul class="post-list d-flex align-items-center">
-                                    <li>
-                                        <i class="fa-light fa-user"></i>
-                                        By Admin
-                                    </li>
-                                    <li>
-                                        <i class="fa-sharp fa-regular fa-comments"></i>
-                                        2 Comments
-                                    </li>
-                                    <li>
-                                        <i class="fa-light fa-tag"></i>
-                                        Book Store
-                                    </li>
-                                </ul>
-                                <h3>Eu parturient Dictumst Frames quam Temper </h3>
-                                <p class="mb-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris efficitur et
-                                    ipsum ut volutpat. Morbi a mollis felis. Nam consectetur lectus vel lorem
-                                    facilisis, quis viverra purus pharetra. Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Fusce dui lacus, tempor a metus vel, varius rhoncus nunc.
-                                    Suspendisse luctus feugiat dictum. Curabitur ipsum velit, viverra in pretium
-                                    eget, molestie maximus magna. Aliquam elementum vel turpis non bibendum. Cras in
-                                    consequat neque.
-                                </p>
-                                <p class="mb-3">
-                                    Nunc tincidunt cursus lectus ac semper. Aenean ullamcorper quis arcu molestie
-                                    consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut nec
-                                    lobortis elit, eu ultrices justo. Fusce auctor erat est, non fringilla nibh
-                                    tempus quis. Aenean dignissim turpis ut interdum interdum. Nam molestie sed ex
-                                    non tempus. Donec sodales aliquam orci non imperdiet. Quisque tempus dolor id
-                                    nisi blandit tempor ut id lacus. Aliquam mattis tempor posuere. Sed ut
-                                    sollicitudin velit,
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris efficitur et
-                                    ipsum ut volutpat. Morbi a mollis felis. Nam consectetur lectus vel lorem
-                                    facilisis, quis viverra purus pharetra. Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit. Fusce dui lacus, tempor a metus vel, varius rhoncus nunc.
-                                    Suspendisse luctus feugiat dictum. Curabitur ipsum velit, viverra in pretium
-                                    eget, molestie maximus magna. Aliquam elementum vel turpis non bibendum. Cras in
-                                    consequat neque.
-                                </p>
-                                <div class="row g-4 mt-4">
-                                    <div class="col-lg-6">
-                                        <div class="details-image">
-                                            <img src="assets/img/news/post-5.jpg" alt="img">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="details-image">
-                                            <img src="assets/img/news/post-6.jpg" alt="img">
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <p class="pt-5 mb-5">
-                                    Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                    dolore of magna aliqua. Ut enim ad minim veniam, made of owl the quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat. Duis
-                                    aute irure and dolor in reprehenderit.Consectetur adipisicing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore of magna aliqua. Ut enim ad minim
-                                    veniam, made of owl the quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in
-                                    reprehenderit.
-                                </p>
 
-                                <div class="hilight-text mt-4 mb-5">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris efficitur et
-                                        ipsum ut volutpat. Morbi a mollis felis. Nam consectetur lectus vel lorem
-                                        facilisis, quis viverra purus pharetra. Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit. Fusce dui lacus, tempor a metus vel, varius
-                                        rhoncus nunc. Suspendisse luctus feugiat dictum. Curabitur ipsum velit,
-                                        viverra in pretium eget, molestie maximus magna. Aliquam elementum vel
-                                        turpis non bibendum.
-                                    </p>
-                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.71428 20.0711H0.5V5.64258H14.9286V20.4531L9.97665 30.3568H3.38041L8.16149 20.7947L8.5233 20.0711H7.71428Z" stroke="#543EE8"></path>
-                                        <path d="M28.2846 20.0711H21.0703V5.64258H35.4989V20.4531L30.547 30.3568H23.9507L28.7318 20.7947L29.0936 20.0711H28.2846Z" stroke="#543EE8"></path>
-                                    </svg>
-                                </div>
+      <!-- postbox area start -->
+      <div class="postbox-area pt-80 pb-60">
+        <div class="container">
+           <div class="row">
+              <div class="col-xxl-8 col-xl-8 col-lg-7 col-md-12">
+                 <div class="postbox__wrapper pr-20">
+                    <article class="postbox__item format-image mb-50 transition-3">
+                       <div class="postbox__thumb w-img mb-30">
+                          <img src="{{ asset('uploads/blog') }}/{{ $blog->image }}" alt="">
+                       </div>
+                       <div class="postbox__content">
+                          <div class="row">
+                             <div class="col-lg-12">
+                                <div class="postbox__content postbox__content-area mb-55">
+                                   <div class="postbox__meta mb-15">
+                                      <span><a href="#"><i class="fal fa-user-alt"></i> {{ $blog->onewithuser->name }}</a></span>
+                                      <span><i class="fal fa-clock"></i> {{Carbon\Carbon::parse($blog->created_at)->format('d M, Y')}}</span>
+                                      <span><a href="#"><i class="far fa-comment-alt"></i> (04) Comments</a></span>
+                                   </div>
+                                   <h4 class="mb-35">
+                                      {{ $blog->title }}
+                                   </h4>
+                                   <p>{!! $blog->description !!}.</p>
 
-                                <p class="mt-4 mb-5">
-                                    Nunc tincidunt cursus lectus ac semper. Aenean ullamcorper quis arcu molestie
-                                    consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut nec
-                                    lobortis elit, eu ultrices justo. Fusce auctor erat est, non fringilla nibh
-                                    tempus quis. Aenean dignissim turpis ut interdum interdum. Nam molestie sed ex
-                                    non tempus. Donec sodales aliquam orci non imperdiet. Quisque tempus dolor id
-                                    nisi blandit tempor ut id lacus. Aliquam mattis tempor posuere.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row tag-share-wrap mt-4 mb-5">
-                            <div class="col-lg-8 col-12">
-                                <div class="tagcloud">
-                                    <span class="me-3">Tags:</span>
-                                    <a href="news-details.html">Adventure</a>
-                                    <a href="news-details.html">Education</a>
-                                    <a href="news-details.html">Store</a>
+                             </div>
+                          </div>
+                          {{-- <div class="row">
+                             <div class="col-lg-6 col-md-6">
+                                <div class="postbox__content-area mb-60">
+                                   <h4>Our Approach</h4>
+                                   <div class="postbox__text mb-30">
+                                      <p>Must explain to you how all praising uts pain was born and I will gives you a itself completed account of the system, and sed expounds the ut actual teachings of that greater </p>
+                                      <div class="postbox__text-list">
+                                         <ul>
+                                            <li><i class="fal fa-check"></i>Extramural Funding</li>
+                                            <li><i class="fal fa-check"></i>Bacteria Markers</li>
+                                            <li><i class="fal fa-check"></i>Nam nec mi euismod euismod</li>
+                                         </ul>
+                                      </div>
+                                   </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
-                                <div class="social-share">
-                                    <span class="me-3">Share:</span>
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                             </div>
+                             <div class="col-lg-6 col-md-6">
+                                <div class="postbox__meta-img w-img mb-60"><img src="{{ asset('frontend') }}/assets/img/blog/blog-in-02.jpg" alt=""></div>
+                             </div>
+                          </div>
+                          <div class="row">
+                             <div class="col-lg-12">
+                                <div class="postbox__content-area mb-40">
+                                   <h4 class="mb-25">What Is A Business Technology Roadmap?</h4>
+                                   <p>Unlike detailed blueprints that lay out all tasks, deadlines, bug reports, and more along the way, technology roadmaps are high-level visual summaries highlighting a company’s vision or plans.
+                                   </p>
+                                   <p>In an Agile approach, a technology roadmap feeds the sprint and grooming processes, providing insight into how the product will travel from start to finish. It makes it easier for development teams to:</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="comments-area">
-                            <div class="comments-heading">
-                                <h3>02 Comments</h3>
-                            </div>
-                            <div class="blog-single-comment d-flex gap-4 pt-4 pb-5">
-                                <div class="image">
-                                    <img src="assets/img/news/comment.png" alt="image">
+                             </div>
+                             <div class="col-lg-6 col-md-6">
+                                <div class="postbox__meta-img mb-60">
+                                   <img src="{{ asset('frontend') }}/assets/img/blog/blog-in-05.jpg" alt="">
                                 </div>
-                                <div class="content">
-                                    <div class="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
-                                        <div class="con">
-                                            <h5><a href="news-details.html">Leslie Alexander</a></h5>
-                                            <span>March 20, 2024 at 2:37 pm</span>
-                                        </div>
-                                        <div class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
+                             </div>
+                             <div class="col-lg-6 col-md-6">
+                                <div class="postbox__meta-img mb-60">
+                                   <img src="{{ asset('frontend') }}/assets/img/blog/blog-in-04.jpg" alt="">
+                                </div>
+                             </div>
+                          </div> --}}
+                          <div class="postbox__tag-border">
+                             <div class="row align-items-center">
+                                <div class="col-xl-7 col-md-12">
+                                   <div class="postbox__tag">
+                                      <div class="postbox__tag-list tagcloud">
+                                         <span>Tag</span>
+                                         @foreach ($blog->manywithtags as $tag)
+                                            <a href="blog.html">{{ $tag->title }}</a>
+                                         @endforeach
+                                      </div>
+                                   </div>
+                                </div>
+                                <div class="col-xl-5 col-md-12">
+                                   <div class="postbox__social-tag">
+                                      <span>Share</span>
+                                      <a class="blog-d-lnkd" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                      <a class="blog-d-pin" href="#"><i class="fab fa-pinterest-p"></i></a>
+                                      <a class="blog-d-fb" href="#"><i class="fab fa-facebook-f"></i></a>
+                                      <a class="blog-d-tweet" href="#"><i class="fab fa-twitter"></i></a>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </article>
+                    <div class="postbox__comment mb-65">
+                       <h3 class="postbox__comment-title">({{ $comments->count() }}) Comment</h3>
+                       <ul>
+                        @foreach ($comments as $comment)
+                           <li>
+                              <div class="postbox__comment-box d-flex">
+                                 <div class="postbox__comment-info">
+                                    <div class="postbox__comment-avater mr-25">
+                                        @if ($comment->onewithuser->image == "default.png" )
+                                        <img src="{{ asset('uploads/default') }}/{{ $comment->onewithuser->image }}" alt="{{ $comment->onewithuser->image }}">
+                                        @else
+                                        <img src="{{ asset('uploads/profile') }}/{{ $comment->onewithuser->image }}" alt="{{ $comment->onewithuser->image }}">
+
+                                        @endif
                                     </div>
-                                    <p class="mt-30 mb-4">Neque porro est qui dolorem ipsum quia quaed inventor
-                                        veritatis et quasi
-                                        architecto var sed efficitur turpis gilla sed
-                                        sit amet finibus eros. Lorem Ipsum is simply dummy</p>
-                                    <a href="news-details.html" class="reply">Reply</a>
-                                </div>
-                            </div>
-                            <div class="blog-single-comment d-flex gap-4 pt-5 pb-5">
-                                <div class="image">
-                                    <img src="assets/img/news/comment-2.png" alt="image">
-                                </div>
-                                <div class="content">
-                                    <div class="head d-flex flex-wrap gap-2 align-items-center justify-content-between">
-                                        <div class="con">
-                                            <h5><a href="news-details.html">Alex Flores</a></h5>
-                                            <span>March 20, 2024 at 2:37 pm</span>
-                                        </div>
-                                        <div class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-regular fa-star"></i>
-                                        </div>
+                                 </div>
+                                 <div class="postbox__comment-text">
+                                    <div class="postbox__comment-name">
+                                       <h5>{{ $comment->name }}</h5>
+                                       <span class="post-meta">{{ Carbon\Carbon::parse($blog->created_at)->format('d M, Y') }}</span>
                                     </div>
-                                    <p class="mt-30 mb-4">Neque porro est qui dolorem ipsum quia quaed inventor
-                                        veritatis et quasi
-                                        architecto var sed efficitur turpis gilla sed
-                                        sit amet finibus eros. Lorem Ipsum is simply dummy</p>
-                                    <a href="news-details.html" class="reply">Reply</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment-form-wrap pt-5">
-                            <h3>Leave a comments</h3>
-                            <form action="#" id="contact-form" method="POST">
-                                <div class="row g-4">
-                                    <div class="col-lg-6">
-                                        <div class="form-clt">
-                                            <span>Your Name*</span>
-                                            <input type="text" name="name" id="name" placeholder="Your Name">
+                                    <p>{{ $comment->comment }}</p>
+                                    <div class="postbox__comment-reply">
+                                       <a onclick="myID({{ $comment->id }})"><i class="fas fa-reply-all"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                            @foreach ($comment->hasmanyreplies as $reply)
+                               <li class="children mb-30">
+                                  <div class="postbox__comment-box d-flex">
+                                     <div class="postbox__comment-info">
+                                        <div class="postbox__comment-avater mr-25">
+                                            @if ($reply->onewithuser->image == "default.png" )
+                                            <img src="{{ asset('uploads/default') }}/{{ $reply->onewithuser->image }}" alt="{{ $comment->onewithuser->image }}">
+                                            @else
+                                            <img src="{{ asset('uploads/profile') }}/{{ $reply->onewithuser->image }}" alt="{{ $comment->onewithuser->image }}">
+
+                                            @endif
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-clt">
-                                            <span>Your Email*</span>
-                                            <input type="text" name="email" id="email2" placeholder="Your Email">
+                                     </div>
+                                     <div class="postbox__comment-text">
+                                        <div class="postbox__comment-name">
+                                           <h5>{{ $reply->name }}</h5>
+                                           <span class="post-meta">{{ Carbon\Carbon::parse($reply->created_at)->format('d M, Y') }}</span>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-clt">
-                                            <span>Message*</span>
-                                            <textarea name="message" id="message" placeholder="Write Message"></textarea>
+                                        <p>I{{ $reply->comment }}.</p>
+                                        <div class="postbox__comment-reply">
+                                           <a href="#"><i class="fas fa-reply-all"></i></a>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <button type="submit" class="theme-btn ">
-                                            post comment<i class="fa-solid fa-arrow-right-long"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                                     </div>
+                                  </div>
+                               </li>
+                            @endforeach
+                           @endforeach
+                        </ul>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-4">
-                    <div class="main-sidebar">
-                        <div class="single-sidebar-widget">
-                            <div class="wid-title">
-                                <h3>Search</h3>
-                            </div>
-                            <div class="search-widget">
-                                <form action="#">
-                                    <input type="text" placeholder="Search here">
-                                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="single-sidebar-widget">
-                            <div class="wid-title">
-                                <h3>Categories</h3>
-                            </div>
-                            <div class="news-widget-categories">
-                                <ul>
-                                    <li><a href="news-details.html">Adventure</a> <span>(5)</span></li>
-                                    <li><a href="news-details.html">Education</a> <span>(3)</span></li>
-                                    <li class="active"><a href="news-details.html">Romance</a><span>(6)</span></li>
-                                    <li><a href="news-details.html">Modern Fiction</a> <span>(2)</span></li>
-                                    <li><a href="news-details.html">Contemporary</a> <span>(4)</span></li>
-                                    <li><a href="news-details.html">Art &amp; Literature</a> <span>(7)</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="single-sidebar-widget">
-                            <div class="wid-title">
-                                <h3>Recent Post</h3>
-                            </div>
-                            <div class="recent-post-area">
-                                <div class="recent-items">
-                                    <div class="recent-thumb">
-                                        <img src="assets/img/news/pp3.jpg" alt="img">
-                                    </div>
-                                    <div class="recent-content">
-                                        <ul>
-                                            <li>
-                                                <i class="fa-solid fa-calendar-days"></i>
-                                                18 Dec, 2024
-                                            </li>
-                                        </ul>
-                                        <h6>
-                                            <a href="news-details.html">
-                                                Top 10 Tarot Decks For The
-                                                Tarot World Summit
-                                            </a>
-                                        </h6>
-                                    </div>
+                    <div class="postbox__comment-form">
+                       <h3 class="postbox__comment-form-title">Leave a Reply</h3>
+                       <p>Your email address will not be published. Required fields are marked *</p>
+                       <form action="{{ route('front.comment.store') }}" method="POST">
+                        @csrf
+                          <div class="row">
+                             <div class="col-xxl-6 col-xl-6 col-lg-6">
+                                <div class="postbox__comment-input">
+                                   <input type="text" placeholder="Enter your Name" name="name">
+                                   <input hidden name="blog_id" value="{{ $blog->id }}">
+                                   <input hidden value="" id="parent_id" name="parent_id">
                                 </div>
-                                <div class="recent-items">
-                                    <div class="recent-thumb">
-                                        <img src="assets/img/news/pp4.jpg" alt="img">
-                                    </div>
-                                    <div class="recent-content">
-                                        <ul>
-                                            <li>
-                                                <i class="fa-solid fa-calendar-days"></i>
-                                                Mar 20, 2024
-                                            </li>
-                                        </ul>
-                                        <h6>
-                                            <a href="news-details.html">
-                                                Eu Parturient Dictumst Fames Quam Tempor
-                                            </a>
-                                        </h6>
-                                    </div>
+                             </div>
+                             <div class="col-xxl-6 col-xl-6 col-lg-6">
+                                <div class="postbox__comment-input">
+                                   <input type="email" placeholder="Enter your email" name="email">
                                 </div>
-                                <div class="recent-items">
-                                    <div class="recent-thumb">
-                                        <img src="assets/img/news/pp5.jpg" alt="img">
-                                    </div>
-                                    <div class="recent-content">
-                                        <ul>
-                                            <li>
-                                                <i class="fa-solid fa-calendar-days"></i>
-                                                Mar 10, 2024
-                                            </li>
-                                        </ul>
-                                        <h6>
-                                            <a href="news-details.html">
-                                                Students Intelligence in education in Building..
-                                            </a>
-                                        </h6>
-                                    </div>
+                             </div>
+                             <div class="col-xxl-12">
+                                <div class="postbox__comment-input">
+                                   <textarea placeholder="Type your comment" name="comment"></textarea>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="single-sidebar-widget">
-                            <div class="wid-title">
-                                <h3>Tags</h3>
-                            </div>
-                            <div class="news-widget-categories">
-                                <div class="tagcloud">
-                                    <a href="news-standard.html">Romance</a>
-                                    <a href="news-details.html">Books</a>
-                                    <a href="news-details.html">Tips &amp; Tricks</a>
-                                    <a href="news-details.html">Adventure</a>
-                                    <a href="news-details.html">Education</a>
-                                    <a href="news-details.html">Store</a>
+                             </div>
+                             <div class="col-xxl-12">
+                                <div class="postbox__comment-btn ">
+                                   <button type="submit" class="tp-color-btn tp-btn banner-animation">Post Comment</button>
                                 </div>
-                            </div>
-                        </div>
+                             </div>
+                          </div>
+                       </form>
                     </div>
-                </div>
-            </div>
+                 </div>
+              </div>
+              <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-12">
+                 <div class="sidebar__wrapper pl-25 pb-50">
+                    <div class="sidebar__widget mb-45">
+                       <div class="sidebar__widget-content">
+                          <h3 class="sidebar__widget-title mb-25">Search</h3>
+                          <div class="sidebar__search">
+                             <form action="#">
+                                <div class="sidebar__search-input-2 p-relative">
+                                   <input type="text" placeholder="Search post">
+                                   <button type="submit"><i class="far fa-search"></i></button>
+                                </div>
+                             </form>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="sidebar__widget mb-40">
+                       <h3 class="sidebar__widget-title mb-25">Category</h3>
+                       <div class="sidebar__widget-content">
+                          <ul>
+                            @forelse ($categories as $category)
+                            <li><a href="blog-details.html">{{ $category->title }}<span>{{ $category->hasmanyblogs->count() }}</span></a></li>
+                            @empty
+                            <li><a href="blog-details.html">Chemistry<span>03</span></a></li>
+
+                            @endforelse
+                          </ul>
+                       </div>
+                    </div>
+                    <div class="sidebar__widget mb-55">
+                       <h3 class="sidebar__widget-title mb-25">Recent Post</h3>
+                       <div class="sidebar__widget-content">
+                          <div class="sidebar__post rc__post">
+                            @forelse ($recentBlogs as $blog)
+                            <div class="rc__post mb-20 d-flex align-items-center">
+                               <div class="rc__post-thumb">
+                                  <a href="blog-details.html"><img src="{{ asset('uploads/blog') }}/{{ $blog->image }}" alt="blog-sidebar"></a>
+                               </div>
+                               <div class="rc__post-content">
+                                  <div class="rc__meta">
+                                     <span>{{ Carbon\Carbon::parse($blog->created_at)->format('d M, Y') }}</span>
+                                  </div>
+                                  <h3 class="rc__post-title">
+                                     <a href="blog-details.html">{{ $blog->title }}</a>
+                                  </h3>
+                               </div>
+                            </div>
+                         @empty
+                         <div class="rc__post mb-20 d-flex align-items-center">
+                            <div class="rc__post-thumb">
+                               <a href="blog-details.html"><img src="{{ asset('frontend') }}/assets/img/blog/blog-in-01.jpg" alt="blog-sidebar"></a>
+                            </div>
+                            <div class="rc__post-content">
+                               <div class="rc__meta">
+                                  <span>4 March. 2022</span>
+                               </div>
+                               <h3 class="rc__post-title">
+                                  <a href="blog-details.html">Don't Underestimate Tree for Furniture</a>
+                               </h3>
+                            </div>
+                         </div>
+                         @endforelse
+                          </div>
+                       </div>
+                    </div>
+                    <div class="sidebar__widget mb-55">
+                       <h3 class="sidebar__widget-title mb-25">Popular Tag</h3>
+                       <div class="sidebar__widget-content">
+                          <div class="tagcloud">
+                            @forelse ($tags as $tag)
+                            <a href="blog-details.html">{{ $tag->title }}</a>
+                            @empty
+
+                            @endforelse
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
-    </div>
-</section>
+     </div>
+     <!-- postbox area end -->
 
-@endsection --}}
 
-@extends('layouts.frontmaster')
+     <script>
+        let hiddenParentid = document.querySelector('#parent_id');
+        function myID(id){
+            hiddenParentid.value = id;
+        }
+     </script>
+
+@endsection

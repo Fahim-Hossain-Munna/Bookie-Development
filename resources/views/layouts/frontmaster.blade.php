@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -337,7 +336,7 @@
                            <li class="has-dropdown">
                               <a href="blog.html">Blog</a>
                               <ul class="submenu">
-                                 <li><a href="blog.html">Blog</a></li>
+                                 <li><a href="{{ route('front.blog') }}">Blog</a></li>
                                  <li><a href="blog-details.html">Blog Details</a></li>
                               </ul>
                            </li>

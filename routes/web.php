@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ColorController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index'])->name('home');
 Route::prefix('bookie/frontend')->get('/blog',[HomeController::class,'blog'])->name('front.blog');
 Route::prefix('bookie/frontend')->get('/blog/single/{id}',[HomeController::class,'blog_details'])->name('front.blog.single');
+Route::prefix('bookie/frontend')->post('/comment',[CommentController::class,'store'])->name('front.comment.store');
 
 
 Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {

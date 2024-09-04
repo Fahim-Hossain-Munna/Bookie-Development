@@ -5,6 +5,8 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Comment;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,15 +22,21 @@ class HomeController extends Controller
     }
     public function blog()
     {
-        $blogs = Blog::latest()->get();
+        $blogs = Blog::latest()->paginate(2);
+        $recentBlogs = Blog::latest()->take(4)->get();
         $categories = Category::latest()->get();
-        return view('frontend.blog.index',compact('categories','blogs'));
+        $tags= Tag::latest()->get();
+        return view('frontend.blog.index',compact('categories','blogs','tags','recentBlogs'));
     }
 
     public function blog_details($blogid)
     {
+        $comments = Comment::with('hasmanyreplies')->where('blog_id',$blogid)->whereNull('parent_id')->get();
+        $blog = Blog::where('id',$blogid)->first();
         $categories = Category::latest()->get();
-        return view('frontend.blog.blogsingle',compact('categories'));
+        $tags= Tag::latest()->get();
+        $recentBlogs = Blog::latest()->take(4)->get();
+        return view('frontend.blog.blogsingle',compact('categories','tags','recentBlogs','blog','comments'));
     }
 
     /**
