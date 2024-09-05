@@ -86,7 +86,7 @@
                    <div class="sidebar__widget-content">
                       <ul>
                          @forelse ($categories as $category)
-                            <li><a href="{{ route('front.category.blog',$category->slug) }}">{{ $category->title }}<span>{{ $category->hasmanyblogs->count() }}</span></a></li>
+                            <li><a href="blog-details.html">{{ $category->title }}<span>{{ $category->hasmanyblogs->count() }}</span></a></li>
                             @empty
                             <li><a href="blog-details.html">Chemistry<span>03</span></a></li>
 
@@ -135,7 +135,7 @@
                    <div class="sidebar__widget-content">
                       <div class="tagcloud">
                          @forelse ($tags as $tag)
-                            <a href="{{ route('front.tag.blog',$tag->slug) }}">{{ $tag->title }}</a>
+                            <a href="blog-details.html">{{ $tag->title }}</a>
                          @empty
 
                          @endforelse

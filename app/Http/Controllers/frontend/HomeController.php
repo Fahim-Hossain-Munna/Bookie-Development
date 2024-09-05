@@ -39,6 +39,26 @@ class HomeController extends Controller
         return view('frontend.blog.blogsingle',compact('categories','tags','recentBlogs','blog','comments'));
     }
 
+    public function cat_blog($cat_slug)
+    {
+        $category = Category::where('slug',$cat_slug)->first();
+        $blogs = Blog::where('category_id',$category->id)->paginate(2);
+        $tags= Tag::latest()->get();
+        $categories = Category::latest()->get();
+        $recentBlogs = Blog::latest()->take(4)->get();
+        return view('frontend.blog.categoryblog',compact('blogs','tags','categories','recentBlogs'));
+    }
+
+    public function tag_blog($tag_slug)
+    {
+        $Tag = Tag::with('manywithblogs')->where('slug',$tag_slug)->first();
+        $blogs = $Tag->manywithblogs()->paginate(2);;
+        $tags= Tag::latest()->get();
+        $categories = Category::latest()->get();
+        $recentBlogs = Blog::latest()->take(4)->get();
+        return view('frontend.blog.tagblog',compact('blogs','tags','categories','recentBlogs'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

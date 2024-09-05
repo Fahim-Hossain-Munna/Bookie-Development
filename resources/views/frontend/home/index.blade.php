@@ -106,7 +106,7 @@
                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
                             <image id="cat-icon-01.svg" width="120" height="120" xlink:href="{{ asset('uploads/category') }}/{{ $category->image }}"/>
                            </svg>
-                           <span>{{ $category->hasmanyblogs->count() }}</span>
+                           <span>{{ $category->hasmanyproduct->count() }}</span>
                         </div>
                         <div class="tpcategory__content">
                            <h5 class="tpcategory__title"><a href="shop.html">{{ env('APP_NAME') }} <br> {{ Illuminate\Support\Str::upper($category->title) }}</a></h5>

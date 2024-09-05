@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+Route::prefix('bookie/frontend')->get('/category/blog/{slug}',[HomeController::class,'cat_blog'])->name('front.category.blog');
+Route::prefix('bookie/frontend')->get('/tag/blog/{slug}',[HomeController::class,'tag_blog'])->name('front.tag.blog');
 Route::prefix('bookie/frontend')->get('/blog',[HomeController::class,'blog'])->name('front.blog');
 Route::prefix('bookie/frontend')->get('/blog/single/{id}',[HomeController::class,'blog_details'])->name('front.blog.single');
 Route::prefix('bookie/frontend')->post('/comment',[CommentController::class,'store'])->name('front.comment.store');
