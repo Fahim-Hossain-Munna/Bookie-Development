@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 31, 2024 at 12:09 PM
+-- Generation Time: Sep 05, 2024 at 12:13 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.9
 
@@ -46,7 +46,7 @@ CREATE TABLE `blogs` (
 --
 
 INSERT INTO `blogs` (`id`, `user_id`, `category_id`, `title`, `slug`, `description`, `image`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 2, 'টিএসসিতে দিনরাত খাটছেন শিক্ষার্থীরা, গতকাল সংগ্রহ প্রায় দেড় কোটি টাকা', 'tiessite-dinrat-khatchen-sikshartheera-gtkal-snggrh-pray-der-koti-taka', '<p>বন্যার্ত মানুষকে সহযোগিতা করার জন্য আজ শনিবার টানা তৃতীয় দিনের মতো ঢাকা বিশ্ববিদ্যালয়ের ছাত্র-শিক্ষক কেন্দ্রে (টিএসসি) গণত্রাণ সংগ্রহ করছে বৈষম্যবিরোধী ছাত্র আন্দোলন৷</p>\r\n<p>নগদ অর্থের পাশাপাশি বিভিন্ন শ্রেণি-পেশার মানুষেরা গতকাল যে পরিমাণ ত্রাণসামগ্রী টিএসসিতে বৈষম্যবিরোধী ছাত্র আন্দোলনের কাছে তুলে দিয়েছেন, তা বহন করতে প্রায় ৫০টি ট্রাক লেগেছে৷ দিনভর ত্রাণ ও নগদ অর্থ সংগ্রহের পর রাতে প্যাকেজিংয়েও অংশ নেন বিপুলসংখ্যক ছাত্র-ছাত্রী৷ পরে ট্রাকে করে ত্রাণ পাঠানো হয়েছে দুর্গত এলাকায়৷ আজ সকাল ১০টা থেকে টিএসসির ফটকে আবারও ত্রাণ সংগ্রহ কর্মসূচি শুরু হয়েছে চলবে রাত আটটা পর্যন্ত</p>\r\n<p>সকাল থেকে শুরু হওয়া এই কর্মসূচি চলবে রাত আটটা পর্যন্ত৷ গতকাল শুক্রবার কর্মসূচির দ্বিতীয় দিনে বৈষম্যবিরোধী ছাত্র আন্দোলনের এই উদ্যোগে ১ কোটি ৪২ লাখ টাকা&nbsp; ৫০ হাজার ১৯৬ টাকা জমা পড়েছে ৷</p>', '1-টিএসসিতে দিনরাত খাটছেন শিক্ষার্থীরা, গতকাল সংগ্রহ প্রায় দেড় কোটি টাকা-24-08-2024-137.webp', 'deactive', '2024-08-24 03:13:15', '2024-08-24 03:13:15', NULL),
+(1, 1, 2, 'টিএসসিতে দিনরাত খাটছেন শিক্ষার্থীরা, গতকাল সংগ্রহ প্রায় দেড় কোটি টাকা', 'tiessite-dinrat-khatchen-sikshartheera-gtkal-snggrh-pray-der-koti-taka', '<p>বন্যার্ত মানুষকে সহযোগিতা করার জন্য আজ শনিবার টানা তৃতীয় দিনের মতো ঢাকা বিশ্ববিদ্যালয়ের ছাত্র-শিক্ষক কেন্দ্রে (টিএসসি) গণত্রাণ সংগ্রহ করছে বৈষম্যবিরোধী ছাত্র আন্দোলন৷</p>\r\n<p>নগদ অর্থের পাশাপাশি বিভিন্ন শ্রেণি-পেশার মানুষেরা গতকাল যে পরিমাণ ত্রাণসামগ্রী টিএসসিতে বৈষম্যবিরোধী ছাত্র আন্দোলনের কাছে তুলে দিয়েছেন, তা বহন করতে প্রায় ৫০টি ট্রাক লেগেছে৷ দিনভর ত্রাণ ও নগদ অর্থ সংগ্রহের পর রাতে প্যাকেজিংয়েও অংশ নেন বিপুলসংখ্যক ছাত্র-ছাত্রী৷ পরে ট্রাকে করে ত্রাণ পাঠানো হয়েছে দুর্গত এলাকায়৷ আজ সকাল ১০টা থেকে টিএসসির ফটকে আবারও ত্রাণ সংগ্রহ কর্মসূচি শুরু হয়েছে চলবে রাত আটটা পর্যন্ত</p>\r\n<p>সকাল থেকে শুরু হওয়া এই কর্মসূচি চলবে রাত আটটা পর্যন্ত৷ গতকাল শুক্রবার কর্মসূচির দ্বিতীয় দিনে বৈষম্যবিরোধী ছাত্র আন্দোলনের এই উদ্যোগে ১ কোটি ৪২ লাখ টাকা&nbsp; ৫০ হাজার ১৯৬ টাকা জমা পড়েছে ৷</p>', '1-টিএসসিতে দিনরাত খাটছেন শিক্ষার্থীরা, গতকাল সংগ্রহ প্রায় দেড় কোটি টাকা-24-08-2024-137.webp', 'deactive', '2024-08-24 03:13:15', '2024-09-01 04:20:57', NULL),
 (2, 1, 5, 'পাকিস্তানে ২১ বছরের যে খরা কাটালেন মুশফিক', 'pakistane-21-bchrer-ze-khra-katalen-musfik', '<p>অথচ আঙুলে ব্যথা নিয়ে রাওয়ালপিন্ডি টেস্ট খেলতে নেমেছিলেন মুশফিক। পাকিস্তানের কন্ডিশন সম্পর্কে স্বচ্ছ ধারণা পেতে জাতীয় দলের সঙ্গে সেখানে না গিয়ে &lsquo;এ&rsquo; দলের সঙ্গে আগেই গিয়েছিলেন। ইসলামাবাদে পাকিস্তান &lsquo;এ&rsquo; দলের বিপক্ষে প্রথম অনানুষ্ঠানিক টেস্ট চলাকালে নেটে অনুশীলনের সময় আঙুলে চোট পান। ওই ম্যাচের দ্বিতীয় ইনিংসে ব্যাটিংও করতে পারেননি। এমনকি ভারী বর্ষণের কারণে পারেননি টেস্টের ঠিকঠাক প্রস্তুতি নিতেও।</p>\r\n<p>সেই মুশফিকই টেস্টে ২১ বছর ধরে পাকিস্তানের মাটিতে বাংলাদেশি ব্যাটসম্যানের সেঞ্চুরিখরা কাটালেন। তাঁর আগে পাকিস্তানের মাঠে টেস্টে সেঞ্চুরি ছিল হাবিবুল বাশার ও জাভেদ ওমরের। ২০০৩ সালের পাকিস্তান সফরে করাচি টেস্টে হাবিবুল ও পেশোয়ার টেস্টে তিন অঙ্ক ছুঁয়েছিলেন জাভেদ।</p>\r\n<p>এই সিরিজ শুরুর সময় থেকেই মুশফিকের সঙ্গে তামিম ইকবালের নাম উচ্চারিত হচ্ছিল। মুশফিকের কারণে তামিম যেন বাংলাদেশ দলে দীর্ঘ দিন ধরে না থেকেও আছেন! কীভাবে? আন্তর্জাতিক ক্রিকেটে ১৫০০০ রানের মাইলফলক থেকে ৩২ রান দূরে থাকতে রাওয়ালপিন্ডি টেস্ট খেলতে নেমেছিলেন মুশফিক। কাল তৃতীয় দিনের শেষ সেশনে ফিফটি পূরণের পথে সেই দ্বিতীয় বাংলাদেশি হিসেবে সেই মাইলফলক স্পর্শ করেছেন। প্রথমজন অবশ্যই তামিম (১৫১৯২)।</p>', '1-পাকিস্তানে ২১ বছরের যে খরা কাটালেন মুশফিক-24-08-2024-3427.webp', 'deactive', '2024-08-24 02:33:49', '2024-08-24 02:33:49', NULL),
 (3, 1, 2, 'হাসিনার পররাষ্ট্রনীতি ছিল মূলত গদি টেকানোর হাতিয়ার', 'hasinar-prrashtrneeti-chil-muult-gdi-tekanor-hatiyar', '<p>গণভবন লক্ষ্য করে বিক্ষুব্ধ জনতা রওনা হওয়ার পর হাসিনার ভারতে পালিয়ে যাওয়াটা মোটেও আশ্চর্যের বিষয় ছিল না। এর কারণ বেশ কয়েক বছর ধরে বাংলাদেশের সরকারের মধ্যে গভীর পচনের লক্ষণ স্পষ্ট হয়েছিল। বাংলাদেশের &lsquo;অর্থনৈতিক অলৌকিক ঘটনা&rsquo; অনেক মানুষকে চরম দারিদ্র্য থেকে বের করে এনেছিল বটে, কিন্তু সেই সাফল্যের বন্দনাগীতি শেষ পর্যন্ত তিক্ত হতে শুরু করেছিল।</p>\r\n<p>জাতীয় নির্বাচনে হাসিনার কারসাজি, জনগণের ব্যক্তিগত স্বাধীনতা খর্ব করা এবং প্রতিষ্ঠানের অবমূল্যায়ন নিয়েও হতাশা বাড়ছিল। যে পৃষ্ঠপোষক চক্রগুলো ক্রমবর্ধমান অজনপ্রিয় স্বৈরশাসককে ক্ষমতায় টিকিয়ে রেখেছিল তাদের দুর্নীতি ও অব্যবস্থাপনা অর্থনীতিকে পর্যুদস্ত করে ফেলেছিল।</p>\r\n<p>বিরোধী দল বিএনপি ২০২৪ সালের জানুয়ারির নির্বাচন বর্জন করার পর একতরফা ভোটে হাসিনার আওয়ামী লীগ বিশাল জয় পায়। কিন্তু এই একতরফা ভোটের পর জনমনে যে অসন্তোষ দেখা দিয়েছিল তা আওয়ামী সরকার ঢেকে রাখতে ব্যর্থ হয়েছিল।</p>', '1-হাসিনার পররাষ্ট্রনীতি ছিল মূলত গদি টেকানোর হাতিয়ার-25-08-2024-5753.webp', 'deactive', '2024-08-24 22:25:24', '2024-08-24 22:25:24', NULL);
 
@@ -158,6 +158,34 @@ INSERT INTO `colors` (`id`, `user_id`, `color_title`, `color`, `status`, `delete
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` int NOT NULL,
+  `blog_id` int NOT NULL,
+  `parent_id` int DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `user_id`, `blog_id`, `parent_id`, `name`, `email`, `comment`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 3, NULL, 'Fahim', 'admin@dev.com', 'Big Fun Sir!', NULL, '2024-09-04 05:41:35', '2024-09-04 05:41:35'),
+(2, 1, 3, NULL, 'Munna', 'fhmunna.dev@gmail.com', 'Just WoW!', NULL, '2024-09-04 05:41:52', '2024-09-04 05:41:52'),
+(3, 1, 3, 1, 'Dighol', 'dighol.kamla@gmail.com', 'Mia eto fan hoiyen na , zoldi poira jaibo.', NULL, '2024-09-04 05:57:16', '2024-09-04 05:57:16');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `failed_jobs`
 --
 
@@ -170,6 +198,61 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `user_id`, `product_id`, `title`, `image`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 'gallery 1', '1-gallery 1-6406-02-09-2024.png', 'deactive', '2024-09-02 00:34:24', '2024-09-01 23:12:47', '2024-09-02 00:34:24'),
+(2, 1, 1, 'gallery 2', '1-gallery 2-3545-02-09-2024.png', 'deactive', NULL, '2024-09-01 23:22:15', '2024-09-02 05:48:30'),
+(3, 1, 1, 'gallery 3', '1-gallery 3-6113-02-09-2024.jpg', 'deactive', NULL, '2024-09-01 23:23:22', '2024-09-02 05:45:38');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inventories`
+--
+
+CREATE TABLE `inventories` (
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `size_id` int NOT NULL,
+  `color_id` int NOT NULL,
+  `quantity` int NOT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `inventories`
+--
+
+INSERT INTO `inventories` (`id`, `user_id`, `product_id`, `size_id`, `color_id`, `quantity`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 2, 1, 10, 'active', NULL, '2024-09-02 04:30:13', '2024-09-02 05:47:19'),
+(2, 1, 1, 4, 2, 25, 'deactive', NULL, '2024-09-02 04:30:27', '2024-09-02 04:30:27'),
+(3, 1, 1, 1, 3, 115, 'active', NULL, '2024-09-02 04:34:04', '2024-09-02 05:47:22');
 
 -- --------------------------------------------------------
 
@@ -233,7 +316,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (12, '2024_08_25_111247_create_sizes_table', 4),
 (13, '2024_08_25_111254_create_colors_table', 4),
 (29, '2024_08_28_102552_create_products_table', 5),
-(30, '2024_08_29_092043_create_product_tag_table', 5);
+(30, '2024_08_29_092043_create_product_tag_table', 5),
+(32, '2024_09_02_032049_create_galleries_table', 6),
+(33, '2024_09_02_091616_create_inventories_table', 7),
+(37, '2024_09_04_100615_create_comments_table', 8);
 
 -- --------------------------------------------------------
 
@@ -285,7 +371,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `user_id`, `category_id`, `product_name`, `product_slug`, `product_code`, `product_short_description`, `product_description`, `product_unit`, `product_thumbnail`, `hole_price`, `purchase_price`, `selling_price`, `discount_price`, `discount_type`, `feature`, `today_deal`, `vat_tax`, `shipping_type`, `shipping_rate`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, '1', '6', 'Fiver Gig', 'fiver-gig', '#AbCD123', '<p>Hey! I am PHP Senior( 8+ years) with great knowledge working of 1)WordPress/Woo commerce 2 Laravel 3)JavaScript 4HTML 5)CSS 6)CodeIgniter I love work with Laravel/WordPress and have great experience with customization &amp; optimization of theme , creating &amp; support plugin , etc. Let\'s start to work! Kind regards, Adeel</p>', '<p>Discuss requirements before ordering. Thank you.t!!</p>\r\n<p>&nbsp;</p>\r\n<p>If you\'re looking for a skilled PHP developer who can create or fix Laravel, CodeIgniter, or any PHP website, then you\'ve come to the right place.</p>\r\n<p>&nbsp;</p>\r\n<p>As a PHP developer, I understand the ins and outs of creating robust web applications using some of the most popular PHP frameworks available today. Whether you need a brand new website built from scratch or an existing fixed and improved, I can help.</p>\r\n<p>I can work with your existing codebase, or start from scratch to create a custom PHP website that perfectly meets your needs. I can create websites that are responsive and user-friendly, with a clean and modern design that showcases your brand and captures the attention of your audience.</p>\r\n<p>&nbsp;</p>\r\n<p>I have experience with a range of PHP frameworks, including Laravel, CodeIgniter, Symfony, and CakePHP, among others. I can work with databases such as MySQL, PostgreSQL, and MongoDB, and I am well-versed in HTML, CSS, and JavaScript.</p>\r\n<p>Whether you need a simple or a complex web application with advanced features, I can help you achieve your goals.</p>\r\n<p>Contact me today to discuss your project and see how I can help you</p>', '1', '1-Fiver Gig-7685-31-08-2024.png', NULL, 500, 800, 100, 'flat', 'deactive', 'deactive', '3', 'inner', 60, 'deactive', NULL, '2024-08-31 03:44:35', '2024-08-31 03:44:35');
+(1, '1', '6', 'Fiver Gig', 'fiver-gig', '#AbCD123', '<p>Hey! I am PHP Senior( 8+ years) with great knowledge working of 1)WordPress/Woo commerce 2 Laravel 3)JavaScript 4HTML 5)CSS 6)CodeIgniter I love work with Laravel/WordPress and have great experience with customization &amp; optimization of theme , creating &amp; support plugin , etc. Let\'s start to work! Kind regards, Adeel</p>', '<p>Discuss requirements before ordering. Thank you.t!!</p>\r\n<p>&nbsp;</p>\r\n<p>If you\'re looking for a skilled PHP developer who can create or fix Laravel, CodeIgniter, or any PHP website, then you\'ve come to the right place.</p>\r\n<p>&nbsp;</p>\r\n<p>As a PHP developer, I understand the ins and outs of creating robust web applications using some of the most popular PHP frameworks available today. Whether you need a brand new website built from scratch or an existing fixed and improved, I can help.</p>\r\n<p>I can work with your existing codebase, or start from scratch to create a custom PHP website that perfectly meets your needs. I can create websites that are responsive and user-friendly, with a clean and modern design that showcases your brand and captures the attention of your audience.</p>\r\n<p>&nbsp;</p>\r\n<p>I have experience with a range of PHP frameworks, including Laravel, CodeIgniter, Symfony, and CakePHP, among others. I can work with databases such as MySQL, PostgreSQL, and MongoDB, and I am well-versed in HTML, CSS, and JavaScript.</p>\r\n<p>Whether you need a simple or a complex web application with advanced features, I can help you achieve your goals.</p>\r\n<p>Contact me today to discuss your project and see how I can help you</p>', '1', '1-Fiver Gig-2769-01-09-2024.png', NULL, 500, 800, 100, 'flat', 'deactive', 'deactive', '3', 'Select Type', 60, 'deactive', NULL, '2024-09-01 04:41:50', '2024-09-01 05:19:04');
 
 -- --------------------------------------------------------
 
@@ -303,8 +389,8 @@ CREATE TABLE `product_tag` (
 --
 
 INSERT INTO `product_tag` (`product_id`, `tag_id`) VALUES
-(1, 8),
-(1, 7);
+(1, 7),
+(1, 4);
 
 -- --------------------------------------------------------
 
@@ -326,8 +412,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('cOkZhqgadOU6VuyZIHphSza7VK9ukps31rIbktne', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiOHZmazlPTnR1NHFGeTdUbnA4ODFidmlFTXFET2JVZnJodm82dURkWSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozNjoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2Jvb2tpZS9wcm9kdWN0Ijt9fQ==', 1725098374),
-('TfnQltleqGr8P90StkFGNrrI9zCyhJEHuQhh0xiO', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUUswd24zdDBpMDRxMEc5SW5BcjlpbGU2VjVXVkxyaFoxOVhwMGdnbSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29raWUvcHJvZHVjdCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1724925717);
+('Hy1Df5OGxNxsGwdsmdzjsVNs5xdxg21wwLC25Hfq', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMDBQOGg2RElQM2ZJUVJFM2pkSndxbGhHb0Q4djdaOENGYWlTQ240bCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1725520660),
+('lJc3tsA8k82VoKTygPESWUxz6KXSLuuLA1Q3XXhL', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiTGJCOHFYUVpPeXZ1ak45OEJ1SU94QTdwYmc4NjFoQW9qSlRQaWxJaiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29raWUvZnJvbnRlbmQvYmxvZy9zaW5nbGUvMyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1725451664);
 
 -- --------------------------------------------------------
 
@@ -456,11 +542,29 @@ ALTER TABLE `colors`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `inventories`
+--
+ALTER TABLE `inventories`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `jobs`
@@ -550,10 +654,28 @@ ALTER TABLE `colors`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `inventories`
+--
+ALTER TABLE `inventories`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -565,7 +687,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `products`
