@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 
@@ -10,17 +11,19 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function login()
     {
-        //
+        $categories = Category::latest()->get();
+        return view('frontend.auth.login',compact('categories'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function register(Request $request)
     {
-        //
+        $categories = Category::latest()->get();
+        return view('frontend.auth.register',compact('categories'));
     }
 
     /**
