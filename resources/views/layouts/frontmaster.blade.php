@@ -19,6 +19,8 @@
 
       <!-- CSS here -->
       <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/animate.css">
       <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/swiper-bundle.css">
       <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/slick.css">
@@ -106,7 +108,10 @@
                                  <i class="fal fa-shopping-cart"></i>
                                  <span class="tp-product-count">2</span>
                               </button>
-                              <a href="{{ route('front.customer.auth.register') }}"><i class="fal fa-user"></i></a>
+                              @auth
+                                <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
+                              @endauth
+                              <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                               <a href="wishlist.html"><i class="fal fa-heart"></i></a>
                            </div>
                         </div>
@@ -282,6 +287,11 @@
                                  <li><a href="index-3.html">Furniture Home</a></li>
                                  <li><a href="index-4.html">Cosmetics Home</a></li>
                                  <li><a href="index-5.html">Food Grocery</a></li>
+                                 @auth
+                                 <li><a href="index-5.html">{{ Auth::guard('customer')->user()->name }}</a></li>
+                                 @endauth
+                                 {{-- @if (Auth::guard('customer')->user()->name )
+                                 @endif --}}
                               </ul>
                            </li>
                            <li class="has-dropdown">
@@ -697,6 +707,11 @@
      <script src="{{ asset('frontend') }}/assets/js/meanmenu.js"></script>
      <script src="{{ asset('frontend') }}/assets/js/jquery.knob.js"></script>
      <script src="{{ asset('frontend') }}/assets/js/main.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+     @yield('script')
   </body>
 
 <!-- Mirrored from html.hixstudio.net/ninico/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Sep 2024 06:03:17 GMT -->

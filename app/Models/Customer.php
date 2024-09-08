@@ -12,5 +12,7 @@ class Customer extends Authenticatable implements MustVerifyEmail
     use HasFactory;
     use SoftDeletes;
 
+    protected $guard = 'customer';
+
     protected $guarded = [''];
 }

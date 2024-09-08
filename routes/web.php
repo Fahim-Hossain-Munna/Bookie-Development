@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\CustomerProfileController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
@@ -23,8 +24,19 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+
+// Frontend customer authentication
 Route::prefix('bookie/frontend')->get('/customer/authentication/login',[CustomerController::class,'login'])->name('front.customer.auth.login');
+Route::prefix('bookie/frontend')->post('/customer/authentication/login',[CustomerController::class,'login_post'])->name('front.customer.auth.login');
 Route::prefix('bookie/frontend')->get('/customer/authentication/register',[CustomerController::class,'register'])->name('front.customer.auth.register');
+Route::prefix('bookie/frontend')->post('/customer/authentication/register',[CustomerController::class,'register_post'])->name('front.customer.auth.register');
+
+// customer profile
+Route::prefix('bookie/frontend')->get('/customer/profile',[CustomerProfileController::class,'index'])->name('front.customer.profile');
+Route::prefix('bookie/frontend')->post('/customer/profile/logout',[CustomerProfileController::class,'logout'])->name('front.customer.logout');
+
+
+// Frontend blog part with comment
 Route::prefix('bookie/frontend')->get('/category/blog/{slug}',[HomeController::class,'cat_blog'])->name('front.category.blog');
 Route::prefix('bookie/frontend')->get('/tag/blog/{slug}',[HomeController::class,'tag_blog'])->name('front.tag.blog');
 Route::prefix('bookie/frontend')->get('/blog',[HomeController::class,'blog'])->name('front.blog');
