@@ -6,7 +6,7 @@
 
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
@@ -42,7 +42,7 @@
                                                     @csrf
                                                    <button type="submit" class="dropdown-item"> <i class="ti ti-pencil"></i>  Restore</button>
                                                 </form>
-                                                 <form action="{{ route('size&color.pdelete.size',$product->id) }}" method="POST">
+                                                 <form action="{{ route('product.pdelete',$product->id) }}" method="POST">
                                                      @csrf
                                                  <button type="submit" class="dropdown-item"> <i class="ti ti-trash"></i> Permanent Delete</button>
                                                  </form>
@@ -64,4 +64,5 @@
                 </div><!--end card-body-->
             </div><!--end card-->
         </div>
+    </div>
 @endsection

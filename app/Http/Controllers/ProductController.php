@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Gallery;
 use App\Models\Product;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -353,9 +354,20 @@ class ProductController extends Controller
         Product::withTrashed()->findOrFail($id)->restore();
         return redirect()->route('product.index')->with('product_status','Product Restore Successfull!!');
     }
-    public function pdelete($id)
+    public function pdelete_product($id)
     {
-        $product = Product::where('id',$id)->first();
+        $product = Product::withTrashed()->where('id',$id)->first();
+        $galleries = Gallery::where('product_id',$id)->get();
+
+        foreach($galleries as $gal){
+            if($gal->image){
+                $old_path = base_path('public/uploads/gallery/'.$gal->image);
+                if(file_exists($old_path)){
+                    unlink($old_path);
+                }
+            }
+        }
+
         if($product->product_thumbnail){
             $old_path = base_path('public/uploads/product/'.$product->product_thumbnail);
             if(file_exists($old_path)){

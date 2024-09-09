@@ -93,7 +93,7 @@ Route::prefix('bookie')->middleware(['auth', 'verified'])->group(function () {
     Route::post('product/feature/page/{id}',[ProductController::class,'feature'])->name('product.feature');
     Route::get('product/trash/page',[ProductController::class,'trash'])->name('product.trash');
     Route::post('product/trash/restore/{id}',[ProductController::class,'restore'])->name('product.restore');
-    Route::post('product/trash/permanentdelete/{id}',[ProductController::class,'pdelete'])->name('product.pdelete');
+    Route::post('product/trash/permanentdelete/{id}',[ProductController::class,'pdelete_product'])->name('product.pdelete');
 
     // products gallery part
     Route::get('product/gallery/index/{id}',[GalleryController::class,'index'])->name('gallery.index');
