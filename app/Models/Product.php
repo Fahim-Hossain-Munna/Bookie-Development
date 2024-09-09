@@ -17,4 +17,8 @@ class Product extends Model
     public function manywithtags(){
         return $this->belongsToMany(Tag::class,'product_tag');
     }
+
+    public function singlewithcategory(){
+        return $this->hasOne(Category::class,"id","category_id");
+    }
 }

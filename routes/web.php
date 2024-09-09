@@ -25,6 +25,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 
+// product details
+Route::prefix('bookie/frontend')->get('/product/single/{slug}',[HomeController::class,'product_single'])->name('front.product.single');
+Route::get('/get-colors-by-size', [HomeController::class, 'getColorsBySize'])->name('getColorsBySize');
+
+
 // Frontend customer authentication
 Route::prefix('bookie/frontend')->get('/customer/authentication/login',[CustomerController::class,'login'])->name('front.customer.auth.login');
 Route::prefix('bookie/frontend')->post('/customer/authentication/login',[CustomerController::class,'login_post'])->name('front.customer.auth.login');

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Comment;
+use App\Models\Inventory;
+use App\Models\Product;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -18,7 +20,9 @@ class HomeController extends Controller
     {
         $blogs = Blog::latest()->get();
         $categories = Category::latest()->get();
-        return view('frontend.home.index',compact('categories','blogs'));
+        $products = Product::where('status','active')->latest()->take(15)->get();
+        $feature_products = Product::where('feature','active')->latest()->take(15)->get();
+        return view('frontend.home.index',compact('categories','blogs','products','feature_products'));
     }
     public function blog()
     {
@@ -59,21 +63,20 @@ class HomeController extends Controller
         return view('frontend.blog.tagblog',compact('blogs','tags','categories','recentBlogs'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+
+    public function product_single($slug)
     {
-        //
+        $categories = Category::latest()->get();
+        $product = Product::where('product_slug',$slug)->first();
+        $colors = Inventory::where('product_id',$product->id)->get();
+        $sizes = Inventory::where('product_id',$product->id)->get();
+        $related_product = Product::where('category_id',$product->category_id)->get();
+        return view('frontend.product.single',compact('product','categories','colors','sizes','related_product'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.

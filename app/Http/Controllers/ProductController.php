@@ -43,6 +43,7 @@ class ProductController extends Controller
         if($request->hasFile('thumbnail')){
             $new_name = auth()->user()->id .'-'. $request->title .'-'. rand(1111,9999) .'-'.now()->format('d-m-Y').'.'.$request->file('thumbnail')->getClientOriginalExtension();
             $image = $manager->read($request->file('thumbnail'));
+            $image->scale(1000,1000);
             $image->toPng()->save(base_path('public/uploads/product/'.$new_name),80);
 
             if($request->slug){
@@ -188,6 +189,7 @@ class ProductController extends Controller
             }
             $new_name = auth()->user()->id .'-'. $request->title .'-'. rand(1111,9999) .'-'.now()->format('d-m-Y').'.'.$request->file('thumbnail')->getClientOriginalExtension();
             $image = $manager->read($request->file('thumbnail'));
+            $image->scale(1000,1000);
             $image->toPng()->save(base_path('public/uploads/product/'.$new_name),80);
 
             $product = Product::findOrFail($product->id);

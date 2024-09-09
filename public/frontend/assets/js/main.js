@@ -6,9 +6,9 @@
 	$(window).on('load', function () {
 
 		$('#preloader').delay(350).fadeOut('slow');
-	
+
 		$('body').delay(350).css({ 'overflow': 'visible' });
-	
+
 	})
 
 
@@ -47,7 +47,7 @@
 		$('html, body').animate({
 			scrollTop: $(target).offset().top
 		}, 1000);
-	
+
 		});
 	}
 
@@ -69,7 +69,7 @@
 
 	////////////////////////////////////////////////////
 	// 04. Nice Select Js
-	$('select').niceSelect();
+	// $('select').niceSelect();
 
 
 	////////////////////////////////////////////////////
@@ -607,7 +607,7 @@
 		allowTouchMove: false,
 		disableOnInteraction: true,
 	});
-		
+
 
 
 

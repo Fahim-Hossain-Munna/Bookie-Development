@@ -30,6 +30,8 @@
       <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/meanmenu.css">
       <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/spacing.css">
       <link rel="stylesheet" href="{{ asset('frontend') }}/assets/css/main.css">
+
+      @livewireStyles
    </head>
    <body>
 
@@ -109,7 +111,9 @@
                                  <span class="tp-product-count">2</span>
                               </button>
                               @auth
+                                @if (!auth()->user()->name)
                                 <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
+                                @endif
                               @endauth
                               <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                               <a href="wishlist.html"><i class="fal fa-heart"></i></a>
@@ -288,7 +292,11 @@
                                  <li><a href="index-4.html">Cosmetics Home</a></li>
                                  <li><a href="index-5.html">Food Grocery</a></li>
                                  @auth
-                                 <li><a href="index-5.html">{{ Auth::guard('customer')->user()->name }}</a></li>
+                                    @if (!Auth::user()->name)
+                                    <li><a href="index-5.html">{{ Auth::guard('customer')->user()->name }}</a></li>
+                                    @else
+                                    <li><a href="index-5.html">{{ Auth::user()->name }}</a></li>
+                                    @endif
                                  @endauth
                                  {{-- @if (Auth::guard('customer')->user()->name )
                                  @endif --}}
@@ -362,7 +370,12 @@
                            <i class="fal fa-shopping-cart"></i>
                            <span class="tp-product-count">2</span>
                         </button>
-                        <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                        @auth
+                            @if (!auth()->user()->name)
+                            <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
+                            @endif
+                        @endauth
+                        <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                         <a href="wishlist.html"><i class="fal fa-heart"></i></a>
                      </div>
                      <div class="header-meta__search-5 ml-25">
@@ -391,7 +404,7 @@
                      <button class="tp-menu-toggle"><i class="far fa-bars"></i></button>
                   </div>
                   <div class="logo">
-                     <a href="index.html"><img src="{{ asset('frontend') }}/assets/img/logo/logo.png" alt="logo"></a>
+                    <h2 style="width: 115px; height:27px; font-family: 'Protest Guerrilla', 'sans-serif'; font-width:400;">Bookie</h2>
                   </div>
                </div>
                <div class="col-lg-9 col-md-8">
@@ -409,7 +422,12 @@
                            <i class="fal fa-shopping-cart"></i>
                            <span>2</span>
                         </button>
-                        <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                        @auth
+                            @if (!auth()->user()->name)
+                            <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
+                            @endif
+                        @endauth
+                        <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                         <a href="wishlist.html"><i class="fal fa-heart"></i></a>
                      </div>
                   </div>
@@ -438,7 +456,12 @@
                               <i class="fal fa-shopping-cart"></i>
                               <span>2</span>
                            </button>
-                           <a href="sign-in.html"><i class="fal fa-user"></i></a>
+                           @auth
+                                @if (!auth()->user()->name)
+                                <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
+                                @endif
+                            @endauth
+                        <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                         </div>
                      </div>
                   </div>
@@ -712,6 +735,8 @@
 
 
      @yield('script')
+     @livewireScripts
+
   </body>
 
 <!-- Mirrored from html.hixstudio.net/ninico/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Sep 2024 06:03:17 GMT -->
