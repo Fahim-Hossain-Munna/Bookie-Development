@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 05, 2024 at 12:13 PM
+-- Generation Time: Sep 09, 2024 at 05:50 PM
 -- Server version: 8.0.30
--- PHP Version: 8.3.9
+-- PHP Version: 8.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,11 +31,11 @@ CREATE TABLE `blogs` (
   `id` bigint UNSIGNED NOT NULL,
   `user_id` int NOT NULL,
   `category_id` int NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -82,8 +82,8 @@ INSERT INTO `blog_tag` (`blog_id`, `tag_id`) VALUES
 --
 
 CREATE TABLE `cache` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -94,8 +94,8 @@ CREATE TABLE `cache` (
 --
 
 CREATE TABLE `cache_locks` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `owner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -107,10 +107,10 @@ CREATE TABLE `cache_locks` (
 
 CREATE TABLE `categories` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -135,10 +135,10 @@ INSERT INTO `categories` (`id`, `title`, `slug`, `image`, `status`, `deleted_at`
 
 CREATE TABLE `colors` (
   `id` bigint UNSIGNED NOT NULL,
-  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `color_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `color` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `user_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `color_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `color` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -166,9 +166,9 @@ CREATE TABLE `comments` (
   `user_id` int NOT NULL,
   `blog_id` int NOT NULL,
   `parent_id` int DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -186,16 +186,38 @@ INSERT INTO `comments` (`id`, `user_id`, `blog_id`, `parent_id`, `name`, `email`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'default.png',
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -209,9 +231,9 @@ CREATE TABLE `galleries` (
   `id` bigint UNSIGNED NOT NULL,
   `user_id` int NOT NULL,
   `product_id` int NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -239,7 +261,7 @@ CREATE TABLE `inventories` (
   `size_id` int NOT NULL,
   `color_id` int NOT NULL,
   `quantity` int NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -252,7 +274,17 @@ CREATE TABLE `inventories` (
 INSERT INTO `inventories` (`id`, `user_id`, `product_id`, `size_id`, `color_id`, `quantity`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 2, 1, 10, 'active', NULL, '2024-09-02 04:30:13', '2024-09-02 05:47:19'),
 (2, 1, 1, 4, 2, 25, 'deactive', NULL, '2024-09-02 04:30:27', '2024-09-02 04:30:27'),
-(3, 1, 1, 1, 3, 115, 'active', NULL, '2024-09-02 04:34:04', '2024-09-02 05:47:22');
+(3, 1, 1, 1, 3, 115, 'active', NULL, '2024-09-02 04:34:04', '2024-09-02 05:47:22'),
+(4, 1, 2, 4, 3, 10, 'deactive', NULL, '2024-09-09 00:43:31', '2024-09-09 00:43:31'),
+(5, 1, 2, 4, 1, 20, 'deactive', NULL, '2024-09-09 00:43:45', '2024-09-09 00:43:45'),
+(6, 1, 2, 4, 4, 50, 'deactive', NULL, '2024-09-09 00:44:00', '2024-09-09 00:44:00'),
+(7, 1, 3, 4, 1, 100, 'deactive', NULL, '2024-09-09 00:44:41', '2024-09-09 00:44:41'),
+(8, 1, 3, 4, 3, 80, 'deactive', NULL, '2024-09-09 00:44:53', '2024-09-09 00:44:53'),
+(9, 1, 4, 3, 2, 1000, 'deactive', NULL, '2024-09-09 00:45:53', '2024-09-09 00:45:53'),
+(10, 1, 4, 3, 1, 10, 'deactive', NULL, '2024-09-09 00:46:07', '2024-09-09 00:46:07'),
+(11, 1, 5, 2, 2, 15, 'deactive', NULL, '2024-09-09 00:46:27', '2024-09-09 00:46:27'),
+(12, 1, 5, 4, 2, 38, 'deactive', NULL, '2024-09-09 00:46:41', '2024-09-09 00:46:41'),
+(13, 1, 5, 3, 1, 8, 'deactive', NULL, '2024-09-09 00:46:59', '2024-09-09 00:46:59');
 
 -- --------------------------------------------------------
 
@@ -262,8 +294,8 @@ INSERT INTO `inventories` (`id`, `user_id`, `product_id`, `size_id`, `color_id`,
 
 CREATE TABLE `jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `queue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint UNSIGNED NOT NULL,
   `reserved_at` int UNSIGNED DEFAULT NULL,
   `available_at` int UNSIGNED NOT NULL,
@@ -277,13 +309,13 @@ CREATE TABLE `jobs` (
 --
 
 CREATE TABLE `job_batches` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `total_jobs` int NOT NULL,
   `pending_jobs` int NOT NULL,
   `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext COLLATE utf8mb4_unicode_ci,
+  `failed_job_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `cancelled_at` int DEFAULT NULL,
   `created_at` int NOT NULL,
   `finished_at` int DEFAULT NULL
@@ -297,7 +329,7 @@ CREATE TABLE `job_batches` (
 
 CREATE TABLE `migrations` (
   `id` int UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -319,7 +351,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (30, '2024_08_29_092043_create_product_tag_table', 5),
 (32, '2024_09_02_032049_create_galleries_table', 6),
 (33, '2024_09_02_091616_create_inventories_table', 7),
-(37, '2024_09_04_100615_create_comments_table', 8);
+(37, '2024_09_04_100615_create_comments_table', 8),
+(38, '2024_09_06_063647_create_customers_table', 9);
 
 -- --------------------------------------------------------
 
@@ -328,8 +361,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -341,26 +374,26 @@ CREATE TABLE `password_reset_tokens` (
 
 CREATE TABLE `products` (
   `id` bigint UNSIGNED NOT NULL,
-  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `product_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `product_slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `product_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `product_short_description` longtext COLLATE utf8mb4_unicode_ci,
-  `product_description` longtext COLLATE utf8mb4_unicode_ci,
-  `product_unit` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `product_thumbnail` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `product_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_short_description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `product_description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `product_unit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product_thumbnail` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `hole_price` float DEFAULT NULL,
   `purchase_price` float DEFAULT NULL,
   `selling_price` float DEFAULT NULL,
   `discount_price` float DEFAULT NULL,
-  `discount_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `feature` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
-  `today_deal` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
-  `vat_tax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `shipping_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `discount_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `feature` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `today_deal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `vat_tax` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shipping_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `shipping_rate` float DEFAULT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -371,7 +404,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `user_id`, `category_id`, `product_name`, `product_slug`, `product_code`, `product_short_description`, `product_description`, `product_unit`, `product_thumbnail`, `hole_price`, `purchase_price`, `selling_price`, `discount_price`, `discount_type`, `feature`, `today_deal`, `vat_tax`, `shipping_type`, `shipping_rate`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, '1', '6', 'Fiver Gig', 'fiver-gig', '#AbCD123', '<p>Hey! I am PHP Senior( 8+ years) with great knowledge working of 1)WordPress/Woo commerce 2 Laravel 3)JavaScript 4HTML 5)CSS 6)CodeIgniter I love work with Laravel/WordPress and have great experience with customization &amp; optimization of theme , creating &amp; support plugin , etc. Let\'s start to work! Kind regards, Adeel</p>', '<p>Discuss requirements before ordering. Thank you.t!!</p>\r\n<p>&nbsp;</p>\r\n<p>If you\'re looking for a skilled PHP developer who can create or fix Laravel, CodeIgniter, or any PHP website, then you\'ve come to the right place.</p>\r\n<p>&nbsp;</p>\r\n<p>As a PHP developer, I understand the ins and outs of creating robust web applications using some of the most popular PHP frameworks available today. Whether you need a brand new website built from scratch or an existing fixed and improved, I can help.</p>\r\n<p>I can work with your existing codebase, or start from scratch to create a custom PHP website that perfectly meets your needs. I can create websites that are responsive and user-friendly, with a clean and modern design that showcases your brand and captures the attention of your audience.</p>\r\n<p>&nbsp;</p>\r\n<p>I have experience with a range of PHP frameworks, including Laravel, CodeIgniter, Symfony, and CakePHP, among others. I can work with databases such as MySQL, PostgreSQL, and MongoDB, and I am well-versed in HTML, CSS, and JavaScript.</p>\r\n<p>Whether you need a simple or a complex web application with advanced features, I can help you achieve your goals.</p>\r\n<p>Contact me today to discuss your project and see how I can help you</p>', '1', '1-Fiver Gig-2769-01-09-2024.png', NULL, 500, 800, 100, 'flat', 'deactive', 'deactive', '3', 'Select Type', 60, 'deactive', NULL, '2024-09-01 04:41:50', '2024-09-01 05:19:04');
+(2, '1', '3', 'Alooz Magic Masala', 'alooz-magic-masala', '#xyz123', '<p>Eating Potato chips has been made for fun than ever before with this new innovative wavy shaped Alooz and its new range of mouthwatering flavours.</p>', '<p>A chip (American English and Australian English) or crisp (British English and Irish English) is a snack food in the form of a crisp, flat or slightly bowl shaped, bite-sized unit. Some chips can be made into dishes and served as an appetizer, side, hors d\'oeuvre, etc. Some types of chip are often served in the combination plate, chips and dip. Other chips are sweet or strongly flavored or fragile. Tortilla chips can be used for chips and salsa, nachoes, bean dip, guacamole, or a layered dip containing multiple of these.</p>', '100gm', '1-Alooz Magic Masala-6503-09-09-2024.jpg', NULL, 10, 15, NULL, NULL, 'deactive', 'deactive', NULL, NULL, NULL, 'active', NULL, '2024-09-09 00:09:36', '2024-09-09 00:52:07'),
+(3, '1', '3', 'Lays Sizzlin Hot', 'lays-sizzlin-hot', '#AbCD123', '<p>Lay\'s is a brand of potato chips with different flavors, as well as the name of the company that founded the chip brand in the United States.</p>', '<p>A chip (American English and Australian English) or crisp (British English and Irish English) is a snack food in the form of a crisp, flat or slightly bowl shaped, bite-sized unit. Some chips can be made into dishes and served as an appetizer, side, hors d\'oeuvre, etc. Some types of chip are often served in the combination plate, chips and dip. Other chips are sweet or strongly flavored or fragile. Tortilla chips can be used for chips and salsa, nachoes, bean dip, guacamole, or a layered dip containing multiple of these.</p>', '55gm', '1-Lays Sizzlin Hot-8616-09-09-2024.webp', NULL, 40, 70, 10, 'flat', 'active', 'deactive', NULL, NULL, NULL, 'active', NULL, '2024-09-09 00:11:59', '2024-09-09 03:37:29'),
+(4, '1', '5', 'Samsung Galaxy S23 Ultra', 'samsung-galaxy-s23-ultra', '#987ygc', '<p>Samsung&rsquo;s Galaxy S23 lineup (which also includes the S23+, a model I haven&rsquo;t tested yet) are not game-changing devices in the least&mdash;and most people don&rsquo;t need all these high-end cameras and tremendous horsepower. But I have to remind myself that sometimes it&rsquo;s OK to pay up for the best of the best. It&rsquo;s nice not having to squint at a dim screen on a sunny day, and to have the ability to play a demanding game at its highest fidelity.</p>', '<p>Samsung&rsquo;s Galaxy S23 lineup (which also includes the S23+, a model I haven&rsquo;t tested yet) are not game-changing devices in the least&mdash;and most people don&rsquo;t need all these high-end cameras and tremendous horsepower. But I have to remind myself that sometimes it&rsquo;s OK to pay up for the best of the best. It&rsquo;s nice not having to squint at a dim screen on a sunny day, and to have the ability to play a demanding game at its highest fidelity.</p>', '120gm', '1-Samsung Galaxy S23 Ultra-1461-09-09-2024.webp', NULL, 75000, 90000, 5, 'percentage', 'deactive', 'deactive', '5', 'outer', 500, 'active', NULL, '2024-09-09 00:20:01', '2024-09-09 00:52:05'),
+(5, '1', '4', 'Leather of Bangladesh', 'leather-of-bangladesh', '#098mYc', '<p>Leather is a strong, flexible and durable material obtained from the tanning, or chemical treatment, of animal skins and hides to prevent decay. The most common leathers come from cattle, sheep, goats, equine animals, buffalo, pigs and hogs, and aquatic animals such as seals and alligators.</p>', '<p>Leather can be made to absorb water, resist water or be completely waterproof. Most leathers manufactured for the shoe, bag, upholstery and leather goods industries offer a degree of water resistance that enables the leather to get wet yet, after drying, retain the properties of elasticity and shape. Many leathers for leather goods are treated to avoid marks from water spotting in light rain. Waterproofing can be made for specific applications, particularly for outdoor shoes and boots that allow for walking several hours in the rain without getting wet feet. Most waterproof leathers are made from cattle hides.Leather is one of the most versatile materials known. This is due to the unique arrangement of complex natural fibres that give the variations on the different types of hides and skins. Chemical and physical processes are tailored to give specific properties and performance to the hides and skins as they are being converted into leather. For definition: The skins from small animals are called skins, and those from large animals are called hides. Here we highlight some of the most important variations of key leather properties.</p>', '350gm', '1-Leather of Bangladesh-8418-09-09-2024.jpg', NULL, 40000, 45000, NULL, NULL, 'deactive', 'deactive', '3', 'outer', 1000, 'active', NULL, '2024-09-09 00:25:21', '2024-09-09 00:52:03'),
+(6, '1', '3', 'Chocolate Cake', 'chocolate-cake', '#mmkO098', '<p>A breadlike food made from a dough or batter that is usually fried or baked in small flat shapes and is often unleavened. b. : a sweet baked food made from a dough or thick batter usually containing flour and sugar and often shortening, eggs, and a raising agent (such as baking powder)</p>', '<p>Cake is a flour confection made from flour, sugar, and other ingredients and is usually baked. In their oldest forms, cakes were modifications of bread, but cakes now cover a wide range of preparations that can be simple or elaborate and which share features with desserts such as pastries, meringues, custards, and pies. The most common ingredients include flour, sugar, eggs, fat (such as butter, oil, or margarine), a liquid, and a leavening agent, such as baking soda or baking powder. Common additional ingredients include dried, candied, or fresh fruit, nuts, cocoa, and extracts such as vanilla, with numerous substitutions for the primary ingredients. Cakes can also be filled with fruit preserves, nuts, or dessert sauces (like custard, jelly, cooked fruit, whipped cream, or syrups),[1] iced with buttercream or other icings, and decorated with marzipan, piped borders, or candied fruit. Cake is often served as a celebratory dish on ceremonial occasions, such as weddings, anniversaries, and birthdays. There are countless cake recipes; some are bread-like, some are rich and elaborate, and many are centuries old. Cake making is no longer a complicated procedure; while at one time considerable labor went into cake making (particularly the whisking of egg foams), baking equipment and directions have been simplified so that even the most amateur of cooks may bake a cake.</p>', NULL, '1-Chocolate Cake-1880-09-09-2024.jpg', NULL, 1000, 700, NULL, 'Select Type', 'deactive', 'deactive', '2', 'inner', 60, 'active', NULL, '2024-09-09 03:25:51', '2024-09-09 03:37:27'),
+(7, '1', '4', 'Bangladeshi Saree', 'bangladeshi-saree', '#saree129', '<p>The sari (or saree) is traditional attire for women of South Asian (especially Indian) descent and is essentially a long piece of fabric that is draped around the body. It is usually worn together with a short fitted blouse, known as a choli, and a long petticoat.</p>', '<p>A sari (sometimes also saree or sadi)[note 1] is a women\'s garment from the Indian subcontinent. It consists of an un-stitched stretch of woven fabric arranged over the body as a robe, with one end attached to the waist, while the other end rests over one shoulder as a stole (shawl), sometimes baring a part of the midriff. It may vary from 4.1 to 8.2 metres (4.5 to 9 yards) in length, and 60 to 120 centimetres (24 to 47 inches) in breadth, and is a form of ethnic wear in India, Sri Lanka, Nepal, Bangladesh, Pakistan. There are various names and styles of sari manufacture and draping, the most common being the Nivi style. The sari is worn with a fitted bodice also called a choli (ravike or kuppasa in southern India, and cholo in Nepal) and a petticoat called ghagra, parkar, or ul-pavadai.It remains fashionable in the Indian subcontinent today.</p>', NULL, '1-Bangladeshi Saree-1129-09-09-2024.webp', NULL, 1400, 1400, 100, 'flat', 'active', 'deactive', '1', 'inner', 60, 'active', NULL, '2024-09-09 03:29:59', '2024-09-09 03:37:28');
 
 -- --------------------------------------------------------
 
@@ -389,8 +427,46 @@ CREATE TABLE `product_tag` (
 --
 
 INSERT INTO `product_tag` (`product_id`, `tag_id`) VALUES
-(1, 7),
-(1, 4);
+(2, 7),
+(2, 4),
+(2, 3),
+(3, 8),
+(3, 5),
+(3, 4),
+(3, 3),
+(4, 16),
+(4, 15),
+(4, 13),
+(4, 12),
+(4, 4),
+(5, 25),
+(5, 22),
+(5, 21),
+(5, 16),
+(5, 7),
+(5, 5),
+(5, 3),
+(6, 25),
+(6, 24),
+(6, 23),
+(6, 21),
+(6, 14),
+(6, 13),
+(6, 9),
+(6, 6),
+(6, 3),
+(7, 25),
+(7, 23),
+(7, 22),
+(7, 21),
+(7, 19),
+(7, 16),
+(7, 13),
+(7, 10),
+(7, 8),
+(7, 7),
+(7, 5),
+(7, 3);
 
 -- --------------------------------------------------------
 
@@ -399,11 +475,11 @@ INSERT INTO `product_tag` (`product_id`, `tag_id`) VALUES
 --
 
 CREATE TABLE `sessions` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -412,8 +488,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('Hy1Df5OGxNxsGwdsmdzjsVNs5xdxg21wwLC25Hfq', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMDBQOGg2RElQM2ZJUVJFM2pkSndxbGhHb0Q4djdaOENGYWlTQ240bCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1725520660),
-('lJc3tsA8k82VoKTygPESWUxz6KXSLuuLA1Q3XXhL', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 Edg/92.0.902.67', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiTGJCOHFYUVpPeXZ1ak45OEJ1SU94QTdwYmc4NjFoQW9qSlRQaWxJaiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29raWUvZnJvbnRlbmQvYmxvZy9zaW5nbGUvMyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1725451664);
+('fpdF4FEIqbinynUmwbR5UxpynkhuSN5Ok6awDDaU', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiMWxOQmU0SEUzdGQ4NllEUEE1cUpUSHR5WmhBNVRDNUJGNnBRc3NNZyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Njk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9ib29raWUvZnJvbnRlbmQvcHJvZHVjdC9zaW5nbGUvbGF5cy1zaXp6bGluLWhvdCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1725904098);
 
 -- --------------------------------------------------------
 
@@ -423,10 +498,10 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 
 CREATE TABLE `sizes` (
   `id` bigint UNSIGNED NOT NULL,
-  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `size_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `size` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `user_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `size_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `size` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -437,7 +512,6 @@ CREATE TABLE `sizes` (
 --
 
 INSERT INTO `sizes` (`id`, `user_id`, `size_title`, `size`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, '1', 'extra small', 'xs', 'deactive', NULL, '2024-08-26 03:47:06', '2024-08-26 03:47:06'),
 (2, '1', 'small', 's', 'deactive', NULL, '2024-08-26 03:47:36', '2024-08-26 03:47:36'),
 (3, '1', 'medium', 'm', 'deactive', NULL, '2024-08-25 23:41:46', '2024-08-26 04:36:24'),
 (4, '1', 'large', 'l', 'deactive', NULL, '2024-08-26 00:13:20', '2024-08-26 03:49:15');
@@ -450,9 +524,9 @@ INSERT INTO `sizes` (`id`, `user_id`, `size_title`, `size`, `status`, `deleted_a
 
 CREATE TABLE `tags` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'deactive',
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -470,7 +544,24 @@ INSERT INTO `tags` (`id`, `title`, `slug`, `status`, `deleted_at`, `created_at`,
 (5, 'we', 'we', 'deactive', NULL, '2024-08-24 02:20:21', '2024-08-24 02:20:21'),
 (6, 'saveus', 'saveus', 'deactive', NULL, '2024-08-24 02:20:26', '2024-08-24 02:20:26'),
 (7, 'design', 'design', 'deactive', NULL, '2024-08-24 02:20:32', '2024-08-24 02:20:32'),
-(8, 'culture', 'culture', 'deactive', NULL, '2024-08-24 02:20:48', '2024-08-24 02:20:48');
+(8, 'culture', 'culture', 'deactive', NULL, '2024-08-24 02:20:48', '2024-08-24 02:20:48'),
+(9, 'food', 'food', 'deactive', NULL, '2024-09-09 00:12:35', '2024-09-09 00:12:35'),
+(10, 'healthy', 'healthy', 'deactive', NULL, '2024-09-09 00:12:46', '2024-09-09 00:12:46'),
+(11, 'foodgasm', 'foodgasm', 'deactive', NULL, '2024-09-09 00:12:57', '2024-09-09 00:12:57'),
+(12, 'cybersecurity', 'cybersecurity', 'deactive', NULL, '2024-09-09 00:13:21', '2024-09-09 00:13:21'),
+(13, 'future', 'future', 'deactive', NULL, '2024-09-09 00:13:27', '2024-09-09 00:13:27'),
+(14, 'entrepreneur', 'entrepreneur', 'deactive', NULL, '2024-09-09 00:13:34', '2024-09-09 00:13:34'),
+(15, 'internet', 'internet', 'deactive', NULL, '2024-09-09 00:13:44', '2024-09-09 00:13:44'),
+(16, 'marketing', 'marketing', 'deactive', NULL, '2024-09-09 00:13:56', '2024-09-09 00:13:56'),
+(17, 'computerscience', 'computerscience', 'deactive', NULL, '2024-09-09 00:14:05', '2024-09-09 00:14:05'),
+(18, 'hoodie', 'hoodie', 'deactive', NULL, '2024-09-09 00:14:49', '2024-09-09 00:14:49'),
+(19, 'saree', 'saree', 'deactive', NULL, '2024-09-09 00:14:54', '2024-09-09 00:14:54'),
+(20, 'panjabi', 'panjabi', 'deactive', NULL, '2024-09-09 00:14:59', '2024-09-09 00:14:59'),
+(21, 'women', 'women', 'deactive', NULL, '2024-09-09 00:15:07', '2024-09-09 00:15:07'),
+(22, 'beauty', 'beauty', 'deactive', NULL, '2024-09-09 00:15:14', '2024-09-09 00:15:15'),
+(23, 'onlineshop', 'onlineshop', 'deactive', NULL, '2024-09-09 00:15:22', '2024-09-09 00:15:22'),
+(24, 'cake', 'cake', 'deactive', NULL, '2024-09-09 00:15:27', '2024-09-09 00:15:27'),
+(25, 'summer', 'summer', 'deactive', NULL, '2024-09-09 00:15:36', '2024-09-09 00:15:36');
 
 -- --------------------------------------------------------
 
@@ -480,15 +571,15 @@ INSERT INTO `tags` (`id`, `title`, `slug`, `status`, `deleted_at`, `created_at`,
 
 CREATE TABLE `users` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'default.png',
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'default.png',
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `contact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -498,7 +589,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `image`, `email_verified_at`, `designation`, `website`, `contact`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Fahim Hossain Munna', 'admin@dev.com', 'default.png', '2024-08-20 01:14:45', NULL, NULL, NULL, '$2y$12$LiyA7g76.VLmjlRRDCH6puz6QpithLf0BT88JKr1yfc/xbHaQlc.y', '4LDLaN34By', '2024-08-20 01:14:46', '2024-08-20 01:14:46');
+(1, 'Fahim Hossain Munna', 'admin@dev.com', 'default.png', '2024-08-20 01:14:45', NULL, NULL, NULL, '$2y$12$LiyA7g76.VLmjlRRDCH6puz6QpithLf0BT88JKr1yfc/xbHaQlc.y', '65mqQ7KO1bOz9QuDo10lt6zMvBCEtt9bZ7he7hdNiaDLG6okaohElWaP0WQK', '2024-08-20 01:14:46', '2024-08-20 01:14:46');
 
 --
 -- Indexes for dumped tables
@@ -546,6 +637,13 @@ ALTER TABLE `colors`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `customers_email_unique` (`email`);
 
 --
 -- Indexes for table `failed_jobs`
@@ -660,6 +758,12 @@ ALTER TABLE `comments`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -675,7 +779,7 @@ ALTER TABLE `galleries`
 -- AUTO_INCREMENT for table `inventories`
 --
 ALTER TABLE `inventories`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -687,13 +791,13 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sizes`
@@ -705,7 +809,7 @@ ALTER TABLE `sizes`
 -- AUTO_INCREMENT for table `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `users`
