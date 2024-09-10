@@ -29,6 +29,7 @@ class Addtocart extends Component
 
     public function updatedSizeDropdown($sizeval){
         $this->size_id = $sizeval;
+        session()->flash('cart_update','');
         $this->colors = Inventory::where('product_id',$this->product_id)->where('size_id',$sizeval)->get();
     }
     public function updatedColorDropdown($colorval){
@@ -40,7 +41,7 @@ class Addtocart extends Component
     public function addtocart(){
         if($this->product_id && $this->quantity && $this->size_id && $this->color_id){
             Cart::create([
-                'auth_id' => Auth::guard('customer')->user()->name,
+                'auth_id' => Auth::guard('customer')->user()->id,
                 'product_id' => $this->product_id,
                 'size_id' => $this->size_id,
                 'color_id' => $this->color_id,
@@ -48,7 +49,7 @@ class Addtocart extends Component
                 'created_at' => now(),
             ]);
             session()->flash('cart_update', 'Thank You Sir, Your Cart is Store.');
-            return redirect()->route('front.product.single',$this->product_id);
+            return back();
         }else{
             session()->flash('cart_error', 'Sorry Sir, Please Select All Necessary Field.');
             return back();

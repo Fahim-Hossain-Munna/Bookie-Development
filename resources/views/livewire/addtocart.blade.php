@@ -35,4 +35,14 @@
           <button><i class="fal fa-heart"></i></button>
        </div>
     </div>
+
+    @if (session('cart_error'))
+    <marquee style="color: red;">{{ session('cart_error') }}</marquee>
+    @endif
+    @if (session('cart_update'))
+    <marquee style="color: green;">{{ session('cart_update') }}</marquee>
+    @endif
+
+
+
 </div>
