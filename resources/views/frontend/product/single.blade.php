@@ -560,3 +560,49 @@
 @endsection
 
 
+@section('script')
+
+  @if (session('cart_update'))
+  <script>
+    Toastify({
+      text: "{{ session('cart_update') }}",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        transition: "opacity 0.5s ease",
+      },
+      onClick: function(){} // Callback after click
+    }).showToast();
+
+    </script>
+  @endif
+
+  @if (session('cart_error'))
+  <script>
+    Toastify({
+      text: "{{ session('cart_error') }}",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #E01C34, #ACABB0)",
+        transition: "opacity 0.5s ease",
+      },
+      onClick: function(){} // Callback after click
+    }).showToast();
+
+    </script>
+  @endif
+
+@endsection
+
+
+

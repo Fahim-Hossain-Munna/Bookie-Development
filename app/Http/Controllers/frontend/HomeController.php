@@ -68,10 +68,8 @@ class HomeController extends Controller
     {
         $categories = Category::latest()->get();
         $product = Product::where('product_slug',$slug)->first();
-        $colors = Inventory::where('product_id',$product->id)->get();
-        $sizes = Inventory::where('product_id',$product->id)->get();
         $related_product = Product::where('category_id',$product->category_id)->get();
-        return view('frontend.product.single',compact('product','categories','colors','sizes','related_product'));
+        return view('frontend.product.single',compact('product','categories','related_product'));
     }
 
     /**
