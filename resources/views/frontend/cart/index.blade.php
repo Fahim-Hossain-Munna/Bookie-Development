@@ -27,7 +27,7 @@
                             </tr>
                          </thead>
                          <tbody>
-                            @foreach ($carts as $cart)
+                            @forelse ($carts as $cart)
                                 <tr>
                                    <td class="product-thumbnail">
                                       <a href="{{ route('front.product.single',$cart->products->product_slug) }}"><img src="{{ asset('uploads/product') }}/{{ $cart->products->product_thumbnail }}" alt="">
@@ -56,7 +56,9 @@
                                     <span class="amount">৳{{ $total }}</span>
                                     @endif
                                    </td>
+                                   <td class="product-quantity">
                                    @livewire('boostquantity',['cart' => $cart])
+                                    </td>
                                    <td class="product-subtotal">
                                       <span class="amount">{{$subtotal}}</span>
                                    </td>
@@ -64,7 +66,11 @@
                                       <a href="#"><i class="fa fa-times"></i></a>
                                    </td>
                                 </tr>
-                            @endforeach
+                                @empty
+                                <tr>
+                                    <td colspan="6" class="text-danger text-center">no data found</td>
+                                </tr>
+                            @endforelse
                          </tbody>
                    </table>
                 </div>
