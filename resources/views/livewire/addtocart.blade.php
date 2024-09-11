@@ -28,9 +28,11 @@
           <input class="tp-cart-input" type="text" wire:model="quantity" readonly>
           <span style="cursor: pointer; padding: 10px 15px; margin-left:10px;" class="" wire:click="increment"><i class="far fa-plus"></i></span>
        </div>
-       <div class="tpproduct-details__cart ml-20">
-          <button wire:click="addtocart"><i class="fal fa-shopping-cart"></i> Add To Cart</button>
-       </div>
+       @auth('customer')
+        <div class="tpproduct-details__cart ml-20">
+           <button wire:click="addtocart"><i class="fal fa-shopping-cart"></i> Add To Cart</button>
+        </div>
+       @endauth
        <div class="tpproduct-details__wishlist ml-20">
           <button><i class="fal fa-heart"></i></button>
        </div>

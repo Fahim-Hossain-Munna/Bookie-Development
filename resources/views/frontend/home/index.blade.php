@@ -165,7 +165,7 @@
                                     @if ($product->discount_type == 'percentage')
                                     <span class="tpproduct__thumb-topsall">৳{{ $product->discount_price }}% Sale</span>
                                     @endif
-                                     <a href="shop-details-2.html">
+                                     <a href="{{ route('front.product.single',$product->product_slug) }}">
                                         <img src="{{ asset('uploads/product') }}/{{ $product->product_thumbnail }}" alt="product-thumb" style="width:100%; height:100%">
                                         <img class="product-thumb-secondary" src="{{ asset('uploads/product') }}/{{ $product->product_thumbnail }}" alt="" style="width:100%; height:100%">
                                      </a>

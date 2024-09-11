@@ -40,16 +40,30 @@ class Addtocart extends Component
 
     public function addtocart(){
         if($this->product_id && $this->quantity && $this->size_id && $this->color_id){
-            Cart::create([
-                'auth_id' => Auth::guard('customer')->user()->id,
-                'product_id' => $this->product_id,
-                'size_id' => $this->size_id,
-                'color_id' => $this->color_id,
-                'quantity' => $this->quantity,
-                'created_at' => now(),
-            ]);
-            session()->flash('cart_update', 'Thank You Sir, Your Cart is Store.');
-            return back();
+            $existingCartItem = Cart::where('auth_id', Auth::guard('customer')->user()->id)
+                                ->where('product_id', $this->product_id)
+                                ->where('size_id', $this->size_id)
+                                ->where('color_id', $this->color_id)
+                                ->first();
+                if($existingCartItem){
+                    $existingCartItem->update([
+                        'quantity' => $existingCartItem->quantity + $this->quantity,
+                        'updated_at' => now(),
+                    ]);
+                    session()->flash('cart_update', 'Thank You Sir, Your Cart is Store.');
+                    return back();
+                }else{
+                    Cart::create([
+                        'auth_id' => Auth::guard('customer')->user()->id,
+                        'product_id' => $this->product_id,
+                        'size_id' => $this->size_id,
+                        'color_id' => $this->color_id,
+                        'quantity' => $this->quantity,
+                        'created_at' => now(),
+                    ]);
+                    session()->flash('cart_update', 'Thank You Sir, Your Cart is Store.');
+                    return back();
+                }
         }else{
             session()->flash('cart_error', 'Sorry Sir, Please Select All Necessary Field.');
             return back();

@@ -110,10 +110,9 @@
                                  <i class="fal fa-shopping-cart"></i>
                                  <span class="tp-product-count">2</span>
                               </button>
-                              @auth
-                                @if (!auth()->user()->name)
+                              @auth('customer')
                                 <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
-                                @endif
+
                               @endauth
                               <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                               <a href="wishlist.html"><i class="fal fa-heart"></i></a>
@@ -291,12 +290,8 @@
                                  <li><a href="index-3.html">Furniture Home</a></li>
                                  <li><a href="index-4.html">Cosmetics Home</a></li>
                                  <li><a href="index-5.html">Food Grocery</a></li>
-                                 @auth
-                                    @if (!Auth::user()->name)
-                                    <li><a href="index-5.html">{{ Auth::guard('customer')->user()->name }}</a></li>
-                                    @else
-                                    <li><a href="index-5.html">{{ Auth::user()->name }}</a></li>
-                                    @endif
+                                 @auth('customer')
+                                    <li><a href="index-5.html">{{ Auth::guard('customer')->user()->name }}</a></li>>
                                  @endauth
                                  {{-- @if (Auth::guard('customer')->user()->name )
                                  @endif --}}
@@ -370,10 +365,10 @@
                            <i class="fal fa-shopping-cart"></i>
                            <span class="tp-product-count">2</span>
                         </button>
-                        @auth
-                            @if (!auth()->user()->name)
+                        @auth('customer')
+
                             <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
-                            @endif
+
                         @endauth
                         <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                         <a href="wishlist.html"><i class="fal fa-heart"></i></a>
@@ -569,7 +564,7 @@
                   <span class="heilight-price"> $300.00</span>
                </div>
                <div class="tpcart__checkout-btn">
-                  <a class="tpcart-btn mb-10" href="cart.html">View Cart</a>
+                  <a class="tpcart-btn mb-10" href="{{ route('front.product.cart') }}">View Cart</a>
                   <a class="tpcheck-btn" href="checkout.html">Checkout</a>
                </div>
             </div>

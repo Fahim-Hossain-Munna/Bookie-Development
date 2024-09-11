@@ -12,4 +12,8 @@ class Cart extends Model
     use SoftDeletes;
 
     protected $guarded = [''];
+
+    public function products(){
+        return $this->hasOne(Product::class,'id','product_id');
+    }
 }
