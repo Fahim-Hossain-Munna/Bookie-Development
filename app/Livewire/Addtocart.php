@@ -74,7 +74,7 @@ class Addtocart extends Component
 
     public function render()
     {
-        $sizes = Inventory::where('product_id',$this->product_id)->get();
+        $sizes = Inventory::select('size_id')->where('product_id',$this->product_id)->groupBy('size_id')->get();
         return view('livewire.addtocart',compact('sizes'));
     }
 }
