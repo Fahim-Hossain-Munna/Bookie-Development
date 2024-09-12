@@ -108,7 +108,7 @@
                            <div class="header-meta__social d-flex align-items-center ml-25">
                               <button class="header-cart p-relative tp-cart-toggle">
                                  <i class="fal fa-shopping-cart"></i>
-                                 <span class="tp-product-count">2</span>
+                                   @livewire('cartcount')
                               </button>
                               @auth('customer')
                                 <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>

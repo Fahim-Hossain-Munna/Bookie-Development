@@ -61,6 +61,7 @@ class Addtocart extends Component
                         'quantity' => $this->quantity,
                         'created_at' => now(),
                     ]);
+                    $this->dispatch('cartUpdated');
                     session()->flash('cart_update', 'Thank You Sir, Your Cart is Store.');
                     return back();
                 }
