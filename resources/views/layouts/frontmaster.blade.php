@@ -101,7 +101,7 @@
                               </ul>
                            </div>
                            <div class="header-meta__value mr-15">
-                              <select>
+                              <select class="form-select" style="width: 100px">
                                  <option>৳ BDT</option>>
                               </select>
                            </div>
@@ -547,7 +547,7 @@
                                     $grandtotal += $subtotal;
 
                                 @endphp
-                                <span class="new-price">$
+                                <span class="new-price">৳
                                     @if ($cart->products->discount_price)
                                         {{ $total }}
                                     @else
@@ -570,7 +570,7 @@
             <div class="tpcart__checkout">
                <div class="tpcart__total-price d-flex justify-content-between align-items-center">
                   <span> Subtotal:</span>
-                  <span class="heilight-price"> ${{ $grandtotal }}</span>
+                  <span class="heilight-price"> ৳ {{ $grandtotal }}</span>
                </div>
                <div class="tpcart__checkout-btn">
                   <a class="tpcart-btn mb-10" href="{{ route('front.product.cart') }}">View Cart</a>

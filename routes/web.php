@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
@@ -31,6 +32,8 @@ Route::prefix('bookie/frontend')->get('/product/single/{slug}',[HomeController::
 
 // cart
 Route::prefix('bookie/frontend')->get('/product/front/cart',[CartController::class,'index'])->name('front.product.cart');
+Route::prefix('bookie/frontend')->get('/product/front/cart/checkout',[CartController::class,'checkout'])->name('front.product.checkout');
+
 
 // Frontend customer authentication
 Route::prefix('bookie/frontend')->get('/customer/authentication/login',[CustomerController::class,'login'])->name('front.customer.auth.login');

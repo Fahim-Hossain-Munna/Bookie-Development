@@ -19,4 +19,15 @@ class CartController extends Controller
         }
         return view('frontend.cart.index',compact('categories','carts'));
     }
+
+    public function checkout(){
+        $categories = Category::latest()->get();
+        if(Auth::guard('customer')->check()){
+
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->get();
+        }else{
+            $carts = [];
+        }
+        return view('frontend.checkout.index',compact('categories','carts'));
+    }
 }

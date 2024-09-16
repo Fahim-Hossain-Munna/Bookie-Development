@@ -101,7 +101,10 @@
                                <li>Subtotal <span>৳{{ $grandtotal }}</span></li>
                                <li>Total <span>৳{{ $grandtotal }}</span></li>
                             </ul>
-                            <a href="checkout.html" class="tp-btn tp-color-btn banner-animation">Proceed to Checkout</a>
+                            @php
+                                session()->put('grandtotal', $grandtotal);
+                            @endphp
+                            <a href="{{ route('front.product.checkout') }}" class="tp-btn tp-color-btn banner-animation">Proceed to Checkout</a>
                          </div>
                    </div>
                 </div>
