@@ -112,7 +112,6 @@
                               </button>
                               @auth('customer')
                                 <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
-
                               @endauth
                               <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                               <a href="wishlist.html"><i class="fal fa-heart"></i></a>
@@ -290,11 +289,9 @@
                                  <li><a href="index-3.html">Furniture Home</a></li>
                                  <li><a href="index-4.html">Cosmetics Home</a></li>
                                  <li><a href="index-5.html">Food Grocery</a></li>
-                                 @auth('customer')
+                                 {{-- @auth('customer')
                                     <li><a href="index-5.html">{{ Auth::guard('customer')->user()->name }}</a></li>>
-                                 @endauth
-                                 {{-- @if (Auth::guard('customer')->user()->name )
-                                 @endif --}}
+                                 @endauth --}}
                               </ul>
                            </li>
                            <li class="has-dropdown">
@@ -363,12 +360,10 @@
                      <div class="header-meta__social  d-flex align-items-center">
                         <button class="header-cart p-relative tp-cart-toggle">
                            <i class="fal fa-shopping-cart"></i>
-                           <span class="tp-product-count">2</span>
+                           @livewire('cartcount')
                         </button>
                         @auth('customer')
-
                             <a href="{{ route('front.customer.profile') }}"><i class="fal fa-user"></i></a>
-
                         @endauth
                         <a href="{{ route('front.customer.auth.register') }}"><i class="fa-solid fa-right-to-bracket"></i></a>
                         <a href="wishlist.html"><i class="fal fa-heart"></i></a>
@@ -512,6 +507,9 @@
       <div class="body-overlay"></div>
       <!-- sidebar-menu-area-end -->
 
+      @php
+          $grandtotal = 0;
+      @endphp
       <!-- header-cart-start -->
       <div class="tpcartinfo tp-cart-info-area p-relative">
       <button class="tpcart__close"><i class="fal fa-times"></i></button>
@@ -520,52 +518,56 @@
          <div class="tpcart__product">
             <div class="tpcart__product-list">
                <ul>
-                  <li>
-                     <div class="tpcart__item">
-                        <div class="tpcart__img">
-                           <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-1.jpg" alt="">
-                           <div class="tpcart__del">
-                              <a href="#"><i class="far fa-times-circle"></i></a>
-                           </div>
-                        </div>
-                        <div class="tpcart__content">
-                           <span class="tpcart__content-title"><a href="shop-details.html">Miko Wooden Bluetooth Speaker</a>
-                           </span>
-                           <div class="tpcart__cart-price">
-                              <span class="quantity">1 x</span>
-                              <span class="new-price">$162.80</span>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
-                  <li>
-                     <div class="tpcart__item">
-                        <div class="tpcart__img">
-                           <img src="{{ asset('frontend') }}/assets/img/product/home-one/product-3.jpg" alt="">
-                           <div class="tpcart__del">
-                              <a href="#"><i class="far fa-times-circle"></i></a>
-                           </div>
-                        </div>
-                        <div class="tpcart__content">
-                           <span class="tpcart__content-title"><a href="shop-details.html">Evo Lightweight Granite Shirt</a>
-                           </span>
-                           <div class="tpcart__cart-price">
-                              <span class="quantity">1 x</span>
-                              <span class="new-price">$138.00</span>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
+                  @foreach ($carts as $cart)
+                    <li>
+                       <div class="tpcart__item">
+                          <div class="tpcart__img">
+                             <img src="{{ asset('uploads/product') }}/{{ $cart->products->product_thumbnail }}" alt="">
+                             <div class="tpcart__del">
+                                <a href="#"><i class="far fa-times-circle"></i></a>
+                             </div>
+                          </div>
+                          <div class="tpcart__content">
+                             <span class="tpcart__content-title"><a href="shop-details.html">{{ $cart->products->product_name }}</a>
+                             </span>
+                             <div class="tpcart__cart-price">
+                                <span class="quantity">{{ $cart->quantity }} x</span>
+                                @php
+                                    $total = $cart->products->selling_price;
+                                    if($cart->products->discount_type == 'flat'){
+                                        $total = $cart->products->selling_price - $cart->products->discount_price;
+                                    }
+
+                                    if($cart->products->discount_type == 'percentage'){
+                                        $subprice = ($cart->products->selling_price * $cart->products->discount_price) / 100;
+                                        $total = $cart->products->selling_price - $subprice;
+                                    }
+
+                                    $subtotal = $total * $cart->quantity;
+                                    $grandtotal += $subtotal;
+
+                                @endphp
+                                <span class="new-price">$
+                                    @if ($cart->products->discount_price)
+                                        {{ $total }}
+                                    @else
+                                        {{ $total }}
+                                    @endif
+                                </span>
+                             </div>
+                          </div>
+                       </div>
+                    </li>
+                  @endforeach
                </ul>
             </div>
             <div class="tpcart__checkout">
                <div class="tpcart__total-price d-flex justify-content-between align-items-center">
                   <span> Subtotal:</span>
-                  <span class="heilight-price"> $300.00</span>
+                  <span class="heilight-price"> ${{ $grandtotal }}</span>
                </div>
                <div class="tpcart__checkout-btn">
                   <a class="tpcart-btn mb-10" href="{{ route('front.product.cart') }}">View Cart</a>
-                  <a class="tpcheck-btn" href="checkout.html">Checkout</a>
                </div>
             </div>
          </div>

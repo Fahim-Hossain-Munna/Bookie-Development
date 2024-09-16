@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Customer;
 use App\Models\User;
@@ -18,8 +19,9 @@ class CustomerController extends Controller
      */
     public function login()
     {
+        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
         $categories = Category::latest()->get();
-        return view('frontend.auth.login',compact('categories'));
+        return view('frontend.auth.login',compact('categories' , 'carts'));
     }
 
     /**
@@ -27,8 +29,9 @@ class CustomerController extends Controller
      */
     public function register(Request $request)
     {
+        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
         $categories = Category::latest()->get();
-        return view('frontend.auth.register',compact('categories'));
+        return view('frontend.auth.register',compact('categories' , 'carts'));
     }
     public function register_post(Request $request)
     {

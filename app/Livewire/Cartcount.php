@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Cartcount extends Component
 {
-    public $cartcount;
+    public $cartcount = 0;
 
     protected $listeners = ['cartUpdated' => 'updateCartCount'];
 
