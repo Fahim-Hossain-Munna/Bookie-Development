@@ -46,7 +46,7 @@
                                     <form id="statusForm{{ $product->id }}" action="{{ route('product.status',$product->id) }}" method="POST">
                                         @csrf
                                         <div class="form-check form-switch form-switch-info" name="status">
-                                            <input onchange="document.getElementById('statusForm{{ $product->id }}').submit()" {{ $product->status == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="status" value="active">
+                                            <input onchange="myFun(this)" {{ $product->status == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="status" value="active">
                                             <label class="form-check-label" for="customSwitchInfos">Status</label>
                                         </div>
                                     </form>
@@ -55,7 +55,7 @@
                                     <form id="todaydealForm{{ $product->id }}" action="{{ route('product.todaydeal',$product->id) }}" method="POST">
                                         @csrf
                                         <div class="form-check form-switch form-switch-info" name="status">
-                                            <input onchange="document.getElementById('todaydealForm{{ $product->id }}').submit()" {{ $product->today_deal == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="today_deal" value="active">
+                                            <input onclick="document.getElementById('todaydealForm{{ $product->id }}').submit()" {{ $product->today_deal == 'active' ? "checked" : "" }} class="form-check-input" type="checkbox" id="customSwitchInfos" name="today_deal" value="active">
                                             <label class="form-check-label" for="customSwitchInfos">Today Deal</label>
                                         </div>
                                     </form>
@@ -102,5 +102,32 @@
         </div><!--end card-->
     </div>
 </div>
+
+
+<script>
+
+    function myFun(element){
+
+        form = element.closest('form');
+
+        Swal.fire({
+            title: "Do you want to save the changes?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+            }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire("Saved!", "", "success");
+                
+                form.submit();
+            } else if (result.isDenied) {
+                Swal.fire("Changes are not saved", "", "info");
+            }
+        });
+
+    }
+
+</script>
 
 @endsection
