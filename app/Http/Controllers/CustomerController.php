@@ -19,7 +19,11 @@ class CustomerController extends Controller
      */
     public function login()
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $categories = Category::latest()->get();
         return view('frontend.auth.login',compact('categories' , 'carts'));
     }
@@ -29,7 +33,11 @@ class CustomerController extends Controller
      */
     public function register(Request $request)
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $categories = Category::latest()->get();
         return view('frontend.auth.register',compact('categories' , 'carts'));
     }

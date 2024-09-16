@@ -518,7 +518,7 @@
          <div class="tpcart__product">
             <div class="tpcart__product-list">
                <ul>
-                  @foreach ($carts as $cart)
+                  @forelse ($carts as $cart)
                     <li>
                        <div class="tpcart__item">
                           <div class="tpcart__img">
@@ -558,7 +558,13 @@
                           </div>
                        </div>
                     </li>
-                  @endforeach
+                    @empty
+                    <li>
+                        <div class="tpcart__item">
+                            <span class="text-danger">no cart on database!</span>
+                        </div>
+                    </li>
+                  @endforelse
                </ul>
             </div>
             <div class="tpcart__checkout">

@@ -20,7 +20,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $blogs = Blog::latest()->get();
         $categories = Category::latest()->get();
         $products = Product::where('status','active')->latest()->take(15)->get();
@@ -29,7 +33,11 @@ class HomeController extends Controller
     }
     public function blog()
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $blogs = Blog::latest()->paginate(2);
         $recentBlogs = Blog::latest()->take(4)->get();
         $categories = Category::latest()->get();
@@ -39,7 +47,11 @@ class HomeController extends Controller
 
     public function blog_details($blogid)
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $comments = Comment::with('hasmanyreplies')->where('blog_id',$blogid)->whereNull('parent_id')->get();
         $blog = Blog::where('id',$blogid)->first();
         $categories = Category::latest()->get();
@@ -50,7 +62,11 @@ class HomeController extends Controller
 
     public function cat_blog($cat_slug)
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $category = Category::where('slug',$cat_slug)->first();
         $blogs = Blog::where('category_id',$category->id)->paginate(2);
         $tags= Tag::latest()->get();
@@ -61,7 +77,11 @@ class HomeController extends Controller
 
     public function tag_blog($tag_slug)
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $Tag = Tag::with('manywithblogs')->where('slug',$tag_slug)->first();
         $blogs = $Tag->manywithblogs()->paginate(2);;
         $tags= Tag::latest()->get();
@@ -73,7 +93,11 @@ class HomeController extends Controller
 
     public function product_single($slug)
     {
-        $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        if(Auth::guard('customer')->check()){
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+        }else{
+            $carts=[];
+        }
         $categories = Category::latest()->get();
         $product = Product::where('product_slug',$slug)->first();
         $related_product = Product::where('category_id',$product->category_id)->get();
