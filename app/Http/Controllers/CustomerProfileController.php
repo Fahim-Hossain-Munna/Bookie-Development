@@ -11,7 +11,7 @@ class CustomerProfileController extends Controller
 {
     public function index(){
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }

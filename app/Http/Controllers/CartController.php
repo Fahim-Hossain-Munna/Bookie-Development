@@ -13,7 +13,7 @@ class CartController extends Controller
         $categories = Category::latest()->get();
         if(Auth::guard('customer')->check()){
 
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->get();
         }else{
             $carts = [];
         }
@@ -24,7 +24,7 @@ class CartController extends Controller
         $categories = Category::latest()->get();
         if(Auth::guard('customer')->check()){
 
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->get();
         }else{
             $carts = [];
         }

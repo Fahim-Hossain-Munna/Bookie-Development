@@ -20,7 +20,7 @@ class CustomerController extends Controller
     public function login()
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }
@@ -34,7 +34,7 @@ class CustomerController extends Controller
     public function register(Request $request)
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }

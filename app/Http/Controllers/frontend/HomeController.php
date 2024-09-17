@@ -21,7 +21,7 @@ class HomeController extends Controller
     public function index()
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }
@@ -34,7 +34,7 @@ class HomeController extends Controller
     public function blog()
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }
@@ -48,7 +48,7 @@ class HomeController extends Controller
     public function blog_details($blogid)
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }
@@ -63,7 +63,7 @@ class HomeController extends Controller
     public function cat_blog($cat_slug)
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }
@@ -78,7 +78,7 @@ class HomeController extends Controller
     public function tag_blog($tag_slug)
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }
@@ -94,7 +94,7 @@ class HomeController extends Controller
     public function product_single($slug)
     {
         if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->take(5)->get();
+            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
         }else{
             $carts=[];
         }

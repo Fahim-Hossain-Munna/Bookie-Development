@@ -20,7 +20,7 @@ class Cartcount extends Component
     public function updateCartCount()
     {
         if(Auth::guard('customer')->check()){
-            $this->cartcount = Cart::where('auth_id', Auth::guard('customer')->user()->id)->count();
+            $this->cartcount = Cart::where('auth_id', Auth::guard('customer')->user()->id)->where('status','pending')->count();
         }
     }
 

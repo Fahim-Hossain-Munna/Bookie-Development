@@ -13,6 +13,7 @@ use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\OderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SizeColorController;
@@ -26,6 +27,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+
+// oder product
+
+Route::prefix('bookie/frontend')->post('order',[OderController::class,'order_now'])->name('customer.order');
 
 // product details
 Route::prefix('bookie/frontend')->get('/product/single/{slug}',[HomeController::class,'product_single'])->name('front.product.single');
