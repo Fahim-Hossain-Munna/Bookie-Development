@@ -91,19 +91,6 @@ class HomeController extends Controller
     }
 
 
-    public function product_single($slug)
-    {
-        if(Auth::guard('customer')->check()){
-            $carts = Cart::where('auth_id',Auth::guard('customer')->user()->id)->where('status','pending')->take(5)->get();
-        }else{
-            $carts=[];
-        }
-        $categories = Category::latest()->get();
-        $product = Product::where('product_slug',$slug)->first();
-        $related_product = Product::where('category_id',$product->category_id)->get();
-        return view('frontend.product.single',compact('product','categories','related_product','carts'));
-    }
-
     /**
      * Store a newly created resource in storage.
      */

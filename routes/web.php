@@ -11,6 +11,7 @@ use App\Http\Controllers\CustomerProfileController;
 use App\Http\Controllers\DashHomeController;
 use App\Http\Controllers\DashSettingsController;
 use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\OderController;
@@ -33,7 +34,8 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::prefix('bookie/frontend')->post('order',[OderController::class,'order_now'])->name('customer.order');
 
 // product details
-Route::prefix('bookie/frontend')->get('/product/single/{slug}',[HomeController::class,'product_single'])->name('front.product.single');
+Route::prefix('bookie/frontend')->get('/product',[FrontendProductController::class,'index'])->name('front.product');
+Route::prefix('bookie/frontend')->get('/product/single/{slug}',[FrontendProductController::class,'single'])->name('front.product.single');
 
 // cart
 Route::prefix('bookie/frontend')->get('/product/front/cart',[CartController::class,'index'])->name('front.product.cart');
